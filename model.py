@@ -256,8 +256,8 @@ smiles_tasks_df = smiles_tasks_df[smiles_tasks_df["cano_smiles"].isin(remained_s
 # print(smiles_tasks_df)
 smiles_tasks_df['cano_smiles'] =canonical_smiles_list
 assert canonical_smiles_list[0]==Chem.MolToSmiles(Chem.MolFromSmiles(smiles_tasks_df['cano_smiles'][0]), isomericSmiles=True)
-number of all smiles:  4
-number of successfully processed smiles:  4
+#number of all smiles:  4
+#number of successfully processed smiles:  4
 #Step 2. Calculate molecule feature
 feature_dicts = save_smiles_dicts(smilesList,filename)
 remained_df = smiles_tasks_df[smiles_tasks_df["cano_smiles"].isin(feature_dicts['smiles_to_atom_mask'].keys())]
