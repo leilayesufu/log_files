@@ -227,7 +227,7 @@ def drawmol(smiles, atom_weights,smarts=None):
 #     with open(str(smiles)+'.svg','w') as f:
 #         f.write(svg)
     return svg
-Step 1. Prepare input file
+#Step 1. Prepare input file
 task_name = 'ppb'
 tasks = ['endpoint']
 
@@ -258,7 +258,7 @@ smiles_tasks_df['cano_smiles'] =canonical_smiles_list
 assert canonical_smiles_list[0]==Chem.MolToSmiles(Chem.MolFromSmiles(smiles_tasks_df['cano_smiles'][0]), isomericSmiles=True)
 number of all smiles:  4
 number of successfully processed smiles:  4
-Step 2. Calculate molecule feature
+#Step 2. Calculate molecule feature
 feature_dicts = save_smiles_dicts(smilesList,filename)
 remained_df = smiles_tasks_df[smiles_tasks_df["cano_smiles"].isin(feature_dicts['smiles_to_atom_mask'].keys())]
 uncovered_df = smiles_tasks_df.drop(remained_df.index)
@@ -266,7 +266,7 @@ print(str(len(uncovered_df.cano_smiles))+' compounds cannot be featured')
 remained_df = remained_df.reset_index(drop=True)
 feature dicts file saved as input_compounds.pickle
 0 compounds cannot be featured
-Step 3. Load model
+#Step 3. Load model
 batch_size = 64
 p_dropout= 0.1
 fingerprint_dim = 200
@@ -304,7 +304,7 @@ model_for_viz.load_state_dict(best_model_wts)
 /home/cflou/anaconda3/envs/dgl/lib/python3.7/site-packages/torch/serialization.py:657: SourceChangeWarning: source code of class 'torch.nn.modules.container.ModuleList' has changed. Saved a reverse patch to ModuleList.patch. Run `patch -p0 < ModuleList.patch` to revert your changes.
   warnings.warn(msg, SourceChangeWarning)
 tensor(True)
-Step 4. Predict values
+#Step 4. Predict values
 remain_pred_list = eval(model, remained_df)
 remained_df['Predicted_values'] = remain_pred_list
 remained_df
@@ -314,12 +314,12 @@ cano_smiles	Predicted_values
 2	CC(C)N1CN(C(c2ccccc2)c2ccccc2)n2ccc(=O)c(O)c2C1=O	0.946909
 3	COCCN1CN(C(c2ccccc2)c2ccccc2)n2ccc(=O)c(O)c2C1=O	0.923631
 remained_df.to_csv('temp.csv')
-Step 5. Get atom attention weights
+#Step 5. Get atom attention weights
 # Notably: for more than 500 compounds, be cautious!
 smi_aw = get_smi_aw(remained_df)
 len(smi_aw)
 4
-Step 6. Identify Privileged Substructure for each molecule
+#Step 6. Identify Privileged Substructure for each molecule
 for key,value in smi_aw.items():
     print(key)
     grinder = Grinder(3,18)
