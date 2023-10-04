@@ -72,7 +72,7 @@ from cairosvg import svg2png
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-Related Functions
+#Related Functions
 def eval_for_viz(model, viz_list,batch_size):
     model.eval()
     test_MAE_list = []
