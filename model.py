@@ -264,8 +264,8 @@ remained_df = smiles_tasks_df[smiles_tasks_df["cano_smiles"].isin(feature_dicts[
 uncovered_df = smiles_tasks_df.drop(remained_df.index)
 print(str(len(uncovered_df.cano_smiles))+' compounds cannot be featured')
 remained_df = remained_df.reset_index(drop=True)
-feature dicts file saved as input_compounds.pickle
-0 compounds cannot be featured
+#feature dicts file saved as input_compounds.pickle
+#0 compounds cannot be featured
 #Step 3. Load model
 batch_size = 64
 p_dropout= 0.1
@@ -303,7 +303,7 @@ model_for_viz.load_state_dict(best_model_wts)
   warnings.warn(msg, SourceChangeWarning)
 /home/cflou/anaconda3/envs/dgl/lib/python3.7/site-packages/torch/serialization.py:657: SourceChangeWarning: source code of class 'torch.nn.modules.container.ModuleList' has changed. Saved a reverse patch to ModuleList.patch. Run `patch -p0 < ModuleList.patch` to revert your changes.
   warnings.warn(msg, SourceChangeWarning)
-tensor(True)
+#tensor(True)
 #Step 4. Predict values
 remain_pred_list = eval(model, remained_df)
 remained_df['Predicted_values'] = remain_pred_list
@@ -318,7 +318,7 @@ remained_df.to_csv('temp.csv')
 # Notably: for more than 500 compounds, be cautious!
 smi_aw = get_smi_aw(remained_df)
 len(smi_aw)
-4
+#4
 #Step 6. Identify Privileged Substructure for each molecule
 for key,value in smi_aw.items():
     print(key)
@@ -362,53 +362,53 @@ for key,value in smi_aw.items():
     print('Dectected Priviledged Substructures: ' +str(psub))
     svg = drawmol(key,value,psub)
     display(SVG(svg))
-O=C(O)CC(c1ccccc1)n1ccc2cc(OCCc3ccc4c(n3)NCCC4)ccc21
-[]
-Predicted PPB fraction: 0.9707259
-Dectected Priviledged Substructures: []
-b'
-O
-HO
-N
-O
-N
-NH
-CN(C)Cc1cncc(C(CC(=O)O)n2ccc3cc(OCCc4ccc5c(n4)NCCC5)ccc32)c1
-['*Cc1cncc(C(C*)*)c1']
-Predicted PPB fraction: 0.8506336
-Dectected Priviledged Substructures: ['*Cc1cncc(C(C*)*)c1']
-b'
-N
-N
-O
-HO
-N
-O
-N
-NH
-CC(C)N1CN(C(c2ccccc2)c2ccccc2)n2ccc(=O)c(O)c2C1=O
-['CC(C)N1CN(*)n2ccc(=O)c(O)c2C1=O']
-Predicted PPB fraction: 0.9469088
-Dectected Priviledged Substructures: ['CC(C)N1CN(*)n2ccc(=O)c(O)c2C1=O']
-b'
-N
-N
-N
-O
-OH
-O
-COCCN1CN(C(c2ccccc2)c2ccccc2)n2ccc(=O)c(O)c2C1=O
-['COCCN1CN(*)n2ccc(=O)c(O)c2C1=O']
-Predicted PPB fraction: 0.9236307
-Dectected Priviledged Substructures: ['COCCN1CN(*)n2ccc(=O)c(O)c2C1=O']
-b'
-O
-N
-N
-N
-O
-OH
-O
+# O=C(O)CC(c1ccccc1)n1ccc2cc(OCCc3ccc4c(n3)NCCC4)ccc21
+# []
+# Predicted PPB fraction: 0.9707259
+# Dectected Priviledged Substructures: []
+# b'
+# O
+# HO
+# N
+# O
+# N
+# NH
+# CN(C)Cc1cncc(C(CC(=O)O)n2ccc3cc(OCCc4ccc5c(n4)NCCC5)ccc32)c1
+# ['*Cc1cncc(C(C*)*)c1']
+# Predicted PPB fraction: 0.8506336
+# Dectected Priviledged Substructures: ['*Cc1cncc(C(C*)*)c1']
+# b'
+# N
+# N
+# O
+# HO
+# N
+# O
+# N
+# NH
+# CC(C)N1CN(C(c2ccccc2)c2ccccc2)n2ccc(=O)c(O)c2C1=O
+# ['CC(C)N1CN(*)n2ccc(=O)c(O)c2C1=O']
+# Predicted PPB fraction: 0.9469088
+# Dectected Priviledged Substructures: ['CC(C)N1CN(*)n2ccc(=O)c(O)c2C1=O']
+# b'
+# N
+# N
+# N
+# O
+# OH
+# O
+# COCCN1CN(C(c2ccccc2)c2ccccc2)n2ccc(=O)c(O)c2C1=O
+# ['COCCN1CN(*)n2ccc(=O)c(O)c2C1=O']
+# Predicted PPB fraction: 0.9236307
+# Dectected Priviledged Substructures: ['COCCN1CN(*)n2ccc(=O)c(O)c2C1=O']
+# b'
+# O
+# N
+# N
+# N
+# O
+# OH
+# O
 def eliminate_redundancy(frag_list,train_df_sort):
     Fragments = []
     for fragment in frag_list:
@@ -581,9 +581,9 @@ smi_list = [smi for smi in train_df.cano_smiles]
 train_df_sort = train_df.sort_values(by = 'endpoint',ascending = False).reset_index(drop=True)
 SA = ['CN1CC(*)C1']
 r = Find_second_level_substructures(SA,train_df_sort)
-CN1CC(*)C1 matches 125 compounds
-Totally find 5062 fragments
-For CN1CC(*)C1 totally find 10 second-level substructures!
+# CN1CC(*)C1 matches 125 compounds
+# Totally find 5062 fragments
+# For CN1CC(*)C1 totally find 10 second-level substructures!
 with open('Results.smi','w')	as f:
     f.write('SA_Fragment\tNAS\tScore\tRES\tCES\tZES\tNTS\n')
     for	i in range(len(r)):
