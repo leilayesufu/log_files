@@ -1,0 +1,59 @@
+# cd /root/
+# sh docker-entrypoint.sh
++ [ -z eos22io ]
++ ersilia serve -p 3000 eos22io
+[32m🚀 Serving model eos22io: idl-ppbopt[0m
+[0m
+[33m   URL: http://127.0.0.1:52939[0m
+[33m   PID: 633[0m
+[33m   SRV: conda[0m
+[0m
+[34m👉 To run model:[0m
+[34m   - run[0m
+[0m
+[34m💁 Information:[0m
+[34m   - info[0m
++ echo Serving model eos22io...
+Serving model eos22io...
++ nginx -g daemon off;
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+nginx: [emerg] still could not bind()
+#  wget https://raw.githubusercontent.com/ersilia-os/ersilia/master/notebooks/eml_canonical.csv
+--2023-10-06 11:32:22--  https://raw.githubusercontent.com/ersilia-os/ersilia/master/notebooks/eml_canonical.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 62402 (61K) [text/plain]
+Saving to: ‘eml_canonical.csv’
+
+eml_canonical.csv     0%[                    ]       0  --.-KB/s               eml_canonical.csv   100%[===================>]  60.94K   380KB/s    in 0.2s    
+
+2023-10-06 11:32:23 (380 KB/s) - ‘eml_canonical.csv’ saved [62402/62402]
+
+# ersilia -v api run -i eml_canonical.csv -o ersilia_output.csv
+11:35:57 | DEBUG    | Getting session from /root/eos/session.json
+11:35:57 | DEBUG    | Getting session from /root/eos/session.json
+11:35:57 | WARNING  | Lake manager 'isaura' is not installed! We strongly recommend installing it to store calculations persistently
+11:35:57 | ERROR    | Isaura is not installed! Calculations will be done without storing and reading from the lake, unfortunately.
+[31m[1m[25m🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+[0m
+[31m[1mError message:
+[0m
+[31m('Connection aborted.', OSError(0, 'Error'))[0m
+[32mIf this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /root/eos/current.log[0m
+# exit

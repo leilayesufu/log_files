@@ -1,0 +1,220 @@
+[
+    {
+        "Id": "dbff41b896d12b611bb2f4e7160dff686aa35a93a74c143c235346fdddeb3ba2",
+        "Created": "2023-10-06T08:27:26.813365051Z",
+        "Path": "sh",
+        "Args": [
+            "/root/docker-entrypoint.sh"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 3765204,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-10-06T08:27:28.204434984Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:bb479617480d55f4bd497b8defd4c40bd1be3c563fa2e6d2b74e83a369b75866",
+        "ResolvConfPath": "/var/lib/docker/containers/dbff41b896d12b611bb2f4e7160dff686aa35a93a74c143c235346fdddeb3ba2/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/dbff41b896d12b611bb2f4e7160dff686aa35a93a74c143c235346fdddeb3ba2/hostname",
+        "HostsPath": "/var/lib/docker/containers/dbff41b896d12b611bb2f4e7160dff686aa35a93a74c143c235346fdddeb3ba2/hosts",
+        "LogPath": "/var/lib/docker/containers/dbff41b896d12b611bb2f4e7160dff686aa35a93a74c143c235346fdddeb3ba2/dbff41b896d12b611bb2f4e7160dff686aa35a93a74c143c235346fdddeb3ba2-json.log",
+        "Name": "/loving_hermann",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                32,
+                133
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/a2bba0930e453a3b91fc6fa6aa1fc76a50dfdfc1a1dc4b91f1483a384a1a51ce-init/diff:/var/lib/docker/overlay2/73e3a0947b2d731f3fa25fc7bf86edc6d2698291f5be0b054b85a66f3a38e53c/diff:/var/lib/docker/overlay2/ce7089bce211f75cdc6a0cdcd07cd4774253ca2593c4d1284e855955695b92c6/diff:/var/lib/docker/overlay2/f024008b2917e7978c05428c04f75ba878f5b6f5dbbbf8bcb681bb5a7dbce243/diff:/var/lib/docker/overlay2/409113643a265c0b7e1a0a1a5a639958f3d5de128b715394ab53b8e2ceca8273/diff:/var/lib/docker/overlay2/46fc94d64a517b7eca7cc440b2ab565b866b7ce453659e0df35308d3a0540f11/diff:/var/lib/docker/overlay2/547e4ea074708e2c13903abc54ae26c87e7fd512c6fb0fce31ad24ccd6528e86/diff:/var/lib/docker/overlay2/a0292c5e7cd425b8869a2659cebcd9814cffbb5f91492040c03f0d82530b1b79/diff:/var/lib/docker/overlay2/49855865cf561f076af0f2a6626d043b3e7dd9b7f13aa17b76caec4ed6c51007/diff:/var/lib/docker/overlay2/2fbd63c9b4fa33801fb3be3a797bb5d5afee996cb82a886feb6b60bc61078acf/diff:/var/lib/docker/overlay2/a569e7b58535cbc494dd5a1753b320cc13378a16b1e9afdcbd130e2c0a991ce2/diff:/var/lib/docker/overlay2/932733fb484e52ee82dbb393e9a2424125ece8ca03aeea018bc10081622095d8/diff:/var/lib/docker/overlay2/af41c470d30213f8b97864c02d980cf5818e58b15a30128d50339a858cea6314/diff:/var/lib/docker/overlay2/2e89ea8da360588b6965cdbed6f9e39f345d4091ca34df67f2f1f3359dd3ad6e/diff",
+                "MergedDir": "/var/lib/docker/overlay2/a2bba0930e453a3b91fc6fa6aa1fc76a50dfdfc1a1dc4b91f1483a384a1a51ce/merged",
+                "UpperDir": "/var/lib/docker/overlay2/a2bba0930e453a3b91fc6fa6aa1fc76a50dfdfc1a1dc4b91f1483a384a1a51ce/diff",
+                "WorkDir": "/var/lib/docker/overlay2/a2bba0930e453a3b91fc6fa6aa1fc76a50dfdfc1a1dc4b91f1483a384a1a51ce/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "dbff41b896d1",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/conda/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D",
+                "PYTHON_VERSION=3.7.17",
+                "PYTHON_PIP_VERSION=23.0.1",
+                "PYTHON_SETUPTOOLS_VERSION=57.5.0",
+                "PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py",
+                "PYTHON_GET_PIP_SHA256=96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207",
+                "MODEL=eos22io"
+            ],
+            "Cmd": null,
+            "Image": "ersiliaos/eos22io",
+            "Volumes": null,
+            "WorkingDir": "/root",
+            "Entrypoint": [
+                "sh",
+                "/root/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "desktop.docker.io/wsl-distro": "Ubuntu-22.04",
+                "org.opencontainers.image.created": "2023-06-20T13:45:42.529Z",
+                "org.opencontainers.image.description": "The Ersilia Model Hub, a repository of AI/ML models for infectious and neglected disease research.",
+                "org.opencontainers.image.licenses": "GPL-3.0",
+                "org.opencontainers.image.revision": "1722171bd8846c14c5876d7d19b7556d0a982be0",
+                "org.opencontainers.image.source": "https://github.com/ersilia-os/ersilia",
+                "org.opencontainers.image.title": "ersilia",
+                "org.opencontainers.image.url": "https://github.com/ersilia-os/ersilia",
+                "org.opencontainers.image.version": "master"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "803a21e589cb39a7af50b77ad64e3f871a1cc9f8c16a9bdbeaa8ab749facb996",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/803a21e589cb",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "0d4fbaa77eb22b6b48f0d4aaf28bb3994615e8a18e373579262cdd5053a05829",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "8caf6e1a43392742badad109d72e1da4d8fd405415bec9c8dd4fea1ac996863e",
+                    "EndpointID": "0d4fbaa77eb22b6b48f0d4aaf28bb3994615e8a18e373579262cdd5053a05829",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

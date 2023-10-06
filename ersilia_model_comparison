@@ -1,0 +1,93 @@
+# cd /root/
+# sh docker-entrypoint.sh
++ [ -z eos22io ]
++ ersilia serve -p 3000 eos22io
+[31m[1m[25m🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+[0m
+[31m[1mError message:
+[0m
+[31m[Errno 2] No such file or directory: '/tmp/ersilia-oe83okfc/command_outputs.log'[0m
+[32mIf this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /root/eos/current.log[0m
+#  wget https://raw.githubusercontent.com/ersilia-os/ersilia/master/notebooks/eml_canonical.csv
+--2023-10-06 11:08:46--  https://raw.githubusercontent.com/ersilia-os/ersilia/master/notebooks/eml_canonical.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.109.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 62402 (61K) [text/plain]
+Saving to: ‘eml_canonical.csv’
+
+eml_canonical.csv     0%[                    ]       0  --.-KB/s               eml_canonical.csv   100%[===================>]  60.94K   361KB/s    in 0.2s    
+
+2023-10-06 11:08:47 (361 KB/s) - ‘eml_canonical.csv’ saved [62402/62402]
+
+# ls
+Dropout.patch	   ModuleList.patch	 download-miniconda.sh	ersilia
+Fingerprint.patch  arch.sh		 eml_canonical.csv
+GRUCell.patch	   bentoml		 eml_canonical.csv.1
+Linear.patch	   docker-entrypoint.sh  eos
+# ersilia -v api run -i eml_canonical.csv -o ersilia_output.csv
+11:11:46 | DEBUG    | Getting session from /root/eos/session.json
+11:11:46 | DEBUG    | Getting session from /root/eos/session.json
+11:11:46 | WARNING  | Lake manager 'isaura' is not installed! We strongly recommend installing it to store calculations persistently
+11:11:46 | ERROR    | Isaura is not installed! Calculations will be done without storing and reading from the lake, unfortunately.
+11:11:47 | DEBUG    | Is fetched: True
+11:11:47 | DEBUG    | Schema available in /root/eos/dest/eos22io/api_schema.json
+11:11:47 | DEBUG    | Setting AutoService for eos22io
+11:11:47 | INFO     | Service class provided
+11:11:48 | DEBUG    | Reading card from eos22io
+11:11:48 | DEBUG    | Reading shape from eos22io
+11:11:48 | DEBUG    | Input Shape: Single
+11:11:48 | DEBUG    | Input type is: compound
+11:11:48 | DEBUG    | Input shape is: Single
+11:11:48 | DEBUG    | Importing module: .types.compound
+11:11:48 | DEBUG    | Checking RDKIT and other requirements necessary for compound inputs
+11:11:48 | DEBUG    | InputShapeSingle shape: Single
+11:11:48 | DEBUG    | Stopping sniffer for finding delimiter
+11:11:48 | DEBUG    | Expected number: 1
+11:11:48 | DEBUG    | Entity is list: False
+11:11:48 | DEBUG    | Stopping sniffer for resolving column types
+11:11:48 | DEBUG    | Has header True
+11:11:48 | DEBUG    | Schema {'input': [1], 'key': None}
+11:11:48 | DEBUG    | Standardizing input single
+11:11:48 | DEBUG    | Reading standard file from /tmp/ersilia-w_gbwf5n/standard_input_file.csv
+11:11:48 | DEBUG    | File has 443 lines
+11:11:48 | DEBUG    | No file splitting necessary!
+11:11:49 | DEBUG    | Reading card from eos22io
+11:11:49 | DEBUG    | Reading shape from eos22io
+11:11:49 | DEBUG    | Input Shape: Single
+11:11:49 | DEBUG    | Input type is: compound
+11:11:49 | DEBUG    | Input shape is: Single
+11:11:49 | DEBUG    | Importing module: .types.compound
+11:11:49 | DEBUG    | Checking RDKIT and other requirements necessary for compound inputs
+11:11:49 | DEBUG    | InputShapeSingle shape: Single
+11:11:49 | DEBUG    | API eos22io:run initialized at URL http://127.0.0.1:44591
+11:11:49 | DEBUG    | Schema available in /root/eos/dest/eos22io/api_schema.json
+11:11:49 | DEBUG    | Posting to run
+11:11:49 | DEBUG    | Batch size 100
+11:11:49 | DEBUG    | Stopping sniffer for finding delimiter
+11:11:49 | DEBUG    | Expected number: 1
+11:11:49 | DEBUG    | Entity is list: False
+11:11:49 | DEBUG    | Stopping sniffer for resolving column types
+11:11:49 | DEBUG    | Has header True
+11:11:49 | DEBUG    | Schema {'input': [1], 'key': None}
+11:11:49 | DEBUG    | Standardizing input single
+11:11:49 | DEBUG    | Reading standard file from /tmp/ersilia-0d7cslt7/standard_input_file.csv
+11:11:49 | DEBUG    | Schema available in /root/eos/dest/eos22io/api_schema.json
+11:11:59 | DEBUG    | Status code: 200
+11:11:59 | DEBUG    | Schema available in /root/eos/dest/eos22io/api_schema.json
+11:12:12 | DEBUG    | Status code: 200
+11:12:29 | DEBUG    | Status code: 200
+11:12:59 | DEBUG    | Status code: 200
+11:13:23 | DEBUG    | Status code: 200
+11:13:23 | DEBUG    | Done with unique posting
+11:13:26 | DEBUG    | Data: outcome
+11:13:26 | DEBUG    | Values: [0.477624]
+11:13:26 | DEBUG    | Pure datatype: numeric_array
+ersilia_output.csv[0m
+# exit
