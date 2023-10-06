@@ -1,0 +1,43 @@
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:42] WARNING: not removing hydrogen atom without neighbors
+[12:02:46] WARNING: not removing hydrogen atom without neighbors
+[12:02:46] WARNING: not removing hydrogen atom without neighbors
+[12:02:49] WARNING: not removing hydrogen atom without neighbors
+[12:02:49] WARNING: not removing hydrogen atom without neighbors
+[12:02:53] WARNING: not removing hydrogen atom without neighbors
+[12:02:53] WARNING: not removing hydrogen atom without neighbors
+[12:03:05] WARNING: not removing hydrogen atom without neighbors
+[12:03:05] WARNING: not removing hydrogen atom without neighbors
+[12:03:11] WARNING: not removing hydrogen atom without neighbors
+[12:03:11] WARNING: not removing hydrogen atom without neighbors
+/home/leila/miniconda3/envs/IDL-PPBopt/lib/python3.7/site-packages/torch/serialization.py:868: SourceChangeWarning: source code of class 'AttentiveFP.AttentiveLayers.Fingerprint' has changed. Saved a reverse patch to Fingerprint.patch. Run `patch -p0 < Fingerprint.patch` to revert your changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/leila/miniconda3/envs/IDL-PPBopt/lib/python3.7/site-packages/torch/serialization.py:868: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. Saved a reverse patch to Linear.patch. Run `patch -p0 < Linear.patch` to revert your changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/leila/miniconda3/envs/IDL-PPBopt/lib/python3.7/site-packages/torch/serialization.py:868: SourceChangeWarning: source code of class 'torch.nn.modules.container.ModuleList' has changed. Saved a reverse patch to ModuleList.patch. Run `patch -p0 < ModuleList.patch` to revert your changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/leila/miniconda3/envs/IDL-PPBopt/lib/python3.7/site-packages/torch/serialization.py:868: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.GRUCell' has changed. Saved a reverse patch to GRUCell.patch. Run `patch -p0 < GRUCell.patch` to revert your changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/leila/miniconda3/envs/IDL-PPBopt/lib/python3.7/site-packages/torch/serialization.py:868: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. Saved a reverse patch to Dropout.patch. Run `patch -p0 < Dropout.patch` to revert your changes.
+  warnings.warn(msg, SourceChangeWarning)
+number of all smiles:  442
+number of successfully processed smiles:  442
+[CaH2]
+[F-]
+[I]
+O
+[Cl-].[K+]
+[I-].[K+]
+S
+N.N.[Ag+].[F-]
+[Cl-].[Na+]
+feature dicts file saved as ersilia_eml_canonical.pickle
+9 compounds cannot be featured
