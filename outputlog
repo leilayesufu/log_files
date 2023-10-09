@@ -1,0 +1,88 @@
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/requests/adapters.py", line 497, in send
+    chunked=chunked,
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/bin/ersilia", line 8, in <module>
+    sys.exit(cli())
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/leila/ersilia/ersilia/cli/commands/__init__.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/leila/ersilia/ersilia/cli/commands/api.py", line 38, in api
+    api_name=api_name, input=input, output=output, batch_size=batch_size
+  File "/home/leila/ersilia/ersilia/core/model.py", line 354, in api
+    api_name=api_name, input=input, output=output, batch_size=batch_size
+  File "/home/leila/ersilia/ersilia/core/model.py", line 368, in api_task
+    for r in result:
+  File "/home/leila/ersilia/ersilia/core/model.py", line 195, in _api_runner_iter
+    for result in api.post(input=input, output=output, batch_size=batch_size):
+  File "/home/leila/ersilia/ersilia/serve/api.py", line 320, in post
+    input=unique_input, output=None, batch_size=batch_size
+  File "/home/leila/ersilia/ersilia/serve/api.py", line 293, in post_unique_input
+    for res in self.post_only_calculations(input, output, batch_size):
+  File "/home/leila/ersilia/ersilia/serve/api.py", line 138, in post_only_calculations
+    result = json.loads(self._post(input, output))
+  File "/home/leila/ersilia/ersilia/serve/api.py", line 103, in _post
+    r = self._do_post([inp_one], output=None)
+  File "/home/leila/ersilia/ersilia/serve/api.py", line 80, in _do_post
+    response = requests.post(url, json=input)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
