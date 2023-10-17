@@ -1,0 +1,4 @@
+../results/best_model.dat
+Precision:0.8404,Recall:0.7075,AUC:0.8982,T_max:0.5770,MCC:0.6712,cutoff_len:64
+
+p_max:0.840376, r_max:0.707510, auc:0.898192, mcc:0.671239

@@ -1,0 +1,19 @@
+../results/best_model.dat
+Traceback (most recent call last):
+  File "predict.py", line 104, in <module>
+    p_max, r_max, auc, mcc = predict(model_file, test_data, batch_size, test_index_files, path_dir)
+  File "predict.py", line 66, in predict
+    model.load_state_dict(torch.load(model_file))
+  File "/home/leila/miniconda3/envs/RLBind/lib/python3.7/site-packages/torch/serialization.py", line 593, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "/home/leila/miniconda3/envs/RLBind/lib/python3.7/site-packages/torch/serialization.py", line 773, in _legacy_load
+    result = unpickler.load()
+  File "/home/leila/miniconda3/envs/RLBind/lib/python3.7/site-packages/torch/serialization.py", line 729, in persistent_load
+    deserialized_objects[root_key] = restore_location(obj, location)
+  File "/home/leila/miniconda3/envs/RLBind/lib/python3.7/site-packages/torch/serialization.py", line 178, in default_restore_location
+    result = fn(storage, location)
+  File "/home/leila/miniconda3/envs/RLBind/lib/python3.7/site-packages/torch/serialization.py", line 154, in _cuda_deserialize
+    device = validate_cuda_device(location)
+  File "/home/leila/miniconda3/envs/RLBind/lib/python3.7/site-packages/torch/serialization.py", line 138, in validate_cuda_device
+    raise RuntimeError('Attempting to deserialize object on a CUDA '
+RuntimeError: Attempting to deserialize object on a CUDA device but torch.cuda.is_available() is False. If you are running on a CPU-only machine, please use torch.load with map_location=torch.device('cpu') to map your storages to the CPU.
