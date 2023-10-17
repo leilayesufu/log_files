@@ -1,0 +1,15 @@
+2023-10-17 19:51:51.117243
+Traceback (most recent call last):
+  File "/home/leila/DrugApp/scripts/rf_model_for_predicting_drug_approval.py", line 17, in <module>
+    df=pd.read_csv(r"..\datasets\prospective_analysis_datasets\{0}_drug_indication_feature_vectors.csv".format(sys.argv[1]),sep=',')
+  File "/home/leila/miniconda3/envs/DrugApp/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/leila/miniconda3/envs/DrugApp/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/leila/miniconda3/envs/DrugApp/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/leila/miniconda3/envs/DrugApp/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "/home/leila/miniconda3/envs/DrugApp/lib/python3.9/site-packages/pandas/io/common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '..\\datasets\\prospective_analysis_datasets\\Rare_drug_indication_feature_vectors.csv'
