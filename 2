@@ -1,0 +1,124 @@
+Loading training args
+Loading data
+Validating SMILES
+Test size = 195
+Predicting with an ensemble of 1 models
+Loading pretrained parameter "encoder.encoder.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.W_i.weight".
+Loading pretrained parameter "encoder.encoder.W_h.weight".
+Loading pretrained parameter "encoder.encoder.W_o.weight".
+Loading pretrained parameter "encoder.encoder.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Saving predictions to /home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv0.csv
+Loading training args
+Loading data
+Validating SMILES
+Test size = 195
+Predicting with an ensemble of 1 models
+Loading pretrained parameter "encoder.encoder.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.W_i.weight".
+Loading pretrained parameter "encoder.encoder.W_h.weight".
+Loading pretrained parameter "encoder.encoder.W_o.weight".
+Loading pretrained parameter "encoder.encoder.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Saving predictions to /home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv1.csv
+Loading training args
+Loading data
+Validating SMILES
+Test size = 195
+Predicting with an ensemble of 1 models
+Loading pretrained parameter "encoder.encoder.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.W_i.weight".
+Loading pretrained parameter "encoder.encoder.W_h.weight".
+Loading pretrained parameter "encoder.encoder.W_o.weight".
+Loading pretrained parameter "encoder.encoder.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Saving predictions to /home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv2.csv
+Loading training args
+Loading data
+Validating SMILES
+Test size = 195
+Predicting with an ensemble of 1 models
+Loading pretrained parameter "encoder.encoder.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.W_i.weight".
+Loading pretrained parameter "encoder.encoder.W_h.weight".
+Loading pretrained parameter "encoder.encoder.W_o.weight".
+Loading pretrained parameter "encoder.encoder.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Saving predictions to /home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv3.csv
+Loading training args
+Loading data
+Validating SMILES
+Test size = 195
+Predicting with an ensemble of 1 models
+Loading pretrained parameter "encoder.encoder.cached_zero_vector".
+Loading pretrained parameter "encoder.encoder.W_i.weight".
+Loading pretrained parameter "encoder.encoder.W_h.weight".
+Loading pretrained parameter "encoder.encoder.W_o.weight".
+Loading pretrained parameter "encoder.encoder.W_o.bias".
+Loading pretrained parameter "ffn.1.weight".
+Loading pretrained parameter "ffn.1.bias".
+Loading pretrained parameter "ffn.4.weight".
+Loading pretrained parameter "ffn.4.bias".
+Saving predictions to /home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv4.csv
+input_file I_test.csv
+output_file output.csv
+root /home/leila/outreachy/taskkk/eos30f3/model/framework/code
+starting process....
+check_fold_absolute_path /home/leila/outreachy/taskkk/eos30f3/model/checkpoints/I_train_rand
+pred_ab_path /home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv
+predict_absolute_path /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../chemprop/predict.py
+0
+python /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../chemprop/predict.py --checkpoint_path=/home/leila/outreachy/taskkk/eos30f3/model/checkpoints/I_train_rand/fold_0/model_0/model.pt --test_path=I_test.csv --preds_path=/home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv0.csv
+1
+python /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../chemprop/predict.py --checkpoint_path=/home/leila/outreachy/taskkk/eos30f3/model/checkpoints/I_train_rand/fold_1/model_0/model.pt --test_path=I_test.csv --preds_path=/home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv1.csv
+2
+python /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../chemprop/predict.py --checkpoint_path=/home/leila/outreachy/taskkk/eos30f3/model/checkpoints/I_train_rand/fold_2/model_0/model.pt --test_path=I_test.csv --preds_path=/home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv2.csv
+3
+python /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../chemprop/predict.py --checkpoint_path=/home/leila/outreachy/taskkk/eos30f3/model/checkpoints/I_train_rand/fold_3/model_0/model.pt --test_path=I_test.csv --preds_path=/home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv3.csv
+4
+python /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../chemprop/predict.py --checkpoint_path=/home/leila/outreachy/taskkk/eos30f3/model/checkpoints/I_train_rand/fold_4/model_0/model.pt --test_path=I_test.csv --preds_path=/home/leila/outreachy/taskkk/eos30f3/model/framework/I_test.csv4.csv
+done
+renamed
+predict_absolute_path0 /home/leila/outreachy/taskkk/eos30f3/model/framework/code/../I_test.csv0.csv
+0      0.885706
+1      0.889818
+2      0.903707
+3      0.806633
+4      0.841375
+         ...   
+190    0.387433
+191    0.094571
+192    0.097898
+193    0.092326
+194    0.094820
+Name: class, Length: 195, dtype: float64
+     predictions
+0       0.885706
+1       0.889818
+2       0.903707
+3       0.806633
+4       0.841375
+..           ...
+190     0.387433
+191     0.094571
+192     0.097898
+193     0.092326
+194     0.094820
+
+[195 rows x 1 columns]
+hello
+finally done
+The file has been deleted.
