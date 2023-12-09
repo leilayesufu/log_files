@@ -1,0 +1,1164 @@
+10:01:41 | DEBUG    | Repo path specified: /home/leila/leila/eos30f3
+10:01:41 | DEBUG    | Absolute path: /home/leila/leila/eos30f3
+⬇️  Fetching model eos30f3: dmpnn-herg
+10:02:12 | DEBUG    | Initialized with URL: None
+10:02:12 | DEBUG    | GitHub CLI is installed
+10:02:12 | DEBUG    | Git LFS is installed
+Updated git hooks.
+Git LFS initialized.
+10:02:12 | DEBUG    | Git LFS has been activated
+10:02:13 | DEBUG    | Connected to the internet
+10:02:13 | DEBUG    | Conda is installed
+10:02:13 | DEBUG    | EOS Home path exists
+10:02:13 | INFO     | Starting delete of model eos30f3
+10:02:13 | INFO     | Removing folder /home/leila/eos/dest/eos30f3
+10:02:13 | INFO     | Removing bento folder first /home/leila/bentoml/repository/eos30f3/20231209100041_152873
+10:02:13 | INFO     | Removing folder /home/leila/eos/repository/eos30f3
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/bin/bentoml", line 5, in <module>
+    from bentoml.cli import cli
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/cli/__init__.py", line 19, in <module>
+    from bentoml.cli.bento_management import add_bento_sub_command
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/cli/bento_management.py", line 28, in <module>
+    from bentoml.yatai.client import get_yatai_client
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/__init__.py", line 21, in <module>
+    from bentoml.yatai.client.bento_repository_api import BentoRepositoryAPIClient
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/bento_repository_api.py", line 29, in <module>
+    from bentoml.yatai.client.label_utils import generate_gprc_labels_selector
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/label_utils.py", line 17, in <module>
+    from bentoml.yatai.proto.label_selectors_pb2 import LabelSelectors
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/proto/label_selectors_pb2.py", line 38, in <module>
+    create_key=_descriptor._internal_create_key),
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/google/protobuf/descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+TypeError: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+10:02:13 | DEBUG    | No BentoML Catalog available
+10:02:13 | INFO     | Deleting conda environment eos30f3
+
+Remove all packages in environment /home/leila/miniconda3/envs/eos30f3:
+
+10:02:16 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos30f3_local.h5
+10:02:16 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos30f3_public.h5
+10:02:16 | INFO     | Removing docker images and stopping containers related to eos30f3
+Total reclaimed space: 0B
+10:02:17 | DEBUG    | Running docker images > /tmp/ersilia-n27lw5u4/docker-images.txt
+10:02:17 | DEBUG    | Model entry eos30f3 was not available in the fetched models registry
+10:02:17 | SUCCESS  | Model eos30f3 deleted successfully
+10:02:21 | DEBUG    | Preparing inner template if necessary
+10:02:21 | DEBUG    | The pack.py file already exists
+10:02:21 | DEBUG    | The Dockerfile file already exists
+10:02:21 | DEBUG    | The src folder already exists
+10:02:21 | DEBUG    | Changing python version if necessary
+10:02:21 | DEBUG    | {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+10:02:21 | DEBUG    | User is not root
+10:02:21 | DEBUG    | Check if model can be run with vanilla (system) code (i.e. dockerfile has no installs)
+10:02:21 | DEBUG    | Check bentoml and python version
+10:02:21 | INFO     | BentoML version {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+10:02:21 | DEBUG    | Custom Ersilia BentoML is used, no need for modifying protobuf version
+10:02:21 | DEBUG    | Model needs some installs
+10:02:21 | DEBUG    | Checking if only python/conda install will be sufficient
+10:02:21 | DEBUG    | Mode: conda
+10:02:21 | DEBUG    | BentoML path exists! Removing it: /home/leila/bentoml/repository/eos30f3
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/bin/bentoml", line 5, in <module>
+    from bentoml.cli import cli
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/cli/__init__.py", line 19, in <module>
+    from bentoml.cli.bento_management import add_bento_sub_command
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/cli/bento_management.py", line 28, in <module>
+    from bentoml.yatai.client import get_yatai_client
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/__init__.py", line 21, in <module>
+    from bentoml.yatai.client.bento_repository_api import BentoRepositoryAPIClient
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/bento_repository_api.py", line 29, in <module>
+    from bentoml.yatai.client.label_utils import generate_gprc_labels_selector
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/label_utils.py", line 17, in <module>
+    from bentoml.yatai.proto.label_selectors_pb2 import LabelSelectors
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/proto/label_selectors_pb2.py", line 38, in <module>
+    create_key=_descriptor._internal_create_key),
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/google/protobuf/descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+TypeError: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+10:02:21 | DEBUG    | No BentoML Catalog available
+10:02:21 | DEBUG    | Trying to remove path: /home/leila/bentoml/repository/eos30f3
+10:02:21 | DEBUG    | ...successfully
+10:02:21 | DEBUG    | Initializing conda packer
+10:02:21 | DEBUG    | Packing model with Conda
+10:02:21 | DEBUG    | Writing install commands
+10:02:21 | DEBUG    | Run commands: ['pip install pip git+https://github.com/bp-kelley/descriptastorus', 'pip install tqdm>=4.62.2', 'pip install typed-argument-parser==1.6.1', 'pip install scikit-learn', 'pip install torch', 'pip install tensorboardX==2.0', 'pip install hyperopt', 'pip install pandas-flavor==0.2.0', 'pip install pandas>=0.24.0', 'pip install scipy>=1.7.0', 'pip install rdkit>=2022.3.3', 'conda install gibrat -y', 'pip install --upgrade protobuf', 'pip install --upgrade bentoml']
+10:02:21 | DEBUG    | Writing install commands in /home/leila/eos/dest/eos30f3/model_install_commands.sh
+10:02:21 | DEBUG    | Setting up
+10:02:21 | DEBUG    | Installs file /home/leila/eos/dest/eos30f3/model_install_commands.sh
+10:02:21 | DEBUG    | Conda environment eos30f3
+10:02:22 | DEBUG    | Environment eos30f3 does not exist
+10:02:22 | INFO     | Cloning base conda environment and adding model dependencies
+Source:      /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+Destination: /home/leila/miniconda3/envs/eos30f3
+Packages: 20
+Files: 5821
+
+Downloading and Extracting Packages: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate eos30f3
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+10:02:31 | DEBUG    | Run commandlines on eos30f3
+10:02:31 | DEBUG    | python -m pip --disable-pip-version-check install pip git+https://github.com/bp-kelley/descriptastorus
+python -m pip --disable-pip-version-check install tqdm>=4.62.2
+python -m pip --disable-pip-version-check install typed-argument-parser==1.6.1
+python -m pip --disable-pip-version-check install scikit-learn
+python -m pip --disable-pip-version-check install torch
+python -m pip --disable-pip-version-check install tensorboardX==2.0
+python -m pip --disable-pip-version-check install hyperopt
+python -m pip --disable-pip-version-check install pandas-flavor==0.2.0
+python -m pip --disable-pip-version-check install pandas>=0.24.0
+python -m pip --disable-pip-version-check install scipy>=1.7.0
+python -m pip --disable-pip-version-check install rdkit>=2022.3.3
+conda install gibrat -y
+python -m pip --disable-pip-version-check install --upgrade protobuf
+python -m pip --disable-pip-version-check install --upgrade bentoml
+python -m pip --disable-pip-version-check install git+https://github.com/ersilia-os/bentoml-ersilia.git
+
+10:02:32 | DEBUG    | Activating base environment
+10:02:32 | DEBUG    | Current working directory: /home/leila/eos/dest/eos30f3
+10:02:32 | DEBUG    | Running bash /tmp/ersilia-i3t3ixra/script.sh 2>&1 | tee -a /tmp/ersilia-ozk1xe2a/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos30f3               *  /home/leila/miniconda3/envs/eos30f3
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting git+https://github.com/bp-kelley/descriptastorus
+  Cloning https://github.com/bp-kelley/descriptastorus to /tmp/pip-req-build-txet9vco
+  Running command git clone --filter=blob:none --quiet https://github.com/bp-kelley/descriptastorus /tmp/pip-req-build-txet9vco
+  Resolved https://github.com/bp-kelley/descriptastorus to commit da9760932ab9a78b116bc697795dd9e1798f087a
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pip in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (22.3.1)
+Collecting pandas_flavor
+  Using cached pandas_flavor-0.6.0-py3-none-any.whl (7.2 kB)
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Collecting scipy
+  Using cached scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from descriptastorus==2.5.0.23) (1.21.6)
+Collecting xarray
+  Using cached xarray-0.20.2-py3-none-any.whl (845 kB)
+Collecting pandas>=0.23
+  Using cached pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas>=0.23->pandas_flavor->descriptastorus==2.5.0.23) (2.8.2)
+Collecting pytz>=2017.3
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas_flavor->descriptastorus==2.5.0.23) (6.7.0)
+Requirement already satisfied: typing-extensions>=3.7 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas_flavor->descriptastorus==2.5.0.23) (4.7.1)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas>=0.23->pandas_flavor->descriptastorus==2.5.0.23) (1.16.0)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->xarray->pandas_flavor->descriptastorus==2.5.0.23) (3.15.0)
+Building wheels for collected packages: descriptastorus
+  Building wheel for descriptastorus (setup.py): started
+  Building wheel for descriptastorus (setup.py): finished with status 'done'
+  Created wheel for descriptastorus: filename=descriptastorus-2.5.0.23-py3-none-any.whl size=1083541 sha256=1b1a96ef55fa681970758096a199fb962065ecab9bb11bde35e0b10831ce2067
+  Stored in directory: /tmp/pip-ephem-wheel-cache-3kjxyh4d/wheels/f9/c3/4f/e7d01f4f2f1a89aef8f0ef088beb4a94976324f3ee21410b10
+Successfully built descriptastorus
+Installing collected packages: pytz, scipy, Pillow, rdkit, pandas, xarray, pandas_flavor, descriptastorus
+Successfully installed Pillow-9.5.0 descriptastorus-2.5.0.23 pandas-1.3.5 pandas_flavor-0.6.0 pytz-2023.3.post1 rdkit-2023.3.2 scipy-1.7.3 xarray-0.20.2
+Collecting typed-argument-parser==1.6.1
+  Using cached typed_argument_parser-1.6.1-py3-none-any.whl
+Requirement already satisfied: typing-extensions>=3.7.4 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from typed-argument-parser==1.6.1) (4.7.1)
+Collecting typing-inspect>=0.5
+  Using cached typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Collecting mypy-extensions>=0.3.0
+  Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Installing collected packages: mypy-extensions, typing-inspect, typed-argument-parser
+Successfully installed mypy-extensions-1.0.0 typed-argument-parser-1.6.1 typing-inspect-0.9.0
+Collecting scikit-learn
+  Using cached scikit_learn-1.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.8 MB)
+Collecting joblib>=0.11
+  Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Requirement already satisfied: numpy>=1.14.6 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from scikit-learn) (1.21.6)
+Requirement already satisfied: scipy>=1.1.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from scikit-learn) (1.7.3)
+Installing collected packages: threadpoolctl, joblib, scikit-learn
+Successfully installed joblib-1.3.2 scikit-learn-1.0.2 threadpoolctl-3.1.0
+Collecting torch
+  Using cached torch-1.13.1-cp37-cp37m-manylinux1_x86_64.whl (887.5 MB)
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Using cached nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Using cached nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+Requirement already satisfied: typing-extensions in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from torch) (4.7.1)
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Using cached nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Using cached nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+Requirement already satisfied: setuptools in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (65.6.3)
+Requirement already satisfied: wheel in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (0.38.4)
+Installing collected packages: nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, nvidia-cudnn-cu11, torch
+Successfully installed nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 torch-1.13.1
+Collecting tensorboardX==2.0
+  Using cached tensorboardX-2.0-py2.py3-none-any.whl (195 kB)
+Requirement already satisfied: protobuf>=3.8.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from tensorboardX==2.0) (3.18.3)
+Requirement already satisfied: six in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from tensorboardX==2.0) (1.16.0)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from tensorboardX==2.0) (1.21.6)
+Installing collected packages: tensorboardX
+Successfully installed tensorboardX-2.0
+Collecting hyperopt
+  Using cached hyperopt-0.2.7-py2.py3-none-any.whl (1.6 MB)
+Collecting py4j
+  Using cached py4j-0.10.9.7-py2.py3-none-any.whl (200 kB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (1.21.6)
+Collecting networkx>=2.2
+  Using cached networkx-2.6.3-py3-none-any.whl (1.9 MB)
+Requirement already satisfied: tqdm in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (4.66.1)
+Requirement already satisfied: scipy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (1.7.3)
+Requirement already satisfied: six in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (1.16.0)
+Collecting cloudpickle
+  Using cached cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+Collecting future
+  Using cached future-0.18.3-py3-none-any.whl
+Installing collected packages: py4j, networkx, future, cloudpickle, hyperopt
+Successfully installed cloudpickle-2.2.1 future-0.18.3 hyperopt-0.2.7 networkx-2.6.3 py4j-0.10.9.7
+Collecting pandas-flavor==0.2.0
+  Using cached pandas_flavor-0.2.0-py2.py3-none-any.whl (6.6 kB)
+Requirement already satisfied: xarray in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas-flavor==0.2.0) (0.20.2)
+Requirement already satisfied: pandas in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas-flavor==0.2.0) (1.3.5)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas->pandas-flavor==0.2.0) (2.8.2)
+Requirement already satisfied: pytz>=2017.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas->pandas-flavor==0.2.0) (2023.3.post1)
+Requirement already satisfied: numpy>=1.17.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas->pandas-flavor==0.2.0) (1.21.6)
+Requirement already satisfied: typing-extensions>=3.7 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas-flavor==0.2.0) (4.7.1)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas-flavor==0.2.0) (6.7.0)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas->pandas-flavor==0.2.0) (1.16.0)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->xarray->pandas-flavor==0.2.0) (3.15.0)
+Installing collected packages: pandas-flavor
+  Attempting uninstall: pandas-flavor
+    Found existing installation: pandas-flavor 0.6.0
+    Uninstalling pandas-flavor-0.6.0:
+      Successfully uninstalled pandas-flavor-0.6.0
+Successfully installed pandas-flavor-0.2.0
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... unsuccessful initial attempt using frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... unsuccessful initial attempt using frozen solve. Retrying with flexible solve.
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - gibrat
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+Requirement already satisfied: protobuf in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (3.18.3)
+Collecting protobuf
+  Using cached protobuf-4.24.4-cp37-abi3-manylinux2014_x86_64.whl (311 kB)
+Installing collected packages: protobuf
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 3.18.3
+    Uninstalling protobuf-3.18.3:
+      Successfully uninstalled protobuf-3.18.3
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+bentoml 0.11.0 requires protobuf<3.19,>=3.8.0, but you have protobuf 4.24.4 which is incompatible.
+Successfully installed protobuf-4.24.4
+Requirement already satisfied: bentoml in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (0.11.0)
+Collecting bentoml
+  Using cached bentoml-1.0.23-py3-none-any.whl (996 kB)
+Collecting opentelemetry-api==1.17.0
+  Using cached opentelemetry_api-1.17.0-py3-none-any.whl (57 kB)
+Requirement already satisfied: cloudpickle in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.2.1)
+Collecting python-multipart
+  Using cached python_multipart-0.0.6-py3-none-any.whl (45 kB)
+Collecting click-option-group
+  Using cached click_option_group-0.5.6-py3-none-any.whl (12 kB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (1.21.6)
+Collecting opentelemetry-semantic-conventions==0.38b0
+  Using cached opentelemetry_semantic_conventions-0.38b0-py3-none-any.whl (26 kB)
+Collecting opentelemetry-instrumentation==0.38b0
+  Using cached opentelemetry_instrumentation-0.38b0-py3-none-any.whl (24 kB)
+Collecting starlette<0.29,>=0.13.5
+  Using cached starlette-0.28.0-py3-none-any.whl (68 kB)
+Collecting backports.cached-property
+  Using cached backports.cached_property-1.0.2-py3-none-any.whl (6.1 kB)
+Collecting opentelemetry-util-http==0.38b0
+  Using cached opentelemetry_util_http-0.38b0-py3-none-any.whl (6.7 kB)
+Requirement already satisfied: psutil in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (5.9.5)
+Collecting deepmerge
+  Using cached deepmerge-1.1.0-py3-none-any.whl (8.5 kB)
+Collecting backports.shutil-copytree
+  Using cached backports.shutil_copytree-0.0.0.2-py3-none-any.whl
+Collecting pip-tools>=6.6.2
+  Using cached pip_tools-6.14.0-py3-none-any.whl (55 kB)
+Collecting pickle5
+  Using cached pickle5-0.0.12-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (256 kB)
+Collecting watchfiles>=0.15.0
+  Using cached watchfiles-0.20.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Collecting opentelemetry-sdk==1.17.0
+  Using cached opentelemetry_sdk-1.17.0-py3-none-any.whl (100 kB)
+Collecting pathspec
+  Using cached pathspec-0.11.2-py3-none-any.whl (29 kB)
+Requirement already satisfied: requests in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.31.0)
+Collecting uvicorn
+  Using cached uvicorn-0.22.0-py3-none-any.whl (58 kB)
+Requirement already satisfied: prometheus-client>=0.10.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (0.17.1)
+Collecting opentelemetry-instrumentation-aiohttp-client==0.38b0
+  Using cached opentelemetry_instrumentation_aiohttp_client-0.38b0-py3-none-any.whl (11 kB)
+Collecting rich>=11.2.0
+  Using cached rich-13.7.0-py3-none-any.whl (240 kB)
+Collecting singledispatchmethod
+  Using cached singledispatchmethod-1.0-py2.py3-none-any.whl (4.7 kB)
+Requirement already satisfied: packaging>=22.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (23.2)
+Collecting pip-requirements-parser>=31.2.0
+  Using cached pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+Collecting attrs>=21.1.0
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting opentelemetry-instrumentation-asgi==0.38b0
+  Using cached opentelemetry_instrumentation_asgi-0.38b0-py3-none-any.whl (13 kB)
+Collecting PyYAML>=5.0
+  Using cached PyYAML-6.0.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (670 kB)
+Requirement already satisfied: python-json-logger in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.0.7)
+Collecting aiohttp
+  Using cached aiohttp-3.8.6-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (987 kB)
+Collecting circus!=0.17.2,>=0.17.0
+  Using cached circus-0.18.0-py3-none-any.whl (200 kB)
+Collecting cattrs>=22.1.0
+  Using cached cattrs-23.1.2-py3-none-any.whl (50 kB)
+Collecting schema
+  Using cached schema-0.7.5-py2.py3-none-any.whl (17 kB)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (6.7.0)
+Requirement already satisfied: Jinja2>=3.0.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (3.1.2)
+Requirement already satisfied: click>=7.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (8.1.7)
+Collecting simple-di>=0.1.4
+  Using cached simple_di-0.1.5-py3-none-any.whl (9.8 kB)
+Collecting pynvml<12
+  Using cached pynvml-11.5.0-py3-none-any.whl (53 kB)
+Requirement already satisfied: python-dateutil in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.8.2)
+Collecting fs
+  Using cached fs-2.4.16-py2.py3-none-any.whl (135 kB)
+Requirement already satisfied: setuptools>=16.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from opentelemetry-api==1.17.0->bentoml) (65.6.3)
+Collecting deprecated>=1.2.6
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Collecting importlib-metadata
+  Using cached importlib_metadata-6.0.1-py3-none-any.whl (21 kB)
+Collecting wrapt<2.0.0,>=1.0.0
+  Using cached wrapt-1.16.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (77 kB)
+Collecting asgiref~=3.0
+  Using cached asgiref-3.7.2-py3-none-any.whl (24 kB)
+Requirement already satisfied: typing-extensions>=3.7.4 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from opentelemetry-sdk==1.17.0->bentoml) (4.7.1)
+Collecting exceptiongroup
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting pyzmq>=17.0
+  Using cached pyzmq-25.1.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.1 MB)
+Collecting tornado>=5.0.2
+  Using cached tornado-6.2-cp37-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (423 kB)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->bentoml) (3.15.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from Jinja2>=3.0.1->bentoml) (2.1.3)
+Collecting pyparsing
+  Using cached pyparsing-3.1.1-py3-none-any.whl (103 kB)
+Requirement already satisfied: pip>=22.2 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pip-tools>=6.6.2->bentoml) (22.3.1)
+Collecting build
+  Using cached build-1.0.3-py3-none-any.whl (18 kB)
+Collecting tomli
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Requirement already satisfied: wheel in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pip-tools>=6.6.2->bentoml) (0.38.4)
+Collecting pygments<3.0.0,>=2.13.0
+  Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting markdown-it-py>=2.2.0
+  Using cached markdown_it_py-2.2.0-py3-none-any.whl (84 kB)
+Collecting anyio<5,>=3.4.0
+  Using cached anyio-3.7.1-py3-none-any.whl (80 kB)
+Collecting async-timeout<5.0,>=4.0.0a3
+  Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting yarl<2.0,>=1.0
+  Using cached yarl-1.9.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (289 kB)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from aiohttp->bentoml) (3.3.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from aiohttp->bentoml) (6.0.4)
+Collecting frozenlist>=1.1.1
+  Using cached frozenlist-1.3.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (148 kB)
+Collecting asynctest==0.13.0
+  Using cached asynctest-0.13.0-py3-none-any.whl (26 kB)
+Collecting aiosignal>=1.1.2
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting appdirs~=1.4.3
+  Using cached appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Requirement already satisfied: six~=1.10 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from fs->bentoml) (1.16.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml) (2022.12.7)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml) (1.26.17)
+Collecting contextlib2>=0.5.5
+  Using cached contextlib2-21.6.0-py2.py3-none-any.whl (13 kB)
+Collecting h11>=0.8
+  Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Collecting sniffio>=1.1
+  Using cached sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting mdurl~=0.1
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting pyproject_hooks
+  Using cached pyproject_hooks-1.0.0-py3-none-any.whl (9.3 kB)
+Installing collected packages: singledispatchmethod, deepmerge, backports.shutil-copytree, appdirs, yarl, wrapt, tornado, tomli, sniffio, simple-di, pyzmq, PyYAML, python-multipart, pyparsing, pynvml, pygments, pickle5, pathspec, opentelemetry-util-http, opentelemetry-semantic-conventions, mdurl, importlib-metadata, h11, fs, frozenlist, exceptiongroup, contextlib2, backports.cached-property, asynctest, async-timeout, asgiref, schema, pyproject_hooks, pip-requirements-parser, markdown-it-py, deprecated, circus, attrs, anyio, aiosignal, watchfiles, uvicorn, starlette, rich, opentelemetry-api, click-option-group, cattrs, build, aiohttp, pip-tools, opentelemetry-sdk, opentelemetry-instrumentation, opentelemetry-instrumentation-asgi, opentelemetry-instrumentation-aiohttp-client, bentoml
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 6.7.0
+    Uninstalling importlib-metadata-6.7.0:
+      Successfully uninstalled importlib-metadata-6.7.0
+  Attempting uninstall: bentoml
+    Found existing installation: bentoml 0.11.0
+    Uninstalling bentoml-0.11.0:
+      Successfully uninstalled bentoml-0.11.0
+Successfully installed PyYAML-6.0.1 aiohttp-3.8.6 aiosignal-1.3.1 anyio-3.7.1 appdirs-1.4.4 asgiref-3.7.2 async-timeout-4.0.3 asynctest-0.13.0 attrs-23.1.0 backports.cached-property-1.0.2 backports.shutil-copytree-0.0.0.2 bentoml-1.0.23 build-1.0.3 cattrs-23.1.2 circus-0.18.0 click-option-group-0.5.6 contextlib2-21.6.0 deepmerge-1.1.0 deprecated-1.2.14 exceptiongroup-1.2.0 frozenlist-1.3.3 fs-2.4.16 h11-0.14.0 importlib-metadata-6.0.1 markdown-it-py-2.2.0 mdurl-0.1.2 opentelemetry-api-1.17.0 opentelemetry-instrumentation-0.38b0 opentelemetry-instrumentation-aiohttp-client-0.38b0 opentelemetry-instrumentation-asgi-0.38b0 opentelemetry-sdk-1.17.0 opentelemetry-semantic-conventions-0.38b0 opentelemetry-util-http-0.38b0 pathspec-0.11.2 pickle5-0.0.12 pip-requirements-parser-32.0.1 pip-tools-6.14.0 pygments-2.17.2 pynvml-11.5.0 pyparsing-3.1.1 pyproject_hooks-1.0.0 python-multipart-0.0.6 pyzmq-25.1.2 rich-13.7.0 schema-0.7.5 simple-di-0.1.5 singledispatchmethod-1.0 sniffio-1.3.0 starlette-0.28.0 tomli-2.0.1 tornado-6.2 uvicorn-0.22.0 watchfiles-0.20.0 wrapt-1.16.0 yarl-1.9.4
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-a9qlpjw_
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-a9qlpjw_
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit 34a26149d92b5dc4a09b6f51aaaa85b3d8116ae4
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: flask in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.5)
+Requirement already satisfied: requests in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.31.0)
+Requirement already satisfied: docker in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.1.3)
+Requirement already satisfied: sqlalchemy-utils in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.41.1)
+Requirement already satisfied: cerberus in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.3.5)
+Requirement already satisfied: humanfriendly in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: alembic in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.12.0)
+Requirement already satisfied: chardet in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.2.0)
+Requirement already satisfied: multidict in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.0.4)
+Requirement already satisfied: werkzeug in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.3)
+Requirement already satisfied: packaging in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (23.2)
+Requirement already satisfied: psutil in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.9.5)
+Requirement already satisfied: python-json-logger in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.7)
+Requirement already satisfied: ruamel.yaml in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.33)
+Requirement already satisfied: prometheus-client in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.1)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.21.6)
+Collecting protobuf<3.19,>=3.8.0
+  Using cached protobuf-3.18.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+Requirement already satisfied: tabulate in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: sqlalchemy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.21)
+Requirement already satisfied: boto3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.28.58)
+Requirement already satisfied: typing-extensions>=4 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (4.7.1)
+Requirement already satisfied: importlib-resources in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (5.12.0)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (6.0.1)
+Requirement already satisfied: Mako in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (1.2.4)
+Requirement already satisfied: greenlet!=0.4.17 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from sqlalchemy->bentoml==0.11.0) (3.0.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: s3transfer<0.8.0,>=0.7.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (0.7.0)
+Requirement already satisfied: botocore<1.32.0,>=1.31.58 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.31.58)
+Requirement already satisfied: urllib3>=1.26.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.26.17)
+Requirement already satisfied: websocket-client>=0.32.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.6.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (2022.12.7)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.4)
+Requirement already satisfied: click>=8.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (8.1.7)
+Requirement already satisfied: itsdangerous>=2.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (2.1.2)
+Requirement already satisfied: Jinja2>=3.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (3.1.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from werkzeug->bentoml==0.11.0) (2.1.3)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.7)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (2.8.2)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.15.0)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (1.16.0)
+Building wheels for collected packages: bentoml
+  Building wheel for bentoml (pyproject.toml): started
+  Building wheel for bentoml (pyproject.toml): finished with status 'done'
+  Created wheel for bentoml: filename=bentoml-0.11.0-py3-none-any.whl size=665276 sha256=514c1f4fe0b0e091fc5c476bdd1ea0f0f263aafc8991c5b4bccf4a04951fbf5a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-94_c8t1p/wheels/c5/ae/16/6ea4097c679d2e7a3a991c633003ec5b4e1c42a0a309fa2d9d
+Successfully built bentoml
+Installing collected packages: protobuf, bentoml
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 4.24.4
+    Uninstalling protobuf-4.24.4:
+      Successfully uninstalled protobuf-4.24.4
+  Attempting uninstall: bentoml
+    Found existing installation: bentoml 1.0.23
+    Uninstalling bentoml-1.0.23:
+      Successfully uninstalled bentoml-1.0.23
+Successfully installed bentoml-0.11.0 protobuf-3.18.3
+10:04:33 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos30f3               *  /home/leila/miniconda3/envs/eos30f3
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting git+https://github.com/bp-kelley/descriptastorus
+  Cloning https://github.com/bp-kelley/descriptastorus to /tmp/pip-req-build-txet9vco
+  Running command git clone --filter=blob:none --quiet https://github.com/bp-kelley/descriptastorus /tmp/pip-req-build-txet9vco
+  Resolved https://github.com/bp-kelley/descriptastorus to commit da9760932ab9a78b116bc697795dd9e1798f087a
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pip in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (22.3.1)
+Collecting pandas_flavor
+  Using cached pandas_flavor-0.6.0-py3-none-any.whl (7.2 kB)
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Collecting scipy
+  Using cached scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from descriptastorus==2.5.0.23) (1.21.6)
+Collecting xarray
+  Using cached xarray-0.20.2-py3-none-any.whl (845 kB)
+Collecting pandas>=0.23
+  Using cached pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas>=0.23->pandas_flavor->descriptastorus==2.5.0.23) (2.8.2)
+Collecting pytz>=2017.3
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas_flavor->descriptastorus==2.5.0.23) (6.7.0)
+Requirement already satisfied: typing-extensions>=3.7 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas_flavor->descriptastorus==2.5.0.23) (4.7.1)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas>=0.23->pandas_flavor->descriptastorus==2.5.0.23) (1.16.0)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->xarray->pandas_flavor->descriptastorus==2.5.0.23) (3.15.0)
+Building wheels for collected packages: descriptastorus
+  Building wheel for descriptastorus (setup.py): started
+  Building wheel for descriptastorus (setup.py): finished with status 'done'
+  Created wheel for descriptastorus: filename=descriptastorus-2.5.0.23-py3-none-any.whl size=1083541 sha256=1b1a96ef55fa681970758096a199fb962065ecab9bb11bde35e0b10831ce2067
+  Stored in directory: /tmp/pip-ephem-wheel-cache-3kjxyh4d/wheels/f9/c3/4f/e7d01f4f2f1a89aef8f0ef088beb4a94976324f3ee21410b10
+Successfully built descriptastorus
+Installing collected packages: pytz, scipy, Pillow, rdkit, pandas, xarray, pandas_flavor, descriptastorus
+Successfully installed Pillow-9.5.0 descriptastorus-2.5.0.23 pandas-1.3.5 pandas_flavor-0.6.0 pytz-2023.3.post1 rdkit-2023.3.2 scipy-1.7.3 xarray-0.20.2
+Collecting typed-argument-parser==1.6.1
+  Using cached typed_argument_parser-1.6.1-py3-none-any.whl
+Requirement already satisfied: typing-extensions>=3.7.4 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from typed-argument-parser==1.6.1) (4.7.1)
+Collecting typing-inspect>=0.5
+  Using cached typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Collecting mypy-extensions>=0.3.0
+  Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Installing collected packages: mypy-extensions, typing-inspect, typed-argument-parser
+Successfully installed mypy-extensions-1.0.0 typed-argument-parser-1.6.1 typing-inspect-0.9.0
+Collecting scikit-learn
+  Using cached scikit_learn-1.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.8 MB)
+Collecting joblib>=0.11
+  Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Requirement already satisfied: numpy>=1.14.6 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from scikit-learn) (1.21.6)
+Requirement already satisfied: scipy>=1.1.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from scikit-learn) (1.7.3)
+Installing collected packages: threadpoolctl, joblib, scikit-learn
+Successfully installed joblib-1.3.2 scikit-learn-1.0.2 threadpoolctl-3.1.0
+Collecting torch
+  Using cached torch-1.13.1-cp37-cp37m-manylinux1_x86_64.whl (887.5 MB)
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Using cached nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Using cached nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+Requirement already satisfied: typing-extensions in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from torch) (4.7.1)
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Using cached nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Using cached nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+Requirement already satisfied: setuptools in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (65.6.3)
+Requirement already satisfied: wheel in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (0.38.4)
+Installing collected packages: nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, nvidia-cudnn-cu11, torch
+Successfully installed nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 torch-1.13.1
+Collecting tensorboardX==2.0
+  Using cached tensorboardX-2.0-py2.py3-none-any.whl (195 kB)
+Requirement already satisfied: protobuf>=3.8.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from tensorboardX==2.0) (3.18.3)
+Requirement already satisfied: six in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from tensorboardX==2.0) (1.16.0)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from tensorboardX==2.0) (1.21.6)
+Installing collected packages: tensorboardX
+Successfully installed tensorboardX-2.0
+Collecting hyperopt
+  Using cached hyperopt-0.2.7-py2.py3-none-any.whl (1.6 MB)
+Collecting py4j
+  Using cached py4j-0.10.9.7-py2.py3-none-any.whl (200 kB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (1.21.6)
+Collecting networkx>=2.2
+  Using cached networkx-2.6.3-py3-none-any.whl (1.9 MB)
+Requirement already satisfied: tqdm in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (4.66.1)
+Requirement already satisfied: scipy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (1.7.3)
+Requirement already satisfied: six in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from hyperopt) (1.16.0)
+Collecting cloudpickle
+  Using cached cloudpickle-2.2.1-py3-none-any.whl (25 kB)
+Collecting future
+  Using cached future-0.18.3-py3-none-any.whl
+Installing collected packages: py4j, networkx, future, cloudpickle, hyperopt
+Successfully installed cloudpickle-2.2.1 future-0.18.3 hyperopt-0.2.7 networkx-2.6.3 py4j-0.10.9.7
+Collecting pandas-flavor==0.2.0
+  Using cached pandas_flavor-0.2.0-py2.py3-none-any.whl (6.6 kB)
+Requirement already satisfied: xarray in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas-flavor==0.2.0) (0.20.2)
+Requirement already satisfied: pandas in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas-flavor==0.2.0) (1.3.5)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas->pandas-flavor==0.2.0) (2.8.2)
+Requirement already satisfied: pytz>=2017.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas->pandas-flavor==0.2.0) (2023.3.post1)
+Requirement already satisfied: numpy>=1.17.3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pandas->pandas-flavor==0.2.0) (1.21.6)
+Requirement already satisfied: typing-extensions>=3.7 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas-flavor==0.2.0) (4.7.1)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from xarray->pandas-flavor==0.2.0) (6.7.0)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas->pandas-flavor==0.2.0) (1.16.0)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->xarray->pandas-flavor==0.2.0) (3.15.0)
+Installing collected packages: pandas-flavor
+  Attempting uninstall: pandas-flavor
+    Found existing installation: pandas-flavor 0.6.0
+    Uninstalling pandas-flavor-0.6.0:
+      Successfully uninstalled pandas-flavor-0.6.0
+Successfully installed pandas-flavor-0.2.0
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... unsuccessful initial attempt using frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... unsuccessful initial attempt using frozen solve. Retrying with flexible solve.
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - gibrat
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+Requirement already satisfied: protobuf in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (3.18.3)
+Collecting protobuf
+  Using cached protobuf-4.24.4-cp37-abi3-manylinux2014_x86_64.whl (311 kB)
+Installing collected packages: protobuf
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 3.18.3
+    Uninstalling protobuf-3.18.3:
+      Successfully uninstalled protobuf-3.18.3
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+bentoml 0.11.0 requires protobuf<3.19,>=3.8.0, but you have protobuf 4.24.4 which is incompatible.
+Successfully installed protobuf-4.24.4
+Requirement already satisfied: bentoml in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (0.11.0)
+Collecting bentoml
+  Using cached bentoml-1.0.23-py3-none-any.whl (996 kB)
+Collecting opentelemetry-api==1.17.0
+  Using cached opentelemetry_api-1.17.0-py3-none-any.whl (57 kB)
+Requirement already satisfied: cloudpickle in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.2.1)
+Collecting python-multipart
+  Using cached python_multipart-0.0.6-py3-none-any.whl (45 kB)
+Collecting click-option-group
+  Using cached click_option_group-0.5.6-py3-none-any.whl (12 kB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (1.21.6)
+Collecting opentelemetry-semantic-conventions==0.38b0
+  Using cached opentelemetry_semantic_conventions-0.38b0-py3-none-any.whl (26 kB)
+Collecting opentelemetry-instrumentation==0.38b0
+  Using cached opentelemetry_instrumentation-0.38b0-py3-none-any.whl (24 kB)
+Collecting starlette<0.29,>=0.13.5
+  Using cached starlette-0.28.0-py3-none-any.whl (68 kB)
+Collecting backports.cached-property
+  Using cached backports.cached_property-1.0.2-py3-none-any.whl (6.1 kB)
+Collecting opentelemetry-util-http==0.38b0
+  Using cached opentelemetry_util_http-0.38b0-py3-none-any.whl (6.7 kB)
+Requirement already satisfied: psutil in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (5.9.5)
+Collecting deepmerge
+  Using cached deepmerge-1.1.0-py3-none-any.whl (8.5 kB)
+Collecting backports.shutil-copytree
+  Using cached backports.shutil_copytree-0.0.0.2-py3-none-any.whl
+Collecting pip-tools>=6.6.2
+  Using cached pip_tools-6.14.0-py3-none-any.whl (55 kB)
+Collecting pickle5
+  Using cached pickle5-0.0.12-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (256 kB)
+Collecting watchfiles>=0.15.0
+  Using cached watchfiles-0.20.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Collecting opentelemetry-sdk==1.17.0
+  Using cached opentelemetry_sdk-1.17.0-py3-none-any.whl (100 kB)
+Collecting pathspec
+  Using cached pathspec-0.11.2-py3-none-any.whl (29 kB)
+Requirement already satisfied: requests in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.31.0)
+Collecting uvicorn
+  Using cached uvicorn-0.22.0-py3-none-any.whl (58 kB)
+Requirement already satisfied: prometheus-client>=0.10.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (0.17.1)
+Collecting opentelemetry-instrumentation-aiohttp-client==0.38b0
+  Using cached opentelemetry_instrumentation_aiohttp_client-0.38b0-py3-none-any.whl (11 kB)
+Collecting rich>=11.2.0
+  Using cached rich-13.7.0-py3-none-any.whl (240 kB)
+Collecting singledispatchmethod
+  Using cached singledispatchmethod-1.0-py2.py3-none-any.whl (4.7 kB)
+Requirement already satisfied: packaging>=22.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (23.2)
+Collecting pip-requirements-parser>=31.2.0
+  Using cached pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+Collecting attrs>=21.1.0
+  Using cached attrs-23.1.0-py3-none-any.whl (61 kB)
+Collecting opentelemetry-instrumentation-asgi==0.38b0
+  Using cached opentelemetry_instrumentation_asgi-0.38b0-py3-none-any.whl (13 kB)
+Collecting PyYAML>=5.0
+  Using cached PyYAML-6.0.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (670 kB)
+Requirement already satisfied: python-json-logger in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.0.7)
+Collecting aiohttp
+  Using cached aiohttp-3.8.6-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (987 kB)
+Collecting circus!=0.17.2,>=0.17.0
+  Using cached circus-0.18.0-py3-none-any.whl (200 kB)
+Collecting cattrs>=22.1.0
+  Using cached cattrs-23.1.2-py3-none-any.whl (50 kB)
+Collecting schema
+  Using cached schema-0.7.5-py2.py3-none-any.whl (17 kB)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (6.7.0)
+Requirement already satisfied: Jinja2>=3.0.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (3.1.2)
+Requirement already satisfied: click>=7.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (8.1.7)
+Collecting simple-di>=0.1.4
+  Using cached simple_di-0.1.5-py3-none-any.whl (9.8 kB)
+Collecting pynvml<12
+  Using cached pynvml-11.5.0-py3-none-any.whl (53 kB)
+Requirement already satisfied: python-dateutil in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml) (2.8.2)
+Collecting fs
+  Using cached fs-2.4.16-py2.py3-none-any.whl (135 kB)
+Requirement already satisfied: setuptools>=16.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from opentelemetry-api==1.17.0->bentoml) (65.6.3)
+Collecting deprecated>=1.2.6
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Collecting importlib-metadata
+  Using cached importlib_metadata-6.0.1-py3-none-any.whl (21 kB)
+Collecting wrapt<2.0.0,>=1.0.0
+  Using cached wrapt-1.16.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (77 kB)
+Collecting asgiref~=3.0
+  Using cached asgiref-3.7.2-py3-none-any.whl (24 kB)
+Requirement already satisfied: typing-extensions>=3.7.4 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from opentelemetry-sdk==1.17.0->bentoml) (4.7.1)
+Collecting exceptiongroup
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Collecting pyzmq>=17.0
+  Using cached pyzmq-25.1.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.1 MB)
+Collecting tornado>=5.0.2
+  Using cached tornado-6.2-cp37-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (423 kB)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->bentoml) (3.15.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from Jinja2>=3.0.1->bentoml) (2.1.3)
+Collecting pyparsing
+  Using cached pyparsing-3.1.1-py3-none-any.whl (103 kB)
+Requirement already satisfied: pip>=22.2 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pip-tools>=6.6.2->bentoml) (22.3.1)
+Collecting build
+  Using cached build-1.0.3-py3-none-any.whl (18 kB)
+Collecting tomli
+  Using cached tomli-2.0.1-py3-none-any.whl (12 kB)
+Requirement already satisfied: wheel in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from pip-tools>=6.6.2->bentoml) (0.38.4)
+Collecting pygments<3.0.0,>=2.13.0
+  Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting markdown-it-py>=2.2.0
+  Using cached markdown_it_py-2.2.0-py3-none-any.whl (84 kB)
+Collecting anyio<5,>=3.4.0
+  Using cached anyio-3.7.1-py3-none-any.whl (80 kB)
+Collecting async-timeout<5.0,>=4.0.0a3
+  Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting yarl<2.0,>=1.0
+  Using cached yarl-1.9.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (289 kB)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from aiohttp->bentoml) (3.3.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from aiohttp->bentoml) (6.0.4)
+Collecting frozenlist>=1.1.1
+  Using cached frozenlist-1.3.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (148 kB)
+Collecting asynctest==0.13.0
+  Using cached asynctest-0.13.0-py3-none-any.whl (26 kB)
+Collecting aiosignal>=1.1.2
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting appdirs~=1.4.3
+  Using cached appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Requirement already satisfied: six~=1.10 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from fs->bentoml) (1.16.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml) (2022.12.7)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml) (1.26.17)
+Collecting contextlib2>=0.5.5
+  Using cached contextlib2-21.6.0-py2.py3-none-any.whl (13 kB)
+Collecting h11>=0.8
+  Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Collecting sniffio>=1.1
+  Using cached sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting mdurl~=0.1
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting pyproject_hooks
+  Using cached pyproject_hooks-1.0.0-py3-none-any.whl (9.3 kB)
+Installing collected packages: singledispatchmethod, deepmerge, backports.shutil-copytree, appdirs, yarl, wrapt, tornado, tomli, sniffio, simple-di, pyzmq, PyYAML, python-multipart, pyparsing, pynvml, pygments, pickle5, pathspec, opentelemetry-util-http, opentelemetry-semantic-conventions, mdurl, importlib-metadata, h11, fs, frozenlist, exceptiongroup, contextlib2, backports.cached-property, asynctest, async-timeout, asgiref, schema, pyproject_hooks, pip-requirements-parser, markdown-it-py, deprecated, circus, attrs, anyio, aiosignal, watchfiles, uvicorn, starlette, rich, opentelemetry-api, click-option-group, cattrs, build, aiohttp, pip-tools, opentelemetry-sdk, opentelemetry-instrumentation, opentelemetry-instrumentation-asgi, opentelemetry-instrumentation-aiohttp-client, bentoml
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 6.7.0
+    Uninstalling importlib-metadata-6.7.0:
+      Successfully uninstalled importlib-metadata-6.7.0
+  Attempting uninstall: bentoml
+    Found existing installation: bentoml 0.11.0
+    Uninstalling bentoml-0.11.0:
+      Successfully uninstalled bentoml-0.11.0
+Successfully installed PyYAML-6.0.1 aiohttp-3.8.6 aiosignal-1.3.1 anyio-3.7.1 appdirs-1.4.4 asgiref-3.7.2 async-timeout-4.0.3 asynctest-0.13.0 attrs-23.1.0 backports.cached-property-1.0.2 backports.shutil-copytree-0.0.0.2 bentoml-1.0.23 build-1.0.3 cattrs-23.1.2 circus-0.18.0 click-option-group-0.5.6 contextlib2-21.6.0 deepmerge-1.1.0 deprecated-1.2.14 exceptiongroup-1.2.0 frozenlist-1.3.3 fs-2.4.16 h11-0.14.0 importlib-metadata-6.0.1 markdown-it-py-2.2.0 mdurl-0.1.2 opentelemetry-api-1.17.0 opentelemetry-instrumentation-0.38b0 opentelemetry-instrumentation-aiohttp-client-0.38b0 opentelemetry-instrumentation-asgi-0.38b0 opentelemetry-sdk-1.17.0 opentelemetry-semantic-conventions-0.38b0 opentelemetry-util-http-0.38b0 pathspec-0.11.2 pickle5-0.0.12 pip-requirements-parser-32.0.1 pip-tools-6.14.0 pygments-2.17.2 pynvml-11.5.0 pyparsing-3.1.1 pyproject_hooks-1.0.0 python-multipart-0.0.6 pyzmq-25.1.2 rich-13.7.0 schema-0.7.5 simple-di-0.1.5 singledispatchmethod-1.0 sniffio-1.3.0 starlette-0.28.0 tomli-2.0.1 tornado-6.2 uvicorn-0.22.0 watchfiles-0.20.0 wrapt-1.16.0 yarl-1.9.4
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-a9qlpjw_
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-a9qlpjw_
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit 34a26149d92b5dc4a09b6f51aaaa85b3d8116ae4
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: flask in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.5)
+Requirement already satisfied: requests in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.31.0)
+Requirement already satisfied: docker in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.1.3)
+Requirement already satisfied: sqlalchemy-utils in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.41.1)
+Requirement already satisfied: cerberus in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.3.5)
+Requirement already satisfied: humanfriendly in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: alembic in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.12.0)
+Requirement already satisfied: chardet in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.2.0)
+Requirement already satisfied: multidict in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.0.4)
+Requirement already satisfied: werkzeug in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.3)
+Requirement already satisfied: packaging in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (23.2)
+Requirement already satisfied: psutil in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.9.5)
+Requirement already satisfied: python-json-logger in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.7)
+Requirement already satisfied: ruamel.yaml in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.33)
+Requirement already satisfied: prometheus-client in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.1)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.21.6)
+Collecting protobuf<3.19,>=3.8.0
+  Using cached protobuf-3.18.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+Requirement already satisfied: tabulate in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: sqlalchemy in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.21)
+Requirement already satisfied: boto3 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.28.58)
+Requirement already satisfied: typing-extensions>=4 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (4.7.1)
+Requirement already satisfied: importlib-resources in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (5.12.0)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (6.0.1)
+Requirement already satisfied: Mako in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (1.2.4)
+Requirement already satisfied: greenlet!=0.4.17 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from sqlalchemy->bentoml==0.11.0) (3.0.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: s3transfer<0.8.0,>=0.7.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (0.7.0)
+Requirement already satisfied: botocore<1.32.0,>=1.31.58 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.31.58)
+Requirement already satisfied: urllib3>=1.26.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.26.17)
+Requirement already satisfied: websocket-client>=0.32.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.6.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (2022.12.7)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.4)
+Requirement already satisfied: click>=8.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (8.1.7)
+Requirement already satisfied: itsdangerous>=2.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (2.1.2)
+Requirement already satisfied: Jinja2>=3.0 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (3.1.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from werkzeug->bentoml==0.11.0) (2.1.3)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.7)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (2.8.2)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.15.0)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos30f3/lib/python3.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (1.16.0)
+Building wheels for collected packages: bentoml
+  Building wheel for bentoml (pyproject.toml): started
+  Building wheel for bentoml (pyproject.toml): finished with status 'done'
+  Created wheel for bentoml: filename=bentoml-0.11.0-py3-none-any.whl size=665276 sha256=514c1f4fe0b0e091fc5c476bdd1ea0f0f263aafc8991c5b4bccf4a04951fbf5a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-94_c8t1p/wheels/c5/ae/16/6ea4097c679d2e7a3a991c633003ec5b4e1c42a0a309fa2d9d
+Successfully built bentoml
+Installing collected packages: protobuf, bentoml
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 4.24.4
+    Uninstalling protobuf-4.24.4:
+      Successfully uninstalled protobuf-4.24.4
+  Attempting uninstall: bentoml
+    Found existing installation: bentoml 1.0.23
+    Uninstalling bentoml-1.0.23:
+      Successfully uninstalled bentoml-1.0.23
+Successfully installed bentoml-0.11.0 protobuf-3.18.3
+
+10:04:33 | DEBUG    | Error occurred while running: bash /tmp/ersilia-i3t3ixra/script.sh 2>&1 | tee -a /tmp/ersilia-ozk1xe2a/command_outputs.log
+10:04:33 | DEBUG    | Activation done
+10:04:33 | DEBUG    | Creating environment YAML file
+10:04:35 | DEBUG    | Storing Conda environment in the local environment database
+10:04:35 | DEBUG    | Done with the Conda setup
+10:04:36 | DEBUG    | Using environment eos30f3
+10:04:36 | DEBUG    | Running command: python pack.py
+10:04:36 | DEBUG    | Run commandlines on eos30f3
+10:04:36 | DEBUG    | 
+        python pack.py
+        
+10:04:36 | DEBUG    | Activating base environment
+10:04:36 | DEBUG    | Current working directory: /home/leila/eos/dest/eos30f3
+10:04:36 | DEBUG    | Running bash /tmp/ersilia-ytk_gtn6/script.sh 2>&1 | tee -a /tmp/ersilia-99zxiypb/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos30f3               *  /home/leila/miniconda3/envs/eos30f3
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+[2023-12-09 10:04:40,100] INFO - BentoService bundle 'eos30f3:20231209100438_5AC6DF' saved to: /home/leila/bentoml/repository/eos30f3/20231209100438_5AC6DF
+10:04:40 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos30f3               *  /home/leila/miniconda3/envs/eos30f3
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+[2023-12-09 10:04:40,100] INFO - BentoService bundle 'eos30f3:20231209100438_5AC6DF' saved to: /home/leila/bentoml/repository/eos30f3/20231209100438_5AC6DF
+
+10:04:40 | DEBUG    | Activation done
+10:04:40 | DEBUG    | Previous command successfully run inside eos30f3 conda environment
+10:04:40 | DEBUG    | Now trying to establish symlinks
+10:04:40 | DEBUG    | BentoML location is /home/leila/bentoml/repository/eos30f3/20231209100438_5AC6DF
+10:04:40 | DEBUG    | Ersilia Bento location is /home/leila/eos/repository/eos30f3/20231209100438_5AC6DF
+10:04:40 | DEBUG    | Building symlinks between /home/leila/eos/repository/eos30f3/20231209100438_5AC6DF and /home/leila/bentoml/repository/eos30f3/20231209100438_5AC6DF
+10:04:40 | DEBUG    | Creating model symlink bundle artifacts > dest
+10:04:40 | DEBUG    | Creating model_install_commands.sh symlink dest <> bundle
+10:04:40 | INFO     | Could not create symbolic link from /home/leila/eos/dest/eos30f3/data.h5 to /home/leila/eos/isaura/lake/eos30f3_public.h5
+10:04:40 | DEBUG    | Run file found in framework: /home/leila/eos/repository/eos30f3/20231209100438_5AC6DF/eos30f3/artifacts/framework/run.sh
+10:04:40 | DEBUG    | Run commandlines on eos30f3
+10:04:40 | DEBUG    | which python > /tmp/ersilia-n4dxm8rx/tmp.txt
+10:04:40 | DEBUG    | Activating base environment
+10:04:40 | DEBUG    | Current working directory: /home/leila/log_files
+10:04:40 | DEBUG    | Running bash /tmp/ersilia-xtt3fehd/script.sh 2>&1 | tee -a /tmp/ersilia-6e1q0i3r/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos30f3               *  /home/leila/miniconda3/envs/eos30f3
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+10:04:41 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos30f3               *  /home/leila/miniconda3/envs/eos30f3
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+
+10:04:41 | DEBUG    | Activation done
+10:04:41 | DEBUG    | Python executable: /home/leila/miniconda3/envs/eos30f3/bin/python
+10:04:41 | DEBUG    | Conda is needed
+10:04:41 | DEBUG    | Checking if model needs to be integrated to a tool
+10:04:42 | DEBUG    | Getting model card of eos30f3
+10:04:42 | DEBUG    | Trying to get metadata from: /home/leila/eos/dest/eos30f3
+10:04:42 | DEBUG    | Card saved at /home/leila/eos/dest/eos30f3/card.json
+10:04:42 | DEBUG    | Saving slug dmpnn-herg
+10:04:42 | DEBUG    | Checking that autoservice works
+10:04:42 | DEBUG    | Setting AutoService for eos30f3
+10:04:42 | DEBUG    | No service class provided, deciding automatically
+10:04:42 | DEBUG    | No service class file exists in /home/leila/eos/repository/eos30f3/20231209100438_5AC6DF/service_class.txt
+10:04:42 | DEBUG    | Setting virtual environment at /home/leila/eos/dest/eos30f3
+10:04:42 | DEBUG    | Service class: conda
+10:04:42 | DEBUG    | Getting APIs from list file
+10:04:42 | DEBUG    | Getting APIs from Bento
+10:04:42 | DEBUG    | Getting info from BentoML and storing in /tmp/ersilia-e9kxn2hf/info.json
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/bin/bentoml", line 5, in <module>
+    from bentoml.cli import cli
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/cli/__init__.py", line 19, in <module>
+    from bentoml.cli.bento_management import add_bento_sub_command
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/cli/bento_management.py", line 28, in <module>
+    from bentoml.yatai.client import get_yatai_client
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/__init__.py", line 21, in <module>
+    from bentoml.yatai.client.bento_repository_api import BentoRepositoryAPIClient
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/bento_repository_api.py", line 29, in <module>
+    from bentoml.yatai.client.label_utils import generate_gprc_labels_selector
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/client/label_utils.py", line 17, in <module>
+    from bentoml.yatai.proto.label_selectors_pb2 import LabelSelectors
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/bentoml/yatai/proto/label_selectors_pb2.py", line 38, in <module>
+    create_key=_descriptor._internal_create_key),
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/google/protobuf/descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+TypeError: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+[]
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/ersilia/bin/ersilia", line 8, in <module>
+    sys.exit(cli())
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/leila/ersilia/ersilia/cli/commands/__init__.py", line 22, in wrapper
+    return func(*args, **kwargs)
+  File "/home/leila/ersilia/ersilia/cli/commands/fetch.py", line 89, in fetch
+    _fetch(mf, model_id)
+  File "/home/leila/ersilia/ersilia/cli/commands/fetch.py", line 12, in _fetch
+    mf.fetch(model_id)
+  File "/home/leila/ersilia/ersilia/hub/fetch/fetch.py", line 214, in fetch
+    self._fetch_not_from_dockerhub(model_id=model_id)
+  File "/home/leila/ersilia/ersilia/hub/fetch/fetch.py", line 135, in _fetch_not_from_dockerhub
+    self._check()
+  File "/home/leila/ersilia/ersilia/hub/fetch/fetch.py", line 108, in _check
+    mc.check()
+  File "/home/leila/ersilia/ersilia/hub/fetch/actions/check.py", line 13, in check
+    AutoService(self.model_id)
+  File "/home/leila/ersilia/ersilia/serve/autoservice.py", line 184, in __init__
+    self._set_apis()
+  File "/home/leila/ersilia/ersilia/serve/autoservice.py", line 225, in _set_apis
+    for api_name in self.service._get_apis_from_where_available():
+  File "/home/leila/ersilia/ersilia/serve/services.py", line 80, in _get_apis_from_where_available
+    apis_list = self._get_apis_from_bento()
+  File "/home/leila/ersilia/ersilia/serve/services.py", line 54, in _get_apis_from_bento
+    info = self._get_info_from_bento()
+  File "/home/leila/ersilia/ersilia/serve/services.py", line 47, in _get_info_from_bento
+    info = json.load(f)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/json/__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home/leila/miniconda3/envs/ersilia/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
