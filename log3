@@ -1,0 +1,585 @@
+05:54:15 | DEBUG    | Repo path specified: /home/leila/leila/eos9ym3
+05:54:15 | DEBUG    | Absolute path: /home/leila/leila/eos9ym3
+⬇️  Fetching model eos9ym3: MRlogP
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+05:54:15 | DEBUG    | Initialized with URL: None
+05:54:15 | DEBUG    | Starting fetching procedure
+05:54:15 | DEBUG    | GitHub CLI is installed
+05:54:15 | DEBUG    | Git LFS is installed
+Updated git hooks.
+Git LFS initialized.
+05:54:15 | DEBUG    | Git LFS has been activated
+05:54:15 | DEBUG    | Connected to the internet
+05:54:15 | DEBUG    | Conda is installed
+05:54:15 | DEBUG    | EOS Home path exists
+05:54:15 | INFO     | Starting delete of model eos9ym3
+05:54:15 | INFO     | Removing folder /home/leila/eos/dest/eos9ym3
+05:54:15 | INFO     | Removing bento folder first /home/leila/bentoml/repository/eos9ym3/20231220054646_B666F6
+05:54:15 | INFO     | Removing folder /home/leila/eos/repository/eos9ym3
+05:54:19 | INFO     | Removing BentoML service eos9ym3:20231220054646_B666F6
+Are you sure about delete eos9ym3:20231220054646_B666F6? This will delete the BentoService saved bundle files permanently [y/N]: BentoService eos9ym3:20231220054646_B666F6 deleted
+05:54:22 | INFO     | Deleting conda environment eos9ym3
+
+Remove all packages in environment /home/leila/miniconda3/envs/eos9ym3:
+
+05:54:26 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos9ym3_local.h5
+05:54:26 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos9ym3_public.h5
+05:54:26 | INFO     | Removing docker images and stopping containers related to eos9ym3
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+05:54:26 | DEBUG    | Model entry eos9ym3 was not available in the fetched models registry
+05:54:26 | SUCCESS  | Model eos9ym3 deleted successfully
+05:54:29 | DEBUG    | Preparing inner template if necessary
+05:54:29 | DEBUG    | The pack.py file already exists
+05:54:29 | DEBUG    | The Dockerfile file already exists
+05:54:29 | DEBUG    | The src folder already exists
+05:54:29 | DEBUG    | Changing python version if necessary
+05:54:29 | DEBUG    | {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+05:54:29 | DEBUG    | User is not root
+05:54:29 | DEBUG    | Check if model can be run with vanilla (system) code (i.e. dockerfile has no installs)
+05:54:29 | DEBUG    | Check bentoml and python version
+05:54:29 | INFO     | BentoML version {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+05:54:29 | DEBUG    | Custom Ersilia BentoML is used, no need for modifying protobuf version
+05:54:29 | DEBUG    | Model needs some installs
+05:54:29 | DEBUG    | Checking if only python/conda install will be sufficient
+05:54:29 | DEBUG    | The python/conda installs may not be sufficient, trying docker
+05:54:29 | DEBUG    | Mode: docker
+05:54:29 | DEBUG    | BentoML path exists! Removing it: /home/leila/bentoml/repository/eos9ym3
+05:54:33 | DEBUG    | Trying to remove path: /home/leila/bentoml/repository/eos9ym3
+05:54:33 | DEBUG    | ...successfully
+05:54:33 | DEBUG    | Initializing conda packer
+05:54:33 | DEBUG    | Packing model with Conda
+05:54:33 | DEBUG    | Writing install commands
+05:54:33 | DEBUG    | Run commands: ['pip install rdkit', 'wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2', 'conda install openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y', 'pip install numpy==1.21.6', 'pip install pandas==1.3.5', 'pip install scikit-learn==1.0.2', 'pip install TensorFlow==2.11.0', 'pip install Keras==2.11.0']
+05:54:33 | DEBUG    | Writing install commands in /home/leila/eos/dest/eos9ym3/model_install_commands.sh
+05:54:33 | DEBUG    | Setting up
+05:54:33 | DEBUG    | Installs file /home/leila/eos/dest/eos9ym3/model_install_commands.sh
+05:54:33 | DEBUG    | Conda environment eos9ym3
+05:54:33 | DEBUG    | Environment eos9ym3 does not exist
+05:54:34 | INFO     | Cloning base conda environment and adding model dependencies
+Source:      /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+Destination: /home/leila/miniconda3/envs/eos9ym3
+Packages: 20
+Files: 5821
+
+Downloading and Extracting Packages: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate eos9ym3
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+05:54:39 | DEBUG    | Run commandlines on eos9ym3
+05:54:39 | DEBUG    | python -m pip --disable-pip-version-check install rdkit
+wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+conda install openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y
+python -m pip --disable-pip-version-check install numpy==1.21.6
+python -m pip --disable-pip-version-check install pandas==1.3.5
+python -m pip --disable-pip-version-check install scikit-learn==1.0.2
+python -m pip --disable-pip-version-check install TensorFlow==2.11.0
+python -m pip --disable-pip-version-check install Keras==2.11.0
+python -m pip --disable-pip-version-check install git+https://github.com/ersilia-os/bentoml-ersilia.git
+
+05:54:39 | DEBUG    | Activating base environment
+05:54:39 | DEBUG    | Current working directory: /home/leila/eos/dest/eos9ym3
+05:54:39 | DEBUG    | Running bash /tmp/ersilia-gd1vd0wt/script.sh 2>&1 | tee -a /tmp/ersilia-_axbqlr0/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.5.0 rdkit-2023.3.2
+--2023-12-20 05:54:45--  https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+Resolving anaconda.org (anaconda.org)... 104.17.15.67, 104.17.16.67, 2606:4700::6811:f43, ...
+Connecting to anaconda.org (anaconda.org)|104.17.15.67|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFN4OXKOMQ%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T094652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHIaCXVzLWVhc3QtMSJHMEUCIQDDxfqblYUMv1g9kL6WjV3Kke%2BQKq1XT%2FaNmxumGG5x5gIgQSBRF8AzQbkrlIUhORz4QB0iHWBlh9E%2FA5KmIIY5h3UqhwUI6%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDJdll17cDlJORT2vQCrbBHowjKCQgi54sVvx9tfRDWKoPXKbW%2Bg551qeD9U5AUEBkzHdWfK%2B7yXp1hkXbs1VlZpwUAoBOIxe8G014wQSjiaEzpr%2B2uqSxBK419OADbh%2BS9UCgJtez7vnkTpMmsuG1cD8ddhSebupLL%2FP33u3ui7dnNsseeevHNp5dIzxcOJs%2Fe2%2BLGycjELaTmH0%2BeUSiJHH%2FzEqywwjyifE5pVszuQHgGnMsM74N3FAzPb6u68j%2FPqDv9614i76%2BeCljTjqx9noUfQ4t6vzAgUnqCBlhQOMWnkPr7PLc03hhfSiN5oaXwCAn24mfbCsBlgPo%2FODZGZ7X6KI4Yi4fGf9l2wLHkXNL6WR%2BadPuJu56NRmVxGsMrZPsmJt6VLEd788Es8syCa54p3sPigf2gjlTv9qkr%2BAN9aG56n5GAjhrG5j7ZFUtsXRw5Jdeuj5yf89vefZXm8cilkFRg4BYoT5BoFE8ZW5I34%2BeiRQRC0Ysy%2BUKCaYMNUxP7skLXFSppnmDdgF05rD3FXMUSm26bEHXYL62Ktni9qbILC5d9oV2fIzR0YCU50EzA8TC5HLZSLIjoPwB2TbmSui1iw%2Beg36NoFZBNa5NoukeLTTWGjQWysdQB4aOlqf4SFkzs2hgWjFmPlojQkmb9oWH0nCK1fE%2BV%2BoUEFtPg4PRwBpWYfmoLxPfCCmlw9tr%2Bpj2C2xunn0LgP2JyLEcA2R8JqzG4Eze8DOGIJofZpx2SzQ%2BciGGlsD1heF3JI3qdZ1vY30uR2esaTX%2Fn0wjLqoid9UZQS%2BvCDUOS5BFrNlDvawLLQtwDCi7IqsBjqaASEfWaGt0E4ri7erDXyEhwNC2sxvxPDdhsgBnokAv65Yq4Noj3Hg4RQOLyICm%2FiU%2FxrxON5xWjpEYppNspjosII3gRYxELMVGD1xSMZ34kphRp%2B9UC33sip3lO%2BmgkNuO%2FQiJRYVyFWbcatC9meguWTYJyLIDFRRUnPuuH5JZkFAxHXSWHjXMuAoF1Lk%2BKqGta4344oG9nXdlAE%3D&X-Amz-Signature=b355d459c78d944d5f8f49301a9d38b32f6593b6149a977c394163f61ca26fbf [following]
+--2023-12-20 05:54:49--  https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFN4OXKOMQ%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T094652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHIaCXVzLWVhc3QtMSJHMEUCIQDDxfqblYUMv1g9kL6WjV3Kke%2BQKq1XT%2FaNmxumGG5x5gIgQSBRF8AzQbkrlIUhORz4QB0iHWBlh9E%2FA5KmIIY5h3UqhwUI6%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDJdll17cDlJORT2vQCrbBHowjKCQgi54sVvx9tfRDWKoPXKbW%2Bg551qeD9U5AUEBkzHdWfK%2B7yXp1hkXbs1VlZpwUAoBOIxe8G014wQSjiaEzpr%2B2uqSxBK419OADbh%2BS9UCgJtez7vnkTpMmsuG1cD8ddhSebupLL%2FP33u3ui7dnNsseeevHNp5dIzxcOJs%2Fe2%2BLGycjELaTmH0%2BeUSiJHH%2FzEqywwjyifE5pVszuQHgGnMsM74N3FAzPb6u68j%2FPqDv9614i76%2BeCljTjqx9noUfQ4t6vzAgUnqCBlhQOMWnkPr7PLc03hhfSiN5oaXwCAn24mfbCsBlgPo%2FODZGZ7X6KI4Yi4fGf9l2wLHkXNL6WR%2BadPuJu56NRmVxGsMrZPsmJt6VLEd788Es8syCa54p3sPigf2gjlTv9qkr%2BAN9aG56n5GAjhrG5j7ZFUtsXRw5Jdeuj5yf89vefZXm8cilkFRg4BYoT5BoFE8ZW5I34%2BeiRQRC0Ysy%2BUKCaYMNUxP7skLXFSppnmDdgF05rD3FXMUSm26bEHXYL62Ktni9qbILC5d9oV2fIzR0YCU50EzA8TC5HLZSLIjoPwB2TbmSui1iw%2Beg36NoFZBNa5NoukeLTTWGjQWysdQB4aOlqf4SFkzs2hgWjFmPlojQkmb9oWH0nCK1fE%2BV%2BoUEFtPg4PRwBpWYfmoLxPfCCmlw9tr%2Bpj2C2xunn0LgP2JyLEcA2R8JqzG4Eze8DOGIJofZpx2SzQ%2BciGGlsD1heF3JI3qdZ1vY30uR2esaTX%2Fn0wjLqoid9UZQS%2BvCDUOS5BFrNlDvawLLQtwDCi7IqsBjqaASEfWaGt0E4ri7erDXyEhwNC2sxvxPDdhsgBnokAv65Yq4Noj3Hg4RQOLyICm%2FiU%2FxrxON5xWjpEYppNspjosII3gRYxELMVGD1xSMZ34kphRp%2B9UC33sip3lO%2BmgkNuO%2FQiJRYVyFWbcatC9meguWTYJyLIDFRRUnPuuH5JZkFAxHXSWHjXMuAoF1Lk%2BKqGta4344oG9nXdlAE%3D&X-Amz-Signature=b355d459c78d944d5f8f49301a9d38b32f6593b6149a977c394163f61ca26fbf
+Resolving binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)... 52.217.229.153, 52.216.221.209, 52.217.224.1, ...
+Connecting to binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)|52.217.229.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5813812 (5.5M) [application/x-tar]
+Saving to: ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’
+
+     0K .......... .......... .......... .......... ..........  0%  104K 54s
+    50K .......... .......... .......... .......... ..........  1% 4.25M 28s
+   100K .......... .......... .......... .......... ..........  2%  195K 28s
+   150K .......... .......... .......... .......... ..........  3% 9.92M 21s
+   200K .......... .......... .......... .......... ..........  4% 2.68M 17s
+   250K .......... .......... .......... .......... ..........  5%  226K 18s
+   300K .......... .......... .......... .......... ..........  6% 1.78M 16s
+   350K .......... .......... .......... .......... ..........  7% 5.77M 14s
+   400K .......... .......... .......... .......... ..........  7%  267K 14s
+   450K .......... .......... .......... .......... ..........  8%  549K 14s
+   500K .......... .......... .......... .......... ..........  9% 14.4M 12s
+   550K .......... .......... .......... .......... .......... 10% 2.42M 11s
+   600K .......... .......... .......... .......... .......... 11%  477K 11s
+   650K .......... .......... .......... .......... .......... 12%  341K 11s
+   700K .......... .......... .......... .......... .......... 13% 1.43M 11s
+   750K .......... .......... .......... .......... .......... 14%  186K 12s
+   800K .......... .......... .......... .......... .......... 14%  317K 12s
+   850K .......... .......... .......... .......... .......... 15%  158K 13s
+   900K .......... .......... .......... .......... .......... 16% 14.5M 12s
+   950K .......... .......... .......... .......... .......... 17%  191K 12s
+  1000K .......... .......... .......... .......... .......... 18% 8.06M 12s
+  1050K .......... .......... .......... .......... .......... 19%  196K 12s
+  1100K .......... .......... .......... .......... .......... 20%  225K 12s
+  1150K .......... .......... .......... .......... .......... 21% 1.06M 12s
+  1200K .......... .......... .......... .......... .......... 22%  238K 12s
+  1250K .......... .......... .......... .......... .......... 22%  242K 12s
+  1300K .......... .......... .......... .......... .......... 23% 1.51M 12s
+  1350K .......... .......... .......... .......... .......... 24%  232K 12s
+  1400K .......... .......... .......... .......... .......... 25%  690K 11s
+  1450K .......... .......... .......... .......... .......... 26%  163K 12s
+  1500K .......... .......... .......... .......... .......... 27%  109K 12s
+  1550K .......... .......... .......... .......... .......... 28%  729K 12s
+  1600K .......... .......... .......... .......... .......... 29%  138K 12s
+  1650K .......... .......... .......... .......... .......... 29%  134K 13s
+  1700K .......... .......... .......... .......... .......... 30%  162K 13s
+  1750K .......... .......... .......... .......... .......... 31%  217K 13s
+  1800K .......... .......... .......... .......... .......... 32%  180K 13s
+  1850K .......... .......... .......... .......... .......... 33%  130K 13s
+  1900K .......... .......... .......... .......... .......... 34%  178K 13s
+  1950K .......... .......... .......... .......... .......... 35%  182K 13s
+  2000K .......... .......... .......... .......... .......... 36%  150K 13s
+  2050K .......... .......... .......... .......... .......... 36%  143K 13s
+  2100K .......... .......... .......... .......... .......... 37%  215K 13s
+  2150K .......... .......... .......... .......... .......... 38%  147K 13s
+  2200K .......... .......... .......... .......... .......... 39%  143K 13s
+  2250K .......... .......... .......... .......... .......... 40%  203K 13s
+  2300K .......... .......... .......... .......... .......... 41%  211K 13s
+  2350K .......... .......... .......... .......... .......... 42%  198K 13s
+  2400K .......... .......... .......... .......... .......... 43%  161K 13s
+  2450K .......... .......... .......... .......... .......... 44%  147K 13s
+  2500K .......... .......... .......... .......... .......... 44%  176K 13s
+  2550K .......... .......... .......... .......... .......... 45%  208K 13s
+  2600K .......... .......... .......... .......... .......... 46%  218K 13s
+  2650K .......... .......... .......... .......... .......... 47%  225K 12s
+  2700K .......... .......... .......... .......... .......... 48%  105K 12s
+  2750K .......... .......... .......... .......... .......... 49%  173K 12s
+  2800K .......... .......... .......... .......... .......... 50%  128K 12s
+  2850K .......... .......... .......... .......... .......... 51%  199K 12s
+  2900K .......... .......... .......... .......... .......... 51%  141K 12s
+  2950K .......... .......... .......... .......... .......... 52%  166K 12s
+  3000K .......... .......... .......... .......... .......... 53%  218K 12s
+  3050K .......... .......... .......... .......... .......... 54%  202K 11s
+  3100K .......... .......... .......... .......... .......... 55%  148K 11s
+  3150K .......... .......... .......... .......... .......... 56%  107K 11s
+  3200K .......... .......... .......... .......... .......... 57%  159K 11s
+  3250K .......... .......... .......... .......... .......... 58%  104K 11s
+  3300K .......... .......... .......... .......... .......... 59% 73.1K 11s
+  3350K .......... .......... .......... .......... .......... 59%  107K 11s
+  3400K .......... .......... .......... .......... .......... 60% 79.2K 11s
+  3450K .......... .......... .......... .......... .......... 61%  122K 11s
+  3500K .......... .......... .......... .......... .......... 62% 86.3K 11s
+  3550K .......... .......... .......... .......... .......... 63% 62.6K 11s
+  3600K .......... .......... .......... .......... .......... 64%  106K 11s
+  3650K .......... .......... .......... .......... .......... 65% 48.9K 11s
+  3700K .......... .......... .......... .......... .......... 66% 68.7K 11s
+  3750K .......... .......... .......... .......... .......... 66% 53.5K 11s
+  3800K .......... .......... .......... .......... .......... 67% 58.4K 11s
+  3850K .......... .......... .......... .......... .......... 68% 54.0K 11s
+  3900K .......... .......... .......... .......... .......... 69% 65.4K 11s
+  3950K .......... .......... .......... .......... .......... 70% 68.6K 11s
+  4000K .......... .......... .......... .......... .......... 71% 71.2K 10s
+  4050K .......... .......... .......... .......... .......... 72% 73.1K 10s
+  4100K .......... .......... .......... .......... .......... 73% 88.2K 10s
+  4150K .......... .......... .......... .......... .......... 73% 77.9K 10s
+  4200K .......... .......... .......... .......... .......... 74% 94.0K 10s
+  4250K .......... .......... .......... .......... .......... 75%  101K 9s
+  4300K .......... .......... .......... .......... .......... 76%  131K 9s
+  4350K .......... .......... .......... .......... .......... 77%  130K 9s
+  4400K .......... .......... .......... .......... .......... 78%  135K 8s
+  4450K .......... .......... .......... .......... .......... 79%  213K 8s
+  4500K .......... .......... .......... .......... .......... 80%  198K 8s
+  4550K .......... .......... .......... .......... .......... 81%  212K 7s
+  4600K .......... .......... .......... .......... .......... 81%  206K 7s
+  4650K .......... .......... .......... .......... .......... 82%  222K 7s
+  4700K .......... .......... .......... .......... .......... 83%  225K 6s
+  4750K .......... .......... .......... .......... .......... 84%  404K 6s
+  4800K .......... .......... .......... .......... .......... 85%  139K 5s
+  4850K .......... .......... .......... .......... .......... 86%  221K 5s
+  4900K .......... .......... .......... .......... .......... 87%  212K 5s
+  4950K .......... .......... .......... .......... .......... 88%  141K 4s
+  5000K .......... .......... .......... .......... .......... 88%  200K 4s
+  5050K .......... .......... .......... .......... .......... 89%  224K 4s
+  5100K .......... .......... .......... .......... .......... 90%  201K 3s
+  5150K .......... .......... .......... .......... .......... 91%  578K 3s
+  5200K .......... .......... .......... .......... .......... 92%  204K 3s
+  5250K .......... .......... .......... .......... .......... 93%  216K 2s
+  5300K .......... .......... .......... .......... .......... 94%  210K 2s
+  5350K .......... .......... .......... .......... .......... 95%  239K 2s
+  5400K .......... .......... .......... .......... .......... 95%  245K 1s
+  5450K .......... .......... .......... .......... .......... 96%  221K 1s
+  5500K .......... .......... .......... .......... .......... 97%  149K 1s
+  5550K .......... .......... .......... .......... .......... 98%  194K 0s
+  5600K .......... .......... .......... .......... .......... 99%  138K 0s
+  5650K .......... .......... .......                         100% 4.73M=36s
+
+utime(openbabel-3.0.0-py27hdef5451_1.tar.bz2): No such file or directory
+2023-12-20 05:55:28 (158 KB/s) - ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’ saved [5813812/5813812]
+
+
+PathNotFoundError: /home/leila/miniconda3/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+
+
+Downloading and Extracting Packages: ...working... done
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+05:55:29 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.5.0 rdkit-2023.3.2
+--2023-12-20 05:54:45--  https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+Resolving anaconda.org (anaconda.org)... 104.17.15.67, 104.17.16.67, 2606:4700::6811:f43, ...
+Connecting to anaconda.org (anaconda.org)|104.17.15.67|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFN4OXKOMQ%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T094652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHIaCXVzLWVhc3QtMSJHMEUCIQDDxfqblYUMv1g9kL6WjV3Kke%2BQKq1XT%2FaNmxumGG5x5gIgQSBRF8AzQbkrlIUhORz4QB0iHWBlh9E%2FA5KmIIY5h3UqhwUI6%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDJdll17cDlJORT2vQCrbBHowjKCQgi54sVvx9tfRDWKoPXKbW%2Bg551qeD9U5AUEBkzHdWfK%2B7yXp1hkXbs1VlZpwUAoBOIxe8G014wQSjiaEzpr%2B2uqSxBK419OADbh%2BS9UCgJtez7vnkTpMmsuG1cD8ddhSebupLL%2FP33u3ui7dnNsseeevHNp5dIzxcOJs%2Fe2%2BLGycjELaTmH0%2BeUSiJHH%2FzEqywwjyifE5pVszuQHgGnMsM74N3FAzPb6u68j%2FPqDv9614i76%2BeCljTjqx9noUfQ4t6vzAgUnqCBlhQOMWnkPr7PLc03hhfSiN5oaXwCAn24mfbCsBlgPo%2FODZGZ7X6KI4Yi4fGf9l2wLHkXNL6WR%2BadPuJu56NRmVxGsMrZPsmJt6VLEd788Es8syCa54p3sPigf2gjlTv9qkr%2BAN9aG56n5GAjhrG5j7ZFUtsXRw5Jdeuj5yf89vefZXm8cilkFRg4BYoT5BoFE8ZW5I34%2BeiRQRC0Ysy%2BUKCaYMNUxP7skLXFSppnmDdgF05rD3FXMUSm26bEHXYL62Ktni9qbILC5d9oV2fIzR0YCU50EzA8TC5HLZSLIjoPwB2TbmSui1iw%2Beg36NoFZBNa5NoukeLTTWGjQWysdQB4aOlqf4SFkzs2hgWjFmPlojQkmb9oWH0nCK1fE%2BV%2BoUEFtPg4PRwBpWYfmoLxPfCCmlw9tr%2Bpj2C2xunn0LgP2JyLEcA2R8JqzG4Eze8DOGIJofZpx2SzQ%2BciGGlsD1heF3JI3qdZ1vY30uR2esaTX%2Fn0wjLqoid9UZQS%2BvCDUOS5BFrNlDvawLLQtwDCi7IqsBjqaASEfWaGt0E4ri7erDXyEhwNC2sxvxPDdhsgBnokAv65Yq4Noj3Hg4RQOLyICm%2FiU%2FxrxON5xWjpEYppNspjosII3gRYxELMVGD1xSMZ34kphRp%2B9UC33sip3lO%2BmgkNuO%2FQiJRYVyFWbcatC9meguWTYJyLIDFRRUnPuuH5JZkFAxHXSWHjXMuAoF1Lk%2BKqGta4344oG9nXdlAE%3D&X-Amz-Signature=b355d459c78d944d5f8f49301a9d38b32f6593b6149a977c394163f61ca26fbf [following]
+--2023-12-20 05:54:49--  https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFN4OXKOMQ%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T094652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHIaCXVzLWVhc3QtMSJHMEUCIQDDxfqblYUMv1g9kL6WjV3Kke%2BQKq1XT%2FaNmxumGG5x5gIgQSBRF8AzQbkrlIUhORz4QB0iHWBlh9E%2FA5KmIIY5h3UqhwUI6%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDJdll17cDlJORT2vQCrbBHowjKCQgi54sVvx9tfRDWKoPXKbW%2Bg551qeD9U5AUEBkzHdWfK%2B7yXp1hkXbs1VlZpwUAoBOIxe8G014wQSjiaEzpr%2B2uqSxBK419OADbh%2BS9UCgJtez7vnkTpMmsuG1cD8ddhSebupLL%2FP33u3ui7dnNsseeevHNp5dIzxcOJs%2Fe2%2BLGycjELaTmH0%2BeUSiJHH%2FzEqywwjyifE5pVszuQHgGnMsM74N3FAzPb6u68j%2FPqDv9614i76%2BeCljTjqx9noUfQ4t6vzAgUnqCBlhQOMWnkPr7PLc03hhfSiN5oaXwCAn24mfbCsBlgPo%2FODZGZ7X6KI4Yi4fGf9l2wLHkXNL6WR%2BadPuJu56NRmVxGsMrZPsmJt6VLEd788Es8syCa54p3sPigf2gjlTv9qkr%2BAN9aG56n5GAjhrG5j7ZFUtsXRw5Jdeuj5yf89vefZXm8cilkFRg4BYoT5BoFE8ZW5I34%2BeiRQRC0Ysy%2BUKCaYMNUxP7skLXFSppnmDdgF05rD3FXMUSm26bEHXYL62Ktni9qbILC5d9oV2fIzR0YCU50EzA8TC5HLZSLIjoPwB2TbmSui1iw%2Beg36NoFZBNa5NoukeLTTWGjQWysdQB4aOlqf4SFkzs2hgWjFmPlojQkmb9oWH0nCK1fE%2BV%2BoUEFtPg4PRwBpWYfmoLxPfCCmlw9tr%2Bpj2C2xunn0LgP2JyLEcA2R8JqzG4Eze8DOGIJofZpx2SzQ%2BciGGlsD1heF3JI3qdZ1vY30uR2esaTX%2Fn0wjLqoid9UZQS%2BvCDUOS5BFrNlDvawLLQtwDCi7IqsBjqaASEfWaGt0E4ri7erDXyEhwNC2sxvxPDdhsgBnokAv65Yq4Noj3Hg4RQOLyICm%2FiU%2FxrxON5xWjpEYppNspjosII3gRYxELMVGD1xSMZ34kphRp%2B9UC33sip3lO%2BmgkNuO%2FQiJRYVyFWbcatC9meguWTYJyLIDFRRUnPuuH5JZkFAxHXSWHjXMuAoF1Lk%2BKqGta4344oG9nXdlAE%3D&X-Amz-Signature=b355d459c78d944d5f8f49301a9d38b32f6593b6149a977c394163f61ca26fbf
+Resolving binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)... 52.217.229.153, 52.216.221.209, 52.217.224.1, ...
+Connecting to binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)|52.217.229.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5813812 (5.5M) [application/x-tar]
+Saving to: ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’
+
+     0K .......... .......... .......... .......... ..........  0%  104K 54s
+    50K .......... .......... .......... .......... ..........  1% 4.25M 28s
+   100K .......... .......... .......... .......... ..........  2%  195K 28s
+   150K .......... .......... .......... .......... ..........  3% 9.92M 21s
+   200K .......... .......... .......... .......... ..........  4% 2.68M 17s
+   250K .......... .......... .......... .......... ..........  5%  226K 18s
+   300K .......... .......... .......... .......... ..........  6% 1.78M 16s
+   350K .......... .......... .......... .......... ..........  7% 5.77M 14s
+   400K .......... .......... .......... .......... ..........  7%  267K 14s
+   450K .......... .......... .......... .......... ..........  8%  549K 14s
+   500K .......... .......... .......... .......... ..........  9% 14.4M 12s
+   550K .......... .......... .......... .......... .......... 10% 2.42M 11s
+   600K .......... .......... .......... .......... .......... 11%  477K 11s
+   650K .......... .......... .......... .......... .......... 12%  341K 11s
+   700K .......... .......... .......... .......... .......... 13% 1.43M 11s
+   750K .......... .......... .......... .......... .......... 14%  186K 12s
+   800K .......... .......... .......... .......... .......... 14%  317K 12s
+   850K .......... .......... .......... .......... .......... 15%  158K 13s
+   900K .......... .......... .......... .......... .......... 16% 14.5M 12s
+   950K .......... .......... .......... .......... .......... 17%  191K 12s
+  1000K .......... .......... .......... .......... .......... 18% 8.06M 12s
+  1050K .......... .......... .......... .......... .......... 19%  196K 12s
+  1100K .......... .......... .......... .......... .......... 20%  225K 12s
+  1150K .......... .......... .......... .......... .......... 21% 1.06M 12s
+  1200K .......... .......... .......... .......... .......... 22%  238K 12s
+  1250K .......... .......... .......... .......... .......... 22%  242K 12s
+  1300K .......... .......... .......... .......... .......... 23% 1.51M 12s
+  1350K .......... .......... .......... .......... .......... 24%  232K 12s
+  1400K .......... .......... .......... .......... .......... 25%  690K 11s
+  1450K .......... .......... .......... .......... .......... 26%  163K 12s
+  1500K .......... .......... .......... .......... .......... 27%  109K 12s
+  1550K .......... .......... .......... .......... .......... 28%  729K 12s
+  1600K .......... .......... .......... .......... .......... 29%  138K 12s
+  1650K .......... .......... .......... .......... .......... 29%  134K 13s
+  1700K .......... .......... .......... .......... .......... 30%  162K 13s
+  1750K .......... .......... .......... .......... .......... 31%  217K 13s
+  1800K .......... .......... .......... .......... .......... 32%  180K 13s
+  1850K .......... .......... .......... .......... .......... 33%  130K 13s
+  1900K .......... .......... .......... .......... .......... 34%  178K 13s
+  1950K .......... .......... .......... .......... .......... 35%  182K 13s
+  2000K .......... .......... .......... .......... .......... 36%  150K 13s
+  2050K .......... .......... .......... .......... .......... 36%  143K 13s
+  2100K .......... .......... .......... .......... .......... 37%  215K 13s
+  2150K .......... .......... .......... .......... .......... 38%  147K 13s
+  2200K .......... .......... .......... .......... .......... 39%  143K 13s
+  2250K .......... .......... .......... .......... .......... 40%  203K 13s
+  2300K .......... .......... .......... .......... .......... 41%  211K 13s
+  2350K .......... .......... .......... .......... .......... 42%  198K 13s
+  2400K .......... .......... .......... .......... .......... 43%  161K 13s
+  2450K .......... .......... .......... .......... .......... 44%  147K 13s
+  2500K .......... .......... .......... .......... .......... 44%  176K 13s
+  2550K .......... .......... .......... .......... .......... 45%  208K 13s
+  2600K .......... .......... .......... .......... .......... 46%  218K 13s
+  2650K .......... .......... .......... .......... .......... 47%  225K 12s
+  2700K .......... .......... .......... .......... .......... 48%  105K 12s
+  2750K .......... .......... .......... .......... .......... 49%  173K 12s
+  2800K .......... .......... .......... .......... .......... 50%  128K 12s
+  2850K .......... .......... .......... .......... .......... 51%  199K 12s
+  2900K .......... .......... .......... .......... .......... 51%  141K 12s
+  2950K .......... .......... .......... .......... .......... 52%  166K 12s
+  3000K .......... .......... .......... .......... .......... 53%  218K 12s
+  3050K .......... .......... .......... .......... .......... 54%  202K 11s
+  3100K .......... .......... .......... .......... .......... 55%  148K 11s
+  3150K .......... .......... .......... .......... .......... 56%  107K 11s
+  3200K .......... .......... .......... .......... .......... 57%  159K 11s
+  3250K .......... .......... .......... .......... .......... 58%  104K 11s
+  3300K .......... .......... .......... .......... .......... 59% 73.1K 11s
+  3350K .......... .......... .......... .......... .......... 59%  107K 11s
+  3400K .......... .......... .......... .......... .......... 60% 79.2K 11s
+  3450K .......... .......... .......... .......... .......... 61%  122K 11s
+  3500K .......... .......... .......... .......... .......... 62% 86.3K 11s
+  3550K .......... .......... .......... .......... .......... 63% 62.6K 11s
+  3600K .......... .......... .......... .......... .......... 64%  106K 11s
+  3650K .......... .......... .......... .......... .......... 65% 48.9K 11s
+  3700K .......... .......... .......... .......... .......... 66% 68.7K 11s
+  3750K .......... .......... .......... .......... .......... 66% 53.5K 11s
+  3800K .......... .......... .......... .......... .......... 67% 58.4K 11s
+  3850K .......... .......... .......... .......... .......... 68% 54.0K 11s
+  3900K .......... .......... .......... .......... .......... 69% 65.4K 11s
+  3950K .......... .......... .......... .......... .......... 70% 68.6K 11s
+  4000K .......... .......... .......... .......... .......... 71% 71.2K 10s
+  4050K .......... .......... .......... .......... .......... 72% 73.1K 10s
+  4100K .......... .......... .......... .......... .......... 73% 88.2K 10s
+  4150K .......... .......... .......... .......... .......... 73% 77.9K 10s
+  4200K .......... .......... .......... .......... .......... 74% 94.0K 10s
+  4250K .......... .......... .......... .......... .......... 75%  101K 9s
+  4300K .......... .......... .......... .......... .......... 76%  131K 9s
+  4350K .......... .......... .......... .......... .......... 77%  130K 9s
+  4400K .......... .......... .......... .......... .......... 78%  135K 8s
+  4450K .......... .......... .......... .......... .......... 79%  213K 8s
+  4500K .......... .......... .......... .......... .......... 80%  198K 8s
+  4550K .......... .......... .......... .......... .......... 81%  212K 7s
+  4600K .......... .......... .......... .......... .......... 81%  206K 7s
+  4650K .......... .......... .......... .......... .......... 82%  222K 7s
+  4700K .......... .......... .......... .......... .......... 83%  225K 6s
+  4750K .......... .......... .......... .......... .......... 84%  404K 6s
+  4800K .......... .......... .......... .......... .......... 85%  139K 5s
+  4850K .......... .......... .......... .......... .......... 86%  221K 5s
+  4900K .......... .......... .......... .......... .......... 87%  212K 5s
+  4950K .......... .......... .......... .......... .......... 88%  141K 4s
+  5000K .......... .......... .......... .......... .......... 88%  200K 4s
+  5050K .......... .......... .......... .......... .......... 89%  224K 4s
+  5100K .......... .......... .......... .......... .......... 90%  201K 3s
+  5150K .......... .......... .......... .......... .......... 91%  578K 3s
+  5200K .......... .......... .......... .......... .......... 92%  204K 3s
+  5250K .......... .......... .......... .......... .......... 93%  216K 2s
+  5300K .......... .......... .......... .......... .......... 94%  210K 2s
+  5350K .......... .......... .......... .......... .......... 95%  239K 2s
+  5400K .......... .......... .......... .......... .......... 95%  245K 1s
+  5450K .......... .......... .......... .......... .......... 96%  221K 1s
+  5500K .......... .......... .......... .......... .......... 97%  149K 1s
+  5550K .......... .......... .......... .......... .......... 98%  194K 0s
+  5600K .......... .......... .......... .......... .......... 99%  138K 0s
+  5650K .......... .......... .......                         100% 4.73M=36s
+
+utime(openbabel-3.0.0-py27hdef5451_1.tar.bz2): No such file or directory
+2023-12-20 05:55:28 (158 KB/s) - ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’ saved [5813812/5813812]
+
+
+PathNotFoundError: /home/leila/miniconda3/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+
+
+Downloading and Extracting Packages: ...working... done
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+
+05:55:29 | DEBUG    | Activation done
+05:55:29 | DEBUG    | Creating environment YAML file
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+/tmp/ersilia-2jzv3_kj/script.sh: line 7: /home/leila/eos/dest/eos9ym3/environment.yml: No such file or directory
+05:55:30 | DEBUG    | Storing Conda environment in the local environment database
+05:55:30 | DEBUG    | Done with the Conda setup
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+05:55:31 | DEBUG    | Using environment eos9ym3
+05:55:31 | DEBUG    | Running command: python pack.py
+05:55:31 | DEBUG    | Run commandlines on eos9ym3
+05:55:31 | DEBUG    | 
+        python pack.py
+        
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+05:55:31 | DEBUG    | Activating base environment
+🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+
+Error message:
+
+[Errno 2] No such file or directory
+If this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /home/leila/eos/current.log

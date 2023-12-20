@@ -1,0 +1,347 @@
+06:38:32 | DEBUG    | Repo path specified: /home/leila/leila/eos9ym3
+06:38:32 | DEBUG    | Absolute path: /home/leila/leila/eos9ym3
+⬇️  Fetching model eos9ym3: MRlogP
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+06:38:33 | DEBUG    | Initialized with URL: None
+06:38:33 | DEBUG    | Starting fetching procedure
+06:38:33 | DEBUG    | GitHub CLI is installed
+06:38:33 | DEBUG    | Git LFS is installed
+Updated git hooks.
+Git LFS initialized.
+06:38:33 | DEBUG    | Git LFS has been activated
+06:38:33 | DEBUG    | Connected to the internet
+06:38:33 | DEBUG    | Conda is installed
+06:38:33 | DEBUG    | EOS Home path exists
+06:38:33 | INFO     | Starting delete of model eos9ym3
+06:38:33 | INFO     | Removing folder /home/leila/eos/dest/eos9ym3
+06:38:37 | INFO     | Deleting conda environment eos9ym3
+
+Remove all packages in environment /home/leila/miniconda3/envs/eos9ym3:
+
+06:38:39 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos9ym3_local.h5
+06:38:39 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos9ym3_public.h5
+06:38:39 | INFO     | Removing docker images and stopping containers related to eos9ym3
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+06:38:39 | DEBUG    | Model entry eos9ym3 was not available in the fetched models registry
+06:38:39 | SUCCESS  | Model eos9ym3 deleted successfully
+06:38:42 | DEBUG    | Preparing inner template if necessary
+06:38:42 | DEBUG    | The pack.py file already exists
+06:38:42 | DEBUG    | The Dockerfile file already exists
+06:38:42 | DEBUG    | The src folder already exists
+06:38:42 | DEBUG    | Changing python version if necessary
+06:38:42 | DEBUG    | {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+06:38:42 | DEBUG    | User is not root
+06:38:42 | DEBUG    | Check if model can be run with vanilla (system) code (i.e. dockerfile has no installs)
+06:38:42 | DEBUG    | Check bentoml and python version
+06:38:42 | INFO     | BentoML version {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+06:38:42 | DEBUG    | Custom Ersilia BentoML is used, no need for modifying protobuf version
+06:38:42 | DEBUG    | Model needs some installs
+06:38:42 | DEBUG    | Checking if only python/conda install will be sufficient
+06:38:42 | DEBUG    | The python/conda installs may not be sufficient, trying docker
+06:38:42 | DEBUG    | Mode: docker
+06:38:42 | DEBUG    | Trying to remove path: /home/leila/bentoml/repository/eos9ym3
+06:38:42 | DEBUG    | ...successfully
+06:38:42 | DEBUG    | ...but path did not exist!
+06:38:42 | DEBUG    | Initializing conda packer
+06:38:42 | DEBUG    | Packing model with Conda
+06:38:42 | DEBUG    | Writing install commands
+06:38:42 | DEBUG    | Run commands: ['pip install rdkit', 'wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2', 'conda install openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y', 'pip install numpy==1.21.6', 'pip install pandas==1.3.5', 'pip install scikit-learn==1.0.2', 'pip install TensorFlow==2.11.0', 'pip install Keras==2.11.0']
+06:38:42 | DEBUG    | Writing install commands in /home/leila/eos/dest/eos9ym3/model_install_commands.sh
+06:38:42 | DEBUG    | Setting up
+06:38:42 | DEBUG    | Installs file /home/leila/eos/dest/eos9ym3/model_install_commands.sh
+06:38:42 | DEBUG    | Conda environment eos9ym3
+06:38:43 | DEBUG    | Environment eos9ym3 does not exist
+06:38:43 | INFO     | Cloning base conda environment and adding model dependencies
+Source:      /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+Destination: /home/leila/miniconda3/envs/eos9ym3
+Packages: 20
+Files: 5821
+
+Downloading and Extracting Packages: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate eos9ym3
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+06:38:48 | DEBUG    | Run commandlines on eos9ym3
+06:38:48 | DEBUG    | python -m pip --disable-pip-version-check install rdkit
+wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+conda install openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y
+python -m pip --disable-pip-version-check install numpy==1.21.6
+python -m pip --disable-pip-version-check install pandas==1.3.5
+python -m pip --disable-pip-version-check install scikit-learn==1.0.2
+python -m pip --disable-pip-version-check install TensorFlow==2.11.0
+python -m pip --disable-pip-version-check install Keras==2.11.0
+python -m pip --disable-pip-version-check install git+https://github.com/ersilia-os/bentoml-ersilia.git
+
+06:38:48 | DEBUG    | Activating base environment
+06:38:48 | DEBUG    | Current working directory: /home/leila/eos/dest/eos9ym3
+06:38:48 | DEBUG    | Running bash /tmp/ersilia-mdt2jscs/script.sh 2>&1 | tee -a /tmp/ersilia-izzm6lka/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.5.0 rdkit-2023.3.2
+--2023-12-20 06:38:52--  https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+Resolving anaconda.org (anaconda.org)... 104.17.16.67, 104.17.15.67, 2606:4700::6811:1043, ...
+Connecting to anaconda.org (anaconda.org)|104.17.16.67|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEVEAX5GI%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T102734Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHMaCXVzLWVhc3QtMSJHMEUCIQDwRTO8dbxhy6LvfodKRL4B1%2FlmfZL7NcLldZw7amV%2F2AIgKzn%2BUx%2B4zXzSs8ZBPFOHafh6Cf%2F6KWkYBcnQCZDVvYAqhwUI7P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDF%2FnF3Fyr2tvBDrVsCrbBM0Y3W%2F%2BilhWFOEKbDBGxeD%2F8uiIrb7tcUm9XdYHxEtjgTsuwK3Z%2BzMODYzT%2Bar9lEGidjv8xoOFvecoI6Ntai4dcv2WgZUGvRHun4A8FDo3M0EarFb0tSw%2Fx77O5tsgX9cj3EYOo4DRTUcF9z3zIMEPilU1zcUXEz39aeBe9qHE%2FprbXL%2Bk8Bt4nz5f3h4%2B9pDG%2FjMgcCm8K3xNHtLm30cle%2F6RlXZd%2BKk0qNFSdm9aPzvXMwq0wfhkiLDB%2FkEEvT4iIIJm1YFQ%2BInYIB%2F2PyqiNpy79Ova4NpBAFAkTCMVqv2Tj33%2BYRs%2Bqcl937Y4FWmqEIoHqcReL8sKQmG4Ab2WKaDEmERhUMOxrHJ%2FU1opxQDfSI9hkdulWfWvaeerSsK%2B%2FmNZsg1GYcoBuhiglr8sNtjt41VT0K5jqgbxnloTkyhu5S17CUapk26qhu%2BklUzKm9O6aIkMFLrrQRVYiHj3sdzvG9UMH7maNaVKXN5s0WSYAJ4JPXJEGNMdUWU95OdI970ADdtPY1F%2F7KZqLWQdz7VE8K2RVW%2FKGKF9HssPVAmeXoTe58gn%2Bbc51Jd6W0xYl82wmA02cb34pmMZZjD586nlQsY2Tpgj1WOYiKL%2FEHQMtgTvA16XYxUcrXq7gaeaSY53CquuoIcBCgsixjHo7f1b94%2Bngz7vSu40%2FzEtc0qNbugw3ZpfI%2Fl%2B%2BlBWZWStrdSr9Y7IYQRomm3doX%2FNSNbE1Z4gUZW2vHuISXvkjGE%2FzSPw%2Bo7COQd0OqTQ0xRpUgj30Jj%2BYgd2r6Gm5sFp9Aw2jzVfk3GEyDCsgousBjqaAe9Wia0SyOAEW4aZW6O6e3QklUYtezBX7otKj3zDKEoXBBg7LSb2BoXuB9Cj32f6XSSbm4U0VBRzuOKBbIN9DwVqDnFOkJIju1smY0c7%2Bosrz3pAV5XSuPfQOlcCs%2B7ziLJl%2FP5dqDBQTLQXutIQxjl%2BaKsKnuxC%2Fqf23nq%2FvsLhVrbZcTLhnjVvr9m63mQzTNIXhpb7bggnMGQ%3D&X-Amz-Signature=d17c9856be8126906074fdbab1ec1cca46663b16baa481fb82be4642dcc81d55 [following]
+--2023-12-20 06:38:54--  https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEVEAX5GI%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T102734Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHMaCXVzLWVhc3QtMSJHMEUCIQDwRTO8dbxhy6LvfodKRL4B1%2FlmfZL7NcLldZw7amV%2F2AIgKzn%2BUx%2B4zXzSs8ZBPFOHafh6Cf%2F6KWkYBcnQCZDVvYAqhwUI7P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDF%2FnF3Fyr2tvBDrVsCrbBM0Y3W%2F%2BilhWFOEKbDBGxeD%2F8uiIrb7tcUm9XdYHxEtjgTsuwK3Z%2BzMODYzT%2Bar9lEGidjv8xoOFvecoI6Ntai4dcv2WgZUGvRHun4A8FDo3M0EarFb0tSw%2Fx77O5tsgX9cj3EYOo4DRTUcF9z3zIMEPilU1zcUXEz39aeBe9qHE%2FprbXL%2Bk8Bt4nz5f3h4%2B9pDG%2FjMgcCm8K3xNHtLm30cle%2F6RlXZd%2BKk0qNFSdm9aPzvXMwq0wfhkiLDB%2FkEEvT4iIIJm1YFQ%2BInYIB%2F2PyqiNpy79Ova4NpBAFAkTCMVqv2Tj33%2BYRs%2Bqcl937Y4FWmqEIoHqcReL8sKQmG4Ab2WKaDEmERhUMOxrHJ%2FU1opxQDfSI9hkdulWfWvaeerSsK%2B%2FmNZsg1GYcoBuhiglr8sNtjt41VT0K5jqgbxnloTkyhu5S17CUapk26qhu%2BklUzKm9O6aIkMFLrrQRVYiHj3sdzvG9UMH7maNaVKXN5s0WSYAJ4JPXJEGNMdUWU95OdI970ADdtPY1F%2F7KZqLWQdz7VE8K2RVW%2FKGKF9HssPVAmeXoTe58gn%2Bbc51Jd6W0xYl82wmA02cb34pmMZZjD586nlQsY2Tpgj1WOYiKL%2FEHQMtgTvA16XYxUcrXq7gaeaSY53CquuoIcBCgsixjHo7f1b94%2Bngz7vSu40%2FzEtc0qNbugw3ZpfI%2Fl%2B%2BlBWZWStrdSr9Y7IYQRomm3doX%2FNSNbE1Z4gUZW2vHuISXvkjGE%2FzSPw%2Bo7COQd0OqTQ0xRpUgj30Jj%2BYgd2r6Gm5sFp9Aw2jzVfk3GEyDCsgousBjqaAe9Wia0SyOAEW4aZW6O6e3QklUYtezBX7otKj3zDKEoXBBg7LSb2BoXuB9Cj32f6XSSbm4U0VBRzuOKBbIN9DwVqDnFOkJIju1smY0c7%2Bosrz3pAV5XSuPfQOlcCs%2B7ziLJl%2FP5dqDBQTLQXutIQxjl%2BaKsKnuxC%2Fqf23nq%2FvsLhVrbZcTLhnjVvr9m63mQzTNIXhpb7bggnMGQ%3D&X-Amz-Signature=d17c9856be8126906074fdbab1ec1cca46663b16baa481fb82be4642dcc81d55
+Resolving binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)... 52.217.171.89, 3.5.25.77, 52.217.225.1, ...
+Connecting to binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)|52.217.171.89|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5813812 (5.5M) [application/x-tar]
+openbabel-3.0.0-py27hdef5451_1.tar.bz2: No such file or directory
+
+Cannot write to ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’ (Success).
+
+PathNotFoundError: /home/leila/miniconda3/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+
+
+Downloading and Extracting Packages: ...working... done
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+06:38:56 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.5.0 rdkit-2023.3.2
+--2023-12-20 06:38:52--  https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+Resolving anaconda.org (anaconda.org)... 104.17.16.67, 104.17.15.67, 2606:4700::6811:1043, ...
+Connecting to anaconda.org (anaconda.org)|104.17.16.67|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEVEAX5GI%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T102734Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHMaCXVzLWVhc3QtMSJHMEUCIQDwRTO8dbxhy6LvfodKRL4B1%2FlmfZL7NcLldZw7amV%2F2AIgKzn%2BUx%2B4zXzSs8ZBPFOHafh6Cf%2F6KWkYBcnQCZDVvYAqhwUI7P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDF%2FnF3Fyr2tvBDrVsCrbBM0Y3W%2F%2BilhWFOEKbDBGxeD%2F8uiIrb7tcUm9XdYHxEtjgTsuwK3Z%2BzMODYzT%2Bar9lEGidjv8xoOFvecoI6Ntai4dcv2WgZUGvRHun4A8FDo3M0EarFb0tSw%2Fx77O5tsgX9cj3EYOo4DRTUcF9z3zIMEPilU1zcUXEz39aeBe9qHE%2FprbXL%2Bk8Bt4nz5f3h4%2B9pDG%2FjMgcCm8K3xNHtLm30cle%2F6RlXZd%2BKk0qNFSdm9aPzvXMwq0wfhkiLDB%2FkEEvT4iIIJm1YFQ%2BInYIB%2F2PyqiNpy79Ova4NpBAFAkTCMVqv2Tj33%2BYRs%2Bqcl937Y4FWmqEIoHqcReL8sKQmG4Ab2WKaDEmERhUMOxrHJ%2FU1opxQDfSI9hkdulWfWvaeerSsK%2B%2FmNZsg1GYcoBuhiglr8sNtjt41VT0K5jqgbxnloTkyhu5S17CUapk26qhu%2BklUzKm9O6aIkMFLrrQRVYiHj3sdzvG9UMH7maNaVKXN5s0WSYAJ4JPXJEGNMdUWU95OdI970ADdtPY1F%2F7KZqLWQdz7VE8K2RVW%2FKGKF9HssPVAmeXoTe58gn%2Bbc51Jd6W0xYl82wmA02cb34pmMZZjD586nlQsY2Tpgj1WOYiKL%2FEHQMtgTvA16XYxUcrXq7gaeaSY53CquuoIcBCgsixjHo7f1b94%2Bngz7vSu40%2FzEtc0qNbugw3ZpfI%2Fl%2B%2BlBWZWStrdSr9Y7IYQRomm3doX%2FNSNbE1Z4gUZW2vHuISXvkjGE%2FzSPw%2Bo7COQd0OqTQ0xRpUgj30Jj%2BYgd2r6Gm5sFp9Aw2jzVfk3GEyDCsgousBjqaAe9Wia0SyOAEW4aZW6O6e3QklUYtezBX7otKj3zDKEoXBBg7LSb2BoXuB9Cj32f6XSSbm4U0VBRzuOKBbIN9DwVqDnFOkJIju1smY0c7%2Bosrz3pAV5XSuPfQOlcCs%2B7ziLJl%2FP5dqDBQTLQXutIQxjl%2BaKsKnuxC%2Fqf23nq%2FvsLhVrbZcTLhnjVvr9m63mQzTNIXhpb7bggnMGQ%3D&X-Amz-Signature=d17c9856be8126906074fdbab1ec1cca46663b16baa481fb82be4642dcc81d55 [following]
+--2023-12-20 06:38:54--  https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEVEAX5GI%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T102734Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHMaCXVzLWVhc3QtMSJHMEUCIQDwRTO8dbxhy6LvfodKRL4B1%2FlmfZL7NcLldZw7amV%2F2AIgKzn%2BUx%2B4zXzSs8ZBPFOHafh6Cf%2F6KWkYBcnQCZDVvYAqhwUI7P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDF%2FnF3Fyr2tvBDrVsCrbBM0Y3W%2F%2BilhWFOEKbDBGxeD%2F8uiIrb7tcUm9XdYHxEtjgTsuwK3Z%2BzMODYzT%2Bar9lEGidjv8xoOFvecoI6Ntai4dcv2WgZUGvRHun4A8FDo3M0EarFb0tSw%2Fx77O5tsgX9cj3EYOo4DRTUcF9z3zIMEPilU1zcUXEz39aeBe9qHE%2FprbXL%2Bk8Bt4nz5f3h4%2B9pDG%2FjMgcCm8K3xNHtLm30cle%2F6RlXZd%2BKk0qNFSdm9aPzvXMwq0wfhkiLDB%2FkEEvT4iIIJm1YFQ%2BInYIB%2F2PyqiNpy79Ova4NpBAFAkTCMVqv2Tj33%2BYRs%2Bqcl937Y4FWmqEIoHqcReL8sKQmG4Ab2WKaDEmERhUMOxrHJ%2FU1opxQDfSI9hkdulWfWvaeerSsK%2B%2FmNZsg1GYcoBuhiglr8sNtjt41VT0K5jqgbxnloTkyhu5S17CUapk26qhu%2BklUzKm9O6aIkMFLrrQRVYiHj3sdzvG9UMH7maNaVKXN5s0WSYAJ4JPXJEGNMdUWU95OdI970ADdtPY1F%2F7KZqLWQdz7VE8K2RVW%2FKGKF9HssPVAmeXoTe58gn%2Bbc51Jd6W0xYl82wmA02cb34pmMZZjD586nlQsY2Tpgj1WOYiKL%2FEHQMtgTvA16XYxUcrXq7gaeaSY53CquuoIcBCgsixjHo7f1b94%2Bngz7vSu40%2FzEtc0qNbugw3ZpfI%2Fl%2B%2BlBWZWStrdSr9Y7IYQRomm3doX%2FNSNbE1Z4gUZW2vHuISXvkjGE%2FzSPw%2Bo7COQd0OqTQ0xRpUgj30Jj%2BYgd2r6Gm5sFp9Aw2jzVfk3GEyDCsgousBjqaAe9Wia0SyOAEW4aZW6O6e3QklUYtezBX7otKj3zDKEoXBBg7LSb2BoXuB9Cj32f6XSSbm4U0VBRzuOKBbIN9DwVqDnFOkJIju1smY0c7%2Bosrz3pAV5XSuPfQOlcCs%2B7ziLJl%2FP5dqDBQTLQXutIQxjl%2BaKsKnuxC%2Fqf23nq%2FvsLhVrbZcTLhnjVvr9m63mQzTNIXhpb7bggnMGQ%3D&X-Amz-Signature=d17c9856be8126906074fdbab1ec1cca46663b16baa481fb82be4642dcc81d55
+Resolving binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)... 52.217.171.89, 3.5.25.77, 52.217.225.1, ...
+Connecting to binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)|52.217.171.89|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5813812 (5.5M) [application/x-tar]
+openbabel-3.0.0-py27hdef5451_1.tar.bz2: No such file or directory
+
+Cannot write to ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’ (Success).
+
+PathNotFoundError: /home/leila/miniconda3/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+
+
+Downloading and Extracting Packages: ...working... done
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/pip/__main__.py", line 9, in <module>
+    if sys.path[0] in ("", os.getcwd()):
+FileNotFoundError: [Errno 2] No such file or directory
+
+06:38:56 | DEBUG    | Activation done
+06:38:56 | DEBUG    | Creating environment YAML file
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+/tmp/ersilia-9q6klkyp/script.sh: line 7: /home/leila/eos/dest/eos9ym3/environment.yml: No such file or directory
+06:38:57 | DEBUG    | Storing Conda environment in the local environment database
+06:38:57 | DEBUG    | Done with the Conda setup
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+06:38:58 | DEBUG    | Using environment eos9ym3
+06:38:58 | DEBUG    | Running command: python pack.py
+06:38:58 | DEBUG    | Run commandlines on eos9ym3
+06:38:58 | DEBUG    | 
+        python pack.py
+        
+sh: 0: getcwd() failed: No such file or directory
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+06:38:58 | DEBUG    | Activating base environment
+🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+
+Error message:
+
+[Errno 2] No such file or directory
+If this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /home/leila/eos/current.log

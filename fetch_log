@@ -1,0 +1,17 @@
+⬇️  Fetching model eos30f3: dmpnn-herg
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+
+Error message:
+
+[Errno 2] No such file or directory
+If this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /home/leila/eos/current.log

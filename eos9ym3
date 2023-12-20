@@ -1,0 +1,1622 @@
+07:22:25 | DEBUG    | Repo path specified: /home/leila/leila/eos9ym3
+07:22:25 | DEBUG    | Absolute path: /home/leila/leila/eos9ym3
+⬇️  Fetching model eos9ym3: MRlogP
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+07:22:25 | DEBUG    | Initialized with URL: None
+07:22:25 | DEBUG    | Starting fetching procedure
+07:22:25 | DEBUG    | GitHub CLI is installed
+07:22:25 | DEBUG    | Git LFS is installed
+Updated git hooks.
+Git LFS initialized.
+07:22:26 | DEBUG    | Git LFS has been activated
+07:22:26 | DEBUG    | Connected to the internet
+07:22:26 | DEBUG    | Conda is installed
+07:22:26 | DEBUG    | EOS Home path exists
+07:22:26 | INFO     | Starting delete of model eos9ym3
+07:22:26 | INFO     | Removing folder /home/leila/eos/dest/eos9ym3
+07:22:26 | INFO     | Removing bento folder first /home/leila/bentoml/repository/eos9ym3/20231220071952_EDC562
+07:22:26 | INFO     | Removing folder /home/leila/eos/repository/eos9ym3
+07:22:30 | INFO     | Removing BentoML service eos9ym3:20231220071952_EDC562
+Are you sure about delete eos9ym3:20231220071952_EDC562? This will delete the BentoService saved bundle files permanently [y/N]: BentoService eos9ym3:20231220071952_EDC562 deleted
+07:22:34 | INFO     | Deleting conda environment eos9ym3
+
+Remove all packages in environment /home/leila/miniconda3/envs/eos9ym3:
+
+07:22:39 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos9ym3_local.h5
+07:22:39 | DEBUG    | Deleting /home/leila/eos/isaura/lake/eos9ym3_public.h5
+07:22:39 | INFO     | Removing docker images and stopping containers related to eos9ym3
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+07:22:39 | DEBUG    | Model entry eos9ym3 was not available in the fetched models registry
+07:22:39 | SUCCESS  | Model eos9ym3 deleted successfully
+07:22:45 | DEBUG    | Preparing inner template if necessary
+07:22:45 | DEBUG    | The pack.py file already exists
+07:22:45 | DEBUG    | The Dockerfile file already exists
+07:22:45 | DEBUG    | The src folder already exists
+07:22:45 | DEBUG    | Changing python version if necessary
+07:22:45 | DEBUG    | {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+07:22:45 | DEBUG    | User is not root
+07:22:45 | DEBUG    | Check if model can be run with vanilla (system) code (i.e. dockerfile has no installs)
+07:22:45 | DEBUG    | Check bentoml and python version
+07:22:45 | INFO     | BentoML version {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+07:22:45 | DEBUG    | Custom Ersilia BentoML is used, no need for modifying protobuf version
+07:22:45 | DEBUG    | Model needs some installs
+07:22:45 | DEBUG    | Checking if only python/conda install will be sufficient
+07:22:45 | DEBUG    | The python/conda installs may not be sufficient, trying docker
+07:22:45 | DEBUG    | Mode: docker
+07:22:45 | DEBUG    | BentoML path exists! Removing it: /home/leila/bentoml/repository/eos9ym3
+07:22:49 | DEBUG    | Trying to remove path: /home/leila/bentoml/repository/eos9ym3
+07:22:49 | DEBUG    | ...successfully
+07:22:49 | DEBUG    | Initializing conda packer
+07:22:49 | DEBUG    | Packing model with Conda
+07:22:49 | DEBUG    | Writing install commands
+07:22:49 | DEBUG    | Run commands: ['pip install rdkit', 'wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2', 'conda install openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y', 'pip install numpy==1.21.6', 'pip install pandas==1.3.5', 'pip install scikit-learn==1.0.2', 'pip install TensorFlow==2.11.0', 'pip install Keras==2.11.0']
+07:22:49 | DEBUG    | Writing install commands in /home/leila/eos/dest/eos9ym3/model_install_commands.sh
+07:22:49 | DEBUG    | Setting up
+07:22:49 | DEBUG    | Installs file /home/leila/eos/dest/eos9ym3/model_install_commands.sh
+07:22:49 | DEBUG    | Conda environment eos9ym3
+07:22:51 | DEBUG    | Environment eos9ym3 does not exist
+07:22:52 | INFO     | Cloning base conda environment and adding model dependencies
+Source:      /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+Destination: /home/leila/miniconda3/envs/eos9ym3
+Packages: 20
+Files: 5821
+
+Downloading and Extracting Packages: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate eos9ym3
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+07:22:59 | DEBUG    | Run commandlines on eos9ym3
+07:22:59 | DEBUG    | python -m pip --disable-pip-version-check install rdkit
+wget https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+conda install openbabel-3.0.0-py27hdef5451_1.tar.bz2 -y
+python -m pip --disable-pip-version-check install numpy==1.21.6
+python -m pip --disable-pip-version-check install pandas==1.3.5
+python -m pip --disable-pip-version-check install scikit-learn==1.0.2
+python -m pip --disable-pip-version-check install TensorFlow==2.11.0
+python -m pip --disable-pip-version-check install Keras==2.11.0
+python -m pip --disable-pip-version-check install git+https://github.com/ersilia-os/bentoml-ersilia.git
+
+07:23:00 | DEBUG    | Activating base environment
+07:23:00 | DEBUG    | Current working directory: /home/leila/eos/dest/eos9ym3
+07:23:00 | DEBUG    | Running bash /tmp/ersilia-4qx96co7/script.sh 2>&1 | tee -a /tmp/ersilia-wy_fp6sk/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.5.0 rdkit-2023.3.2
+--2023-12-20 07:23:06--  https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+Resolving anaconda.org (anaconda.org)... 104.17.15.67, 104.17.16.67, 2606:4700::6811:1043, ...
+Connecting to anaconda.org (anaconda.org)|104.17.15.67|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEQ2GKAGN%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T123714Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHQaCXVzLWVhc3QtMSJHMEUCIGYGYnvmNZAWDoahjFMTnWdoryL5F0JP1YQrYFbaFcFwAiEA4bRDSKDNFOm%2Frd5hAANrFcUUj%2BD1kLBvbWM%2BblcmaJQqhwUI7f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDE2NqIeYn0yhAg%2BFYirbBML1U%2BGNF6hQks7xWJBfo8mUUtMYglgh9MiVJgPAdRq76SvWWIfQzwe3XsLchPxa15URxZzR1t28IFzTjp3c%2BbqmJSQs%2BC1XpY40ugVP6hPMmYWv0U87HJoJzCAs5vcAHkchNdmtdmvdTfmfsAXrovNTJRjxnq5mpF3YwB0BnkIeQy8Wzh0sva1eY7YttywFcwr96NNuE7sY2PkihiRiH6yDZ12An5MSPwNXfYLjDt5f0R8QOC60HfmSISrvuqPUUQoW6LRPvi075XGnAOurXGe%2FW%2BASgn5mgDWxKVXU41K0T0TsykzVKECSQ7iFoodwrPRL8pu0N03m%2FtrSk8ltDcHkO3Zo4GWDXCJWfmZrU4vM%2FQVh5fUj6YulVA%2BT9%2BsZRmnuaCOFffTyIU8p3WF5lVtK2fKHioMLgxYDXyTx5%2BnxWL9H7S%2BkJoAz4zX7qMQQUTc21atACN6asnjkkuYuI29K9fyjmei%2BgqrAwKTsSFZeBLlEP2mZitaueLkY1ko%2BX7uYT9ywEaQklv7LR95lg6pbEPzteGPq5lttFTY8mKO5cq4vJ2x66fblhaarQSdsmxZI485erK%2BARHKhWkSoRgZiE6ob%2BfYx8GS1PLY3k6V5OUBBngDh9gtj5hWAuAdHc3WrJiFsV3pcHifJkL1nw4qMgLmOIR9ln2MhlqZz0tyRj8hS66A8tLZzWvby8ZOi38RjFDedhWDMz%2BVm1IMJzIVcZENNEGcZTvGaybT65kQD%2BiAK5LLmgaoz8JKE%2BU5kSaAjOZ8VTJwAU0LRbj96nJrfbeM38icAALxDYTCsq4usBjqaAZ%2FTWGJjlinPGJhmUTRanNRXvEW5hrXfGM5S3AQhnd2fV8IBB1iTHml1Z0C%2FMkGoNZiZ%2BGNf%2ByjZMk9udRAtH9g7bCJMiRIqdPJerbpuVGTJgj9MSsemYL0ZFvcN%2BCZJIrOgD6EUPaCwWbvp2%2FQ67RUNfBp1DS4f79qw6ew5PVHVOheW%2BIEnkeq05aMZT5XFcrqhxfKjfXxc2kY%3D&X-Amz-Signature=030af013e56d9347fd44baea9735d1d507f201a36da01916ee6d979360ae6fde [following]
+--2023-12-20 07:23:07--  https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEQ2GKAGN%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T123714Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHQaCXVzLWVhc3QtMSJHMEUCIGYGYnvmNZAWDoahjFMTnWdoryL5F0JP1YQrYFbaFcFwAiEA4bRDSKDNFOm%2Frd5hAANrFcUUj%2BD1kLBvbWM%2BblcmaJQqhwUI7f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDE2NqIeYn0yhAg%2BFYirbBML1U%2BGNF6hQks7xWJBfo8mUUtMYglgh9MiVJgPAdRq76SvWWIfQzwe3XsLchPxa15URxZzR1t28IFzTjp3c%2BbqmJSQs%2BC1XpY40ugVP6hPMmYWv0U87HJoJzCAs5vcAHkchNdmtdmvdTfmfsAXrovNTJRjxnq5mpF3YwB0BnkIeQy8Wzh0sva1eY7YttywFcwr96NNuE7sY2PkihiRiH6yDZ12An5MSPwNXfYLjDt5f0R8QOC60HfmSISrvuqPUUQoW6LRPvi075XGnAOurXGe%2FW%2BASgn5mgDWxKVXU41K0T0TsykzVKECSQ7iFoodwrPRL8pu0N03m%2FtrSk8ltDcHkO3Zo4GWDXCJWfmZrU4vM%2FQVh5fUj6YulVA%2BT9%2BsZRmnuaCOFffTyIU8p3WF5lVtK2fKHioMLgxYDXyTx5%2BnxWL9H7S%2BkJoAz4zX7qMQQUTc21atACN6asnjkkuYuI29K9fyjmei%2BgqrAwKTsSFZeBLlEP2mZitaueLkY1ko%2BX7uYT9ywEaQklv7LR95lg6pbEPzteGPq5lttFTY8mKO5cq4vJ2x66fblhaarQSdsmxZI485erK%2BARHKhWkSoRgZiE6ob%2BfYx8GS1PLY3k6V5OUBBngDh9gtj5hWAuAdHc3WrJiFsV3pcHifJkL1nw4qMgLmOIR9ln2MhlqZz0tyRj8hS66A8tLZzWvby8ZOi38RjFDedhWDMz%2BVm1IMJzIVcZENNEGcZTvGaybT65kQD%2BiAK5LLmgaoz8JKE%2BU5kSaAjOZ8VTJwAU0LRbj96nJrfbeM38icAALxDYTCsq4usBjqaAZ%2FTWGJjlinPGJhmUTRanNRXvEW5hrXfGM5S3AQhnd2fV8IBB1iTHml1Z0C%2FMkGoNZiZ%2BGNf%2ByjZMk9udRAtH9g7bCJMiRIqdPJerbpuVGTJgj9MSsemYL0ZFvcN%2BCZJIrOgD6EUPaCwWbvp2%2FQ67RUNfBp1DS4f79qw6ew5PVHVOheW%2BIEnkeq05aMZT5XFcrqhxfKjfXxc2kY%3D&X-Amz-Signature=030af013e56d9347fd44baea9735d1d507f201a36da01916ee6d979360ae6fde
+Resolving binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)... 3.5.25.151, 3.5.28.137, 52.216.220.225, ...
+Connecting to binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)|3.5.25.151|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5813812 (5.5M) [application/x-tar]
+Saving to: ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’
+
+     0K .......... .......... .......... .......... ..........  0%  175K 32s
+    50K .......... .......... .......... .......... ..........  1%  176K 32s
+   100K .......... .......... .......... .......... ..........  2%  156K 33s
+   150K .......... .......... .......... .......... ..........  3% 55.6M 24s
+   200K .......... .......... .......... .......... ..........  4%  140K 27s
+   250K .......... .......... .......... .......... ..........  5%  177K 27s
+   300K .......... .......... .......... .......... ..........  6% 6.36M 23s
+   350K .......... .......... .......... .......... ..........  7%  176K 24s
+   400K .......... .......... .......... .......... ..........  7%  220K 24s
+   450K .......... .......... .......... .......... ..........  8% 1.17M 22s
+   500K .......... .......... .......... .......... ..........  9%  218K 22s
+   550K .......... .......... .......... .......... .......... 10% 1.37M 20s
+   600K .......... .......... .......... .......... .......... 11%  247K 20s
+   650K .......... .......... .......... .......... .......... 12%  455K 19s
+   700K .......... .......... .......... .......... .......... 13%  359K 18s
+   750K .......... .......... .......... .......... .......... 14%  122K 20s
+   800K .......... .......... .......... .......... .......... 14% 13.7M 18s
+   850K .......... .......... .......... .......... .......... 15%  186K 19s
+   900K .......... .......... .......... .......... .......... 16% 2.12M 17s
+   950K .......... .......... .......... .......... .......... 17% 15.4M 16s
+  1000K .......... .......... .......... .......... .......... 18%  186K 17s
+  1050K .......... .......... .......... .......... .......... 19% 2.32M 16s
+  1100K .......... .......... .......... .......... .......... 20%  232K 16s
+  1150K .......... .......... .......... .......... .......... 21% 1.31M 15s
+  1200K .......... .......... .......... .......... .......... 22%  239K 15s
+  1250K .......... .......... .......... .......... .......... 22% 1.17M 15s
+  1300K .......... .......... .......... .......... .......... 23% 1.05M 14s
+  1350K .......... .......... .......... .......... .......... 24%  258K 14s
+  1400K .......... .......... .......... .......... .......... 25% 1.20M 13s
+  1450K .......... .......... .......... .......... .......... 26%  929K 13s
+  1500K .......... .......... .......... .......... .......... 27% 87.0K 14s
+  1550K .......... .......... .......... .......... .......... 28%  859K 13s
+  1600K .......... .......... .......... .......... .......... 29% 64.9M 13s
+  1650K .......... .......... .......... .......... .......... 29%  113M 12s
+  1700K .......... .......... .......... .......... .......... 30%  218K 12s
+  1750K .......... .......... .......... .......... .......... 31% 1.26M 12s
+  1800K .......... .......... .......... .......... .......... 32%  208K 12s
+  1850K .......... .......... .......... .......... .......... 33% 1.57M 12s
+  1900K .......... .......... .......... .......... .......... 34% 98.7K 12s
+  1950K .......... .......... .......... .......... .......... 35% 11.5M 12s
+  2000K .......... .......... .......... .......... .......... 36% 17.2M 11s
+  2050K .......... .......... .......... .......... .......... 36%  148K 11s
+  2100K .......... .......... .......... .......... .......... 37%  115M 11s
+  2150K .......... .......... .......... .......... .......... 38%  181K 11s
+  2200K .......... .......... .......... .......... .......... 39% 3.85M 11s
+  2250K .......... .......... .......... .......... .......... 40% 12.3M 10s
+  2300K .......... .......... .......... .......... .......... 41%  188K 10s
+  2350K .......... .......... .......... .......... .......... 42% 2.20M 10s
+  2400K .......... .......... .......... .......... .......... 43%  169K 10s
+  2450K .......... .......... .......... .......... .......... 44% 3.41M 10s
+  2500K .......... .......... .......... .......... .......... 44% 1.68M 9s
+  2550K .......... .......... .......... .......... .......... 45%  173K 9s
+  2600K .......... .......... .......... .......... .......... 46% 25.9M 9s
+  2650K .......... .......... .......... .......... .......... 47% 10.3M 9s
+  2700K .......... .......... .......... .......... .......... 48%  154K 9s
+  2750K .......... .......... .......... .......... .......... 49% 10.8M 8s
+  2800K .......... .......... .......... .......... .......... 50% 7.49M 8s
+  2850K .......... .......... .......... .......... .......... 51%  155K 8s
+  2900K .......... .......... .......... .......... .......... 51% 6.34M 8s
+  2950K .......... .......... .......... .......... .......... 52% 14.5M 8s
+  3000K .......... .......... .......... .......... .......... 53%  154K 8s
+  3050K .......... .......... .......... .......... .......... 54% 12.2M 7s
+  3100K .......... .......... .......... .......... .......... 55% 6.06M 7s
+  3150K .......... .......... .......... .......... .......... 56%  156K 7s
+  3200K .......... .......... .......... .......... .......... 57% 2.27M 7s
+  3250K .......... .......... .......... .......... .......... 58% 21.0M 7s
+  3300K .......... .......... .......... .......... .......... 59%  147K 7s
+  3350K .......... .......... .......... .......... .......... 59% 7.42M 6s
+  3400K .......... .......... .......... .......... .......... 60% 27.8M 6s
+  3450K .......... .......... .......... .......... .......... 61%  189K 6s
+  3500K .......... .......... .......... .......... .......... 62% 3.43M 6s
+  3550K .......... .......... .......... .......... .......... 63% 5.18M 6s
+  3600K .......... .......... .......... .......... .......... 64%  203K 6s
+  3650K .......... .......... .......... .......... .......... 65% 2.15M 5s
+  3700K .......... .......... .......... .......... .......... 66%  174K 5s
+  3750K .......... .......... .......... .......... .......... 66% 12.6M 5s
+  3800K .......... .......... .......... .......... .......... 67% 8.96M 5s
+  3850K .......... .......... .......... .......... .......... 68%  155K 5s
+  3900K .......... .......... .......... .......... .......... 69% 11.9M 5s
+  3950K .......... .......... .......... .......... .......... 70% 8.11M 5s
+  4000K .......... .......... .......... .......... .......... 71%  154K 4s
+  4050K .......... .......... .......... .......... .......... 72% 2.08M 4s
+  4100K .......... .......... .......... .......... .......... 73% 50.4M 4s
+  4150K .......... .......... .......... .......... .......... 73%  162K 4s
+  4200K .......... .......... .......... .......... .......... 74% 5.80M 4s
+  4250K .......... .......... .......... .......... .......... 75% 65.0M 4s
+  4300K .......... .......... .......... .......... .......... 76%  155K 4s
+  4350K .......... .......... .......... .......... .......... 77% 10.3M 3s
+  4400K .......... .......... .......... .......... .......... 78% 7.76M 3s
+  4450K .......... .......... .......... .......... .......... 79%  156K 3s
+  4500K .......... .......... .......... .......... .......... 80% 6.80M 3s
+  4550K .......... .......... .......... .......... .......... 81% 17.0M 3s
+  4600K .......... .......... .......... .......... .......... 81%  179K 3s
+  4650K .......... .......... .......... .......... .......... 82% 2.67M 3s
+  4700K .......... .......... .......... .......... .......... 83% 1.19M 2s
+  4750K .......... .......... .......... .......... .......... 84%  242K 2s
+  4800K .......... .......... .......... .......... .......... 85%  993K 2s
+  4850K .......... .......... .......... .......... .......... 86% 3.00M 2s
+  4900K .......... .......... .......... .......... .......... 87%  250K 2s
+  4950K .......... .......... .......... .......... .......... 88% 1.09M 2s
+  5000K .......... .......... .......... .......... .......... 88% 2.01M 2s
+  5050K .......... .......... .......... .......... .......... 89%  273K 1s
+  5100K .......... .......... .......... .......... .......... 90% 1.43M 1s
+  5150K .......... .......... .......... .......... .......... 91% 1.30M 1s
+  5200K .......... .......... .......... .......... .......... 92%  320K 1s
+  5250K .......... .......... .......... .......... .......... 93%  880K 1s
+  5300K .......... .......... .......... .......... .......... 94% 1.09M 1s
+  5350K .......... .......... .......... .......... .......... 95%  294K 1s
+  5400K .......... .......... .......... .......... .......... 95%  559K 1s
+  5450K .......... .......... .......... .......... .......... 96% 31.6M 0s
+  5500K .......... .......... .......... .......... .......... 97%  735K 0s
+  5550K .......... .......... .......... .......... .......... 98%  354K 0s
+  5600K .......... .......... .......... .......... .......... 99%  739K 0s
+  5650K .......... .......... .......                         100% 4.57M=14s
+
+2023-12-20 07:23:22 (404 KB/s) - ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’ saved [5813812/5813812]
+
+
+Downloading and Extracting Packages: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Requirement already satisfied: numpy==1.21.6 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (1.21.6)
+Collecting pandas==1.3.5
+  Using cached pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+Collecting pytz>=2017.3
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from pandas==1.3.5) (2.8.2)
+Requirement already satisfied: numpy>=1.17.3 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from pandas==1.3.5) (1.21.6)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas==1.3.5) (1.16.0)
+Installing collected packages: pytz, pandas
+Successfully installed pandas-1.3.5 pytz-2023.3.post1
+Collecting scikit-learn==1.0.2
+  Using cached scikit_learn-1.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.8 MB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Requirement already satisfied: numpy>=1.14.6 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from scikit-learn==1.0.2) (1.21.6)
+Collecting joblib>=0.11
+  Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Collecting scipy>=1.1.0
+  Using cached scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+Successfully installed joblib-1.3.2 scikit-learn-1.0.2 scipy-1.7.3 threadpoolctl-3.1.0
+Collecting TensorFlow==2.11.0
+  Using cached tensorflow-2.11.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (588.3 MB)
+Collecting keras<2.12,>=2.11.0
+  Using cached keras-2.11.0-py2.py3-none-any.whl (1.7 MB)
+Collecting termcolor>=1.1.0
+  Using cached termcolor-2.3.0-py3-none-any.whl (6.9 kB)
+Collecting astunparse>=1.6.0
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting wrapt>=1.11.0
+  Using cached wrapt-1.16.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (77 kB)
+Requirement already satisfied: typing-extensions>=3.6.6 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (4.7.1)
+Collecting tensorboard<2.12,>=2.11
+  Using cached tensorboard-2.11.2-py3-none-any.whl (6.0 MB)
+Collecting gast<=0.4.0,>=0.2.1
+  Using cached gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting h5py>=2.9.0
+  Using cached h5py-3.8.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+Collecting tensorflow-estimator<2.12,>=2.11.0
+  Using cached tensorflow_estimator-2.11.0-py2.py3-none-any.whl (439 kB)
+Requirement already satisfied: packaging in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (23.2)
+Requirement already satisfied: numpy>=1.20 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (1.21.6)
+Collecting flatbuffers>=2.0
+  Using cached flatbuffers-23.5.26-py2.py3-none-any.whl (26 kB)
+Collecting libclang>=13.0.0
+  Using cached libclang-16.0.6-py2.py3-none-manylinux2010_x86_64.whl (22.9 MB)
+Requirement already satisfied: six>=1.12.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (1.16.0)
+Requirement already satisfied: setuptools in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (65.6.3)
+Collecting google-pasta>=0.1.1
+  Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1
+  Using cached tensorflow_io_gcs_filesystem-0.34.0-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (2.4 MB)
+Collecting absl-py>=1.0.0
+  Using cached absl_py-2.0.0-py3-none-any.whl (130 kB)
+Requirement already satisfied: protobuf<3.20,>=3.9.2 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (3.18.3)
+Collecting opt-einsum>=2.3.2
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting grpcio<2.0,>=1.24.3
+  Using cached grpcio-1.60.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from astunparse>=1.6.0->TensorFlow==2.11.0) (0.38.4)
+Collecting google-auth<3,>=1.6.3
+  Using cached google_auth-2.25.2-py2.py3-none-any.whl (184 kB)
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting tensorboard-plugin-wit>=1.6.0
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Collecting markdown>=2.6.8
+  Using cached Markdown-3.4.4-py3-none-any.whl (94 kB)
+Requirement already satisfied: werkzeug>=1.0.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2.2.3)
+Requirement already satisfied: requests<3,>=2.21.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2.31.0)
+Collecting tensorboard-data-server<0.7.0,>=0.6.0
+  Using cached tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+Collecting pyasn1-modules>=0.2.1
+  Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
+Collecting cachetools<6.0,>=2.0.0
+  Using cached cachetools-5.3.2-py3-none-any.whl (9.3 kB)
+Collecting rsa<5,>=3.1.4
+  Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Collecting requests-oauthlib>=0.7.0
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: importlib-metadata>=4.4 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from markdown>=2.6.8->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (6.7.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (3.3.0)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (1.26.17)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2022.12.7)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from werkzeug>=1.0.1->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2.1.3)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (3.15.0)
+Collecting pyasn1<0.6.0,>=0.4.6
+  Using cached pyasn1-0.5.1-py2.py3-none-any.whl (84 kB)
+Collecting oauthlib>=3.0.0
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Installing collected packages: tensorboard-plugin-wit, libclang, flatbuffers, wrapt, termcolor, tensorflow-io-gcs-filesystem, tensorflow-estimator, tensorboard-data-server, pyasn1, opt-einsum, oauthlib, keras, h5py, grpcio, google-pasta, gast, cachetools, astunparse, absl-py, rsa, requests-oauthlib, pyasn1-modules, markdown, google-auth, google-auth-oauthlib, tensorboard, TensorFlow
+Successfully installed TensorFlow-2.11.0 absl-py-2.0.0 astunparse-1.6.3 cachetools-5.3.2 flatbuffers-23.5.26 gast-0.4.0 google-auth-2.25.2 google-auth-oauthlib-0.4.6 google-pasta-0.2.0 grpcio-1.60.0 h5py-3.8.0 keras-2.11.0 libclang-16.0.6 markdown-3.4.4 oauthlib-3.2.2 opt-einsum-3.3.0 pyasn1-0.5.1 pyasn1-modules-0.3.0 requests-oauthlib-1.3.1 rsa-4.9 tensorboard-2.11.2 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-estimator-2.11.0 tensorflow-io-gcs-filesystem-0.34.0 termcolor-2.3.0 wrapt-1.16.0
+Requirement already satisfied: Keras==2.11.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (2.11.0)
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-p9z2_pc4
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-p9z2_pc4
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit 34a26149d92b5dc4a09b6f51aaaa85b3d8116ae4
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: python-json-logger in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.7)
+Requirement already satisfied: sqlalchemy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.21)
+Requirement already satisfied: prometheus-client in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.1)
+Requirement already satisfied: cerberus in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.3.5)
+Requirement already satisfied: ruamel.yaml in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.33)
+Requirement already satisfied: tabulate in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: packaging in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (23.2)
+Requirement already satisfied: humanfriendly in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: requests in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.31.0)
+Requirement already satisfied: sqlalchemy-utils in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.41.1)
+Requirement already satisfied: alembic in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.12.0)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.21.6)
+Requirement already satisfied: chardet in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.2.0)
+Requirement already satisfied: psutil in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.9.5)
+Requirement already satisfied: multidict in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.0.4)
+Requirement already satisfied: docker in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.1.3)
+Requirement already satisfied: boto3 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.28.58)
+Requirement already satisfied: protobuf<3.19,>=3.8.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (3.18.3)
+Requirement already satisfied: flask in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.5)
+Requirement already satisfied: werkzeug in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.3)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (6.7.0)
+Requirement already satisfied: typing-extensions>=4 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (4.7.1)
+Requirement already satisfied: importlib-resources in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (5.12.0)
+Requirement already satisfied: Mako in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (1.2.4)
+Requirement already satisfied: greenlet!=0.4.17 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from sqlalchemy->bentoml==0.11.0) (3.0.0)
+Requirement already satisfied: s3transfer<0.8.0,>=0.7.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (0.7.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: botocore<1.32.0,>=1.31.58 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.31.58)
+Requirement already satisfied: websocket-client>=0.32.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.6.1)
+Requirement already satisfied: urllib3>=1.26.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.26.17)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (2022.12.7)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.3.0)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.4)
+Requirement already satisfied: itsdangerous>=2.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (2.1.2)
+Requirement already satisfied: Jinja2>=3.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (3.1.2)
+Requirement already satisfied: click>=8.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (8.1.7)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from werkzeug->bentoml==0.11.0) (2.1.3)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.7)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (2.8.2)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.15.0)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (1.16.0)
+07:24:50 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+Collecting rdkit
+  Using cached rdkit-2023.3.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.5 MB)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Using cached Pillow-9.5.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.5.0 rdkit-2023.3.2
+--2023-12-20 07:23:06--  https://anaconda.org/conda-forge/openbabel/3.0.0/download/linux-64/openbabel-3.0.0-py27hdef5451_1.tar.bz2
+Resolving anaconda.org (anaconda.org)... 104.17.15.67, 104.17.16.67, 2606:4700::6811:1043, ...
+Connecting to anaconda.org (anaconda.org)|104.17.15.67|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEQ2GKAGN%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T123714Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHQaCXVzLWVhc3QtMSJHMEUCIGYGYnvmNZAWDoahjFMTnWdoryL5F0JP1YQrYFbaFcFwAiEA4bRDSKDNFOm%2Frd5hAANrFcUUj%2BD1kLBvbWM%2BblcmaJQqhwUI7f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDE2NqIeYn0yhAg%2BFYirbBML1U%2BGNF6hQks7xWJBfo8mUUtMYglgh9MiVJgPAdRq76SvWWIfQzwe3XsLchPxa15URxZzR1t28IFzTjp3c%2BbqmJSQs%2BC1XpY40ugVP6hPMmYWv0U87HJoJzCAs5vcAHkchNdmtdmvdTfmfsAXrovNTJRjxnq5mpF3YwB0BnkIeQy8Wzh0sva1eY7YttywFcwr96NNuE7sY2PkihiRiH6yDZ12An5MSPwNXfYLjDt5f0R8QOC60HfmSISrvuqPUUQoW6LRPvi075XGnAOurXGe%2FW%2BASgn5mgDWxKVXU41K0T0TsykzVKECSQ7iFoodwrPRL8pu0N03m%2FtrSk8ltDcHkO3Zo4GWDXCJWfmZrU4vM%2FQVh5fUj6YulVA%2BT9%2BsZRmnuaCOFffTyIU8p3WF5lVtK2fKHioMLgxYDXyTx5%2BnxWL9H7S%2BkJoAz4zX7qMQQUTc21atACN6asnjkkuYuI29K9fyjmei%2BgqrAwKTsSFZeBLlEP2mZitaueLkY1ko%2BX7uYT9ywEaQklv7LR95lg6pbEPzteGPq5lttFTY8mKO5cq4vJ2x66fblhaarQSdsmxZI485erK%2BARHKhWkSoRgZiE6ob%2BfYx8GS1PLY3k6V5OUBBngDh9gtj5hWAuAdHc3WrJiFsV3pcHifJkL1nw4qMgLmOIR9ln2MhlqZz0tyRj8hS66A8tLZzWvby8ZOi38RjFDedhWDMz%2BVm1IMJzIVcZENNEGcZTvGaybT65kQD%2BiAK5LLmgaoz8JKE%2BU5kSaAjOZ8VTJwAU0LRbj96nJrfbeM38icAALxDYTCsq4usBjqaAZ%2FTWGJjlinPGJhmUTRanNRXvEW5hrXfGM5S3AQhnd2fV8IBB1iTHml1Z0C%2FMkGoNZiZ%2BGNf%2ByjZMk9udRAtH9g7bCJMiRIqdPJerbpuVGTJgj9MSsemYL0ZFvcN%2BCZJIrOgD6EUPaCwWbvp2%2FQ67RUNfBp1DS4f79qw6ew5PVHVOheW%2BIEnkeq05aMZT5XFcrqhxfKjfXxc2kY%3D&X-Amz-Signature=030af013e56d9347fd44baea9735d1d507f201a36da01916ee6d979360ae6fde [following]
+--2023-12-20 07:23:07--  https://binstar-cio-packages-prod.s3.amazonaws.com/5c71a541d9c2cf4a5a0f4c8b/5dc3ff4883b66329e4ab067d?response-content-disposition=attachment%3B%20filename%3D%22linux-64%2Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2%22%3B%20filename%2A%3DUTF-8%27%27linux-64%252Fopenbabel-3.0.0-py27hdef5451_1.tar.bz2&response-content-type=application%2Fx-tar&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAWUI46DZFEQ2GKAGN%2F20231220%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231220T123714Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHQaCXVzLWVhc3QtMSJHMEUCIGYGYnvmNZAWDoahjFMTnWdoryL5F0JP1YQrYFbaFcFwAiEA4bRDSKDNFOm%2Frd5hAANrFcUUj%2BD1kLBvbWM%2BblcmaJQqhwUI7f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw0NTU4NjQwOTgzNzgiDE2NqIeYn0yhAg%2BFYirbBML1U%2BGNF6hQks7xWJBfo8mUUtMYglgh9MiVJgPAdRq76SvWWIfQzwe3XsLchPxa15URxZzR1t28IFzTjp3c%2BbqmJSQs%2BC1XpY40ugVP6hPMmYWv0U87HJoJzCAs5vcAHkchNdmtdmvdTfmfsAXrovNTJRjxnq5mpF3YwB0BnkIeQy8Wzh0sva1eY7YttywFcwr96NNuE7sY2PkihiRiH6yDZ12An5MSPwNXfYLjDt5f0R8QOC60HfmSISrvuqPUUQoW6LRPvi075XGnAOurXGe%2FW%2BASgn5mgDWxKVXU41K0T0TsykzVKECSQ7iFoodwrPRL8pu0N03m%2FtrSk8ltDcHkO3Zo4GWDXCJWfmZrU4vM%2FQVh5fUj6YulVA%2BT9%2BsZRmnuaCOFffTyIU8p3WF5lVtK2fKHioMLgxYDXyTx5%2BnxWL9H7S%2BkJoAz4zX7qMQQUTc21atACN6asnjkkuYuI29K9fyjmei%2BgqrAwKTsSFZeBLlEP2mZitaueLkY1ko%2BX7uYT9ywEaQklv7LR95lg6pbEPzteGPq5lttFTY8mKO5cq4vJ2x66fblhaarQSdsmxZI485erK%2BARHKhWkSoRgZiE6ob%2BfYx8GS1PLY3k6V5OUBBngDh9gtj5hWAuAdHc3WrJiFsV3pcHifJkL1nw4qMgLmOIR9ln2MhlqZz0tyRj8hS66A8tLZzWvby8ZOi38RjFDedhWDMz%2BVm1IMJzIVcZENNEGcZTvGaybT65kQD%2BiAK5LLmgaoz8JKE%2BU5kSaAjOZ8VTJwAU0LRbj96nJrfbeM38icAALxDYTCsq4usBjqaAZ%2FTWGJjlinPGJhmUTRanNRXvEW5hrXfGM5S3AQhnd2fV8IBB1iTHml1Z0C%2FMkGoNZiZ%2BGNf%2ByjZMk9udRAtH9g7bCJMiRIqdPJerbpuVGTJgj9MSsemYL0ZFvcN%2BCZJIrOgD6EUPaCwWbvp2%2FQ67RUNfBp1DS4f79qw6ew5PVHVOheW%2BIEnkeq05aMZT5XFcrqhxfKjfXxc2kY%3D&X-Amz-Signature=030af013e56d9347fd44baea9735d1d507f201a36da01916ee6d979360ae6fde
+Resolving binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)... 3.5.25.151, 3.5.28.137, 52.216.220.225, ...
+Connecting to binstar-cio-packages-prod.s3.amazonaws.com (binstar-cio-packages-prod.s3.amazonaws.com)|3.5.25.151|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5813812 (5.5M) [application/x-tar]
+Saving to: ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’
+
+     0K .......... .......... .......... .......... ..........  0%  175K 32s
+    50K .......... .......... .......... .......... ..........  1%  176K 32s
+   100K .......... .......... .......... .......... ..........  2%  156K 33s
+   150K .......... .......... .......... .......... ..........  3% 55.6M 24s
+   200K .......... .......... .......... .......... ..........  4%  140K 27s
+   250K .......... .......... .......... .......... ..........  5%  177K 27s
+   300K .......... .......... .......... .......... ..........  6% 6.36M 23s
+   350K .......... .......... .......... .......... ..........  7%  176K 24s
+   400K .......... .......... .......... .......... ..........  7%  220K 24s
+   450K .......... .......... .......... .......... ..........  8% 1.17M 22s
+   500K .......... .......... .......... .......... ..........  9%  218K 22s
+   550K .......... .......... .......... .......... .......... 10% 1.37M 20s
+   600K .......... .......... .......... .......... .......... 11%  247K 20s
+   650K .......... .......... .......... .......... .......... 12%  455K 19s
+   700K .......... .......... .......... .......... .......... 13%  359K 18s
+   750K .......... .......... .......... .......... .......... 14%  122K 20s
+   800K .......... .......... .......... .......... .......... 14% 13.7M 18s
+   850K .......... .......... .......... .......... .......... 15%  186K 19s
+   900K .......... .......... .......... .......... .......... 16% 2.12M 17s
+   950K .......... .......... .......... .......... .......... 17% 15.4M 16s
+  1000K .......... .......... .......... .......... .......... 18%  186K 17s
+  1050K .......... .......... .......... .......... .......... 19% 2.32M 16s
+  1100K .......... .......... .......... .......... .......... 20%  232K 16s
+  1150K .......... .......... .......... .......... .......... 21% 1.31M 15s
+  1200K .......... .......... .......... .......... .......... 22%  239K 15s
+  1250K .......... .......... .......... .......... .......... 22% 1.17M 15s
+  1300K .......... .......... .......... .......... .......... 23% 1.05M 14s
+  1350K .......... .......... .......... .......... .......... 24%  258K 14s
+  1400K .......... .......... .......... .......... .......... 25% 1.20M 13s
+  1450K .......... .......... .......... .......... .......... 26%  929K 13s
+  1500K .......... .......... .......... .......... .......... 27% 87.0K 14s
+  1550K .......... .......... .......... .......... .......... 28%  859K 13s
+  1600K .......... .......... .......... .......... .......... 29% 64.9M 13s
+  1650K .......... .......... .......... .......... .......... 29%  113M 12s
+  1700K .......... .......... .......... .......... .......... 30%  218K 12s
+  1750K .......... .......... .......... .......... .......... 31% 1.26M 12s
+  1800K .......... .......... .......... .......... .......... 32%  208K 12s
+  1850K .......... .......... .......... .......... .......... 33% 1.57M 12s
+  1900K .......... .......... .......... .......... .......... 34% 98.7K 12s
+  1950K .......... .......... .......... .......... .......... 35% 11.5M 12s
+  2000K .......... .......... .......... .......... .......... 36% 17.2M 11s
+  2050K .......... .......... .......... .......... .......... 36%  148K 11s
+  2100K .......... .......... .......... .......... .......... 37%  115M 11s
+  2150K .......... .......... .......... .......... .......... 38%  181K 11s
+  2200K .......... .......... .......... .......... .......... 39% 3.85M 11s
+  2250K .......... .......... .......... .......... .......... 40% 12.3M 10s
+  2300K .......... .......... .......... .......... .......... 41%  188K 10s
+  2350K .......... .......... .......... .......... .......... 42% 2.20M 10s
+  2400K .......... .......... .......... .......... .......... 43%  169K 10s
+  2450K .......... .......... .......... .......... .......... 44% 3.41M 10s
+  2500K .......... .......... .......... .......... .......... 44% 1.68M 9s
+  2550K .......... .......... .......... .......... .......... 45%  173K 9s
+  2600K .......... .......... .......... .......... .......... 46% 25.9M 9s
+  2650K .......... .......... .......... .......... .......... 47% 10.3M 9s
+  2700K .......... .......... .......... .......... .......... 48%  154K 9s
+  2750K .......... .......... .......... .......... .......... 49% 10.8M 8s
+  2800K .......... .......... .......... .......... .......... 50% 7.49M 8s
+  2850K .......... .......... .......... .......... .......... 51%  155K 8s
+  2900K .......... .......... .......... .......... .......... 51% 6.34M 8s
+  2950K .......... .......... .......... .......... .......... 52% 14.5M 8s
+  3000K .......... .......... .......... .......... .......... 53%  154K 8s
+  3050K .......... .......... .......... .......... .......... 54% 12.2M 7s
+  3100K .......... .......... .......... .......... .......... 55% 6.06M 7s
+  3150K .......... .......... .......... .......... .......... 56%  156K 7s
+  3200K .......... .......... .......... .......... .......... 57% 2.27M 7s
+  3250K .......... .......... .......... .......... .......... 58% 21.0M 7s
+  3300K .......... .......... .......... .......... .......... 59%  147K 7s
+  3350K .......... .......... .......... .......... .......... 59% 7.42M 6s
+  3400K .......... .......... .......... .......... .......... 60% 27.8M 6s
+  3450K .......... .......... .......... .......... .......... 61%  189K 6s
+  3500K .......... .......... .......... .......... .......... 62% 3.43M 6s
+  3550K .......... .......... .......... .......... .......... 63% 5.18M 6s
+  3600K .......... .......... .......... .......... .......... 64%  203K 6s
+  3650K .......... .......... .......... .......... .......... 65% 2.15M 5s
+  3700K .......... .......... .......... .......... .......... 66%  174K 5s
+  3750K .......... .......... .......... .......... .......... 66% 12.6M 5s
+  3800K .......... .......... .......... .......... .......... 67% 8.96M 5s
+  3850K .......... .......... .......... .......... .......... 68%  155K 5s
+  3900K .......... .......... .......... .......... .......... 69% 11.9M 5s
+  3950K .......... .......... .......... .......... .......... 70% 8.11M 5s
+  4000K .......... .......... .......... .......... .......... 71%  154K 4s
+  4050K .......... .......... .......... .......... .......... 72% 2.08M 4s
+  4100K .......... .......... .......... .......... .......... 73% 50.4M 4s
+  4150K .......... .......... .......... .......... .......... 73%  162K 4s
+  4200K .......... .......... .......... .......... .......... 74% 5.80M 4s
+  4250K .......... .......... .......... .......... .......... 75% 65.0M 4s
+  4300K .......... .......... .......... .......... .......... 76%  155K 4s
+  4350K .......... .......... .......... .......... .......... 77% 10.3M 3s
+  4400K .......... .......... .......... .......... .......... 78% 7.76M 3s
+  4450K .......... .......... .......... .......... .......... 79%  156K 3s
+  4500K .......... .......... .......... .......... .......... 80% 6.80M 3s
+  4550K .......... .......... .......... .......... .......... 81% 17.0M 3s
+  4600K .......... .......... .......... .......... .......... 81%  179K 3s
+  4650K .......... .......... .......... .......... .......... 82% 2.67M 3s
+  4700K .......... .......... .......... .......... .......... 83% 1.19M 2s
+  4750K .......... .......... .......... .......... .......... 84%  242K 2s
+  4800K .......... .......... .......... .......... .......... 85%  993K 2s
+  4850K .......... .......... .......... .......... .......... 86% 3.00M 2s
+  4900K .......... .......... .......... .......... .......... 87%  250K 2s
+  4950K .......... .......... .......... .......... .......... 88% 1.09M 2s
+  5000K .......... .......... .......... .......... .......... 88% 2.01M 2s
+  5050K .......... .......... .......... .......... .......... 89%  273K 1s
+  5100K .......... .......... .......... .......... .......... 90% 1.43M 1s
+  5150K .......... .......... .......... .......... .......... 91% 1.30M 1s
+  5200K .......... .......... .......... .......... .......... 92%  320K 1s
+  5250K .......... .......... .......... .......... .......... 93%  880K 1s
+  5300K .......... .......... .......... .......... .......... 94% 1.09M 1s
+  5350K .......... .......... .......... .......... .......... 95%  294K 1s
+  5400K .......... .......... .......... .......... .......... 95%  559K 1s
+  5450K .......... .......... .......... .......... .......... 96% 31.6M 0s
+  5500K .......... .......... .......... .......... .......... 97%  735K 0s
+  5550K .......... .......... .......... .......... .......... 98%  354K 0s
+  5600K .......... .......... .......... .......... .......... 99%  739K 0s
+  5650K .......... .......... .......                         100% 4.57M=14s
+
+2023-12-20 07:23:22 (404 KB/s) - ‘openbabel-3.0.0-py27hdef5451_1.tar.bz2’ saved [5813812/5813812]
+
+
+Downloading and Extracting Packages: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Requirement already satisfied: numpy==1.21.6 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (1.21.6)
+Collecting pandas==1.3.5
+  Using cached pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+Collecting pytz>=2017.3
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from pandas==1.3.5) (2.8.2)
+Requirement already satisfied: numpy>=1.17.3 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from pandas==1.3.5) (1.21.6)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas==1.3.5) (1.16.0)
+Installing collected packages: pytz, pandas
+Successfully installed pandas-1.3.5 pytz-2023.3.post1
+Collecting scikit-learn==1.0.2
+  Using cached scikit_learn-1.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24.8 MB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Requirement already satisfied: numpy>=1.14.6 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from scikit-learn==1.0.2) (1.21.6)
+Collecting joblib>=0.11
+  Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Collecting scipy>=1.1.0
+  Using cached scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+Successfully installed joblib-1.3.2 scikit-learn-1.0.2 scipy-1.7.3 threadpoolctl-3.1.0
+Collecting TensorFlow==2.11.0
+  Using cached tensorflow-2.11.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (588.3 MB)
+Collecting keras<2.12,>=2.11.0
+  Using cached keras-2.11.0-py2.py3-none-any.whl (1.7 MB)
+Collecting termcolor>=1.1.0
+  Using cached termcolor-2.3.0-py3-none-any.whl (6.9 kB)
+Collecting astunparse>=1.6.0
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting wrapt>=1.11.0
+  Using cached wrapt-1.16.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (77 kB)
+Requirement already satisfied: typing-extensions>=3.6.6 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (4.7.1)
+Collecting tensorboard<2.12,>=2.11
+  Using cached tensorboard-2.11.2-py3-none-any.whl (6.0 MB)
+Collecting gast<=0.4.0,>=0.2.1
+  Using cached gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting h5py>=2.9.0
+  Using cached h5py-3.8.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+Collecting tensorflow-estimator<2.12,>=2.11.0
+  Using cached tensorflow_estimator-2.11.0-py2.py3-none-any.whl (439 kB)
+Requirement already satisfied: packaging in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (23.2)
+Requirement already satisfied: numpy>=1.20 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (1.21.6)
+Collecting flatbuffers>=2.0
+  Using cached flatbuffers-23.5.26-py2.py3-none-any.whl (26 kB)
+Collecting libclang>=13.0.0
+  Using cached libclang-16.0.6-py2.py3-none-manylinux2010_x86_64.whl (22.9 MB)
+Requirement already satisfied: six>=1.12.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (1.16.0)
+Requirement already satisfied: setuptools in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (65.6.3)
+Collecting google-pasta>=0.1.1
+  Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1
+  Using cached tensorflow_io_gcs_filesystem-0.34.0-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (2.4 MB)
+Collecting absl-py>=1.0.0
+  Using cached absl_py-2.0.0-py3-none-any.whl (130 kB)
+Requirement already satisfied: protobuf<3.20,>=3.9.2 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from TensorFlow==2.11.0) (3.18.3)
+Collecting opt-einsum>=2.3.2
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting grpcio<2.0,>=1.24.3
+  Using cached grpcio-1.60.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from astunparse>=1.6.0->TensorFlow==2.11.0) (0.38.4)
+Collecting google-auth<3,>=1.6.3
+  Using cached google_auth-2.25.2-py2.py3-none-any.whl (184 kB)
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting tensorboard-plugin-wit>=1.6.0
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Collecting markdown>=2.6.8
+  Using cached Markdown-3.4.4-py3-none-any.whl (94 kB)
+Requirement already satisfied: werkzeug>=1.0.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2.2.3)
+Requirement already satisfied: requests<3,>=2.21.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2.31.0)
+Collecting tensorboard-data-server<0.7.0,>=0.6.0
+  Using cached tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+Collecting pyasn1-modules>=0.2.1
+  Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
+Collecting cachetools<6.0,>=2.0.0
+  Using cached cachetools-5.3.2-py3-none-any.whl (9.3 kB)
+Collecting rsa<5,>=3.1.4
+  Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Collecting requests-oauthlib>=0.7.0
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: importlib-metadata>=4.4 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from markdown>=2.6.8->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (6.7.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (3.3.0)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (1.26.17)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2022.12.7)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from werkzeug>=1.0.1->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (2.1.3)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard<2.12,>=2.11->TensorFlow==2.11.0) (3.15.0)
+Collecting pyasn1<0.6.0,>=0.4.6
+  Using cached pyasn1-0.5.1-py2.py3-none-any.whl (84 kB)
+Collecting oauthlib>=3.0.0
+  Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Installing collected packages: tensorboard-plugin-wit, libclang, flatbuffers, wrapt, termcolor, tensorflow-io-gcs-filesystem, tensorflow-estimator, tensorboard-data-server, pyasn1, opt-einsum, oauthlib, keras, h5py, grpcio, google-pasta, gast, cachetools, astunparse, absl-py, rsa, requests-oauthlib, pyasn1-modules, markdown, google-auth, google-auth-oauthlib, tensorboard, TensorFlow
+Successfully installed TensorFlow-2.11.0 absl-py-2.0.0 astunparse-1.6.3 cachetools-5.3.2 flatbuffers-23.5.26 gast-0.4.0 google-auth-2.25.2 google-auth-oauthlib-0.4.6 google-pasta-0.2.0 grpcio-1.60.0 h5py-3.8.0 keras-2.11.0 libclang-16.0.6 markdown-3.4.4 oauthlib-3.2.2 opt-einsum-3.3.0 pyasn1-0.5.1 pyasn1-modules-0.3.0 requests-oauthlib-1.3.1 rsa-4.9 tensorboard-2.11.2 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-estimator-2.11.0 tensorflow-io-gcs-filesystem-0.34.0 termcolor-2.3.0 wrapt-1.16.0
+Requirement already satisfied: Keras==2.11.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (2.11.0)
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-p9z2_pc4
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-p9z2_pc4
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit 34a26149d92b5dc4a09b6f51aaaa85b3d8116ae4
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: python-json-logger in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.7)
+Requirement already satisfied: sqlalchemy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.21)
+Requirement already satisfied: prometheus-client in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.1)
+Requirement already satisfied: cerberus in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.3.5)
+Requirement already satisfied: ruamel.yaml in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.33)
+Requirement already satisfied: tabulate in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: packaging in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (23.2)
+Requirement already satisfied: humanfriendly in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: requests in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.31.0)
+Requirement already satisfied: sqlalchemy-utils in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (0.41.1)
+Requirement already satisfied: alembic in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.12.0)
+Requirement already satisfied: numpy in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.21.6)
+Requirement already satisfied: chardet in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.2.0)
+Requirement already satisfied: psutil in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (5.9.5)
+Requirement already satisfied: multidict in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.0.4)
+Requirement already satisfied: docker in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (6.1.3)
+Requirement already satisfied: boto3 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (1.28.58)
+Requirement already satisfied: protobuf<3.19,>=3.8.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (3.18.3)
+Requirement already satisfied: flask in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.5)
+Requirement already satisfied: werkzeug in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.3)
+Requirement already satisfied: importlib-metadata in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (6.7.0)
+Requirement already satisfied: typing-extensions>=4 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (4.7.1)
+Requirement already satisfied: importlib-resources in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (5.12.0)
+Requirement already satisfied: Mako in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (1.2.4)
+Requirement already satisfied: greenlet!=0.4.17 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from sqlalchemy->bentoml==0.11.0) (3.0.0)
+Requirement already satisfied: s3transfer<0.8.0,>=0.7.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (0.7.0)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: botocore<1.32.0,>=1.31.58 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.31.58)
+Requirement already satisfied: websocket-client>=0.32.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.6.1)
+Requirement already satisfied: urllib3>=1.26.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.26.17)
+Requirement already satisfied: certifi>=2017.4.17 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (2022.12.7)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.3.0)
+Requirement already satisfied: idna<4,>=2.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.4)
+Requirement already satisfied: itsdangerous>=2.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (2.1.2)
+Requirement already satisfied: Jinja2>=3.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (3.1.2)
+Requirement already satisfied: click>=8.0 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (8.1.7)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from werkzeug->bentoml==0.11.0) (2.1.3)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.7)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (2.8.2)
+Requirement already satisfied: zipp>=0.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.15.0)
+Requirement already satisfied: six>=1.5 in /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.32.0,>=1.31.58->boto3->bentoml==0.11.0) (1.16.0)
+
+07:24:50 | DEBUG    | Activation done
+07:24:50 | DEBUG    | Creating environment YAML file
+07:24:54 | DEBUG    | Storing Conda environment in the local environment database
+07:24:54 | DEBUG    | Done with the Conda setup
+07:24:55 | DEBUG    | Using environment eos9ym3
+07:24:55 | DEBUG    | Running command: python pack.py
+07:24:55 | DEBUG    | Run commandlines on eos9ym3
+07:24:55 | DEBUG    | 
+        python pack.py
+        
+07:24:56 | DEBUG    | Activating base environment
+07:24:56 | DEBUG    | Current working directory: /home/leila/eos/dest/eos9ym3
+07:24:56 | DEBUG    | Running bash /tmp/ersilia-9py8hlyv/script.sh 2>&1 | tee -a /tmp/ersilia-y8g9wxr3/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+[2023-12-20 07:25:00,221] INFO - BentoService bundle 'eos9ym3:20231220072458_A6C67F' saved to: /home/leila/bentoml/repository/eos9ym3/20231220072458_A6C67F
+07:25:00 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+[2023-12-20 07:25:00,221] INFO - BentoService bundle 'eos9ym3:20231220072458_A6C67F' saved to: /home/leila/bentoml/repository/eos9ym3/20231220072458_A6C67F
+
+07:25:00 | DEBUG    | Activation done
+07:25:00 | DEBUG    | Previous command successfully run inside eos9ym3 conda environment
+07:25:00 | DEBUG    | Now trying to establish symlinks
+07:25:00 | DEBUG    | BentoML location is /home/leila/bentoml/repository/eos9ym3/20231220072458_A6C67F
+07:25:00 | DEBUG    | Ersilia Bento location is /home/leila/eos/repository/eos9ym3/20231220072458_A6C67F
+07:25:00 | DEBUG    | Building symlinks between /home/leila/eos/repository/eos9ym3/20231220072458_A6C67F and /home/leila/bentoml/repository/eos9ym3/20231220072458_A6C67F
+07:25:00 | DEBUG    | Creating model symlink bundle artifacts > dest
+07:25:00 | DEBUG    | Creating model_install_commands.sh symlink dest <> bundle
+07:25:00 | INFO     | Could not create symbolic link from /home/leila/eos/dest/eos9ym3/data.h5 to /home/leila/eos/isaura/lake/eos9ym3_public.h5
+07:25:00 | DEBUG    | Run file found in framework: /home/leila/eos/repository/eos9ym3/20231220072458_A6C67F/eos9ym3/artifacts/framework/run.sh
+07:25:00 | DEBUG    | Run commandlines on eos9ym3
+07:25:00 | DEBUG    | which python > /tmp/ersilia-a5yij_o1/tmp.txt
+07:25:01 | DEBUG    | Activating base environment
+07:25:01 | DEBUG    | Current working directory: /home/leila/leila/eos9ym3
+07:25:01 | DEBUG    | Running bash /tmp/ersilia-m5vo7wzm/script.sh 2>&1 | tee -a /tmp/ersilia-15xpcyrd/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+07:25:02 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+
+07:25:02 | DEBUG    | Activation done
+07:25:02 | DEBUG    | Python executable: /home/leila/miniconda3/envs/eos9ym3/bin/python
+07:25:02 | DEBUG    | Conda is needed
+07:25:02 | DEBUG    | Checking if model needs to be integrated to a tool
+07:25:03 | DEBUG    | Getting model card of eos9ym3
+07:25:03 | DEBUG    | Trying to get metadata from: /home/leila/eos/dest/eos9ym3
+07:25:03 | DEBUG    | Card saved at /home/leila/eos/dest/eos9ym3/card.json
+07:25:03 | DEBUG    | Saving slug MRlogP
+07:25:03 | DEBUG    | Checking that autoservice works
+07:25:03 | DEBUG    | Setting AutoService for eos9ym3
+07:25:03 | DEBUG    | No service class provided, deciding automatically
+07:25:03 | DEBUG    | No service class file exists in /home/leila/eos/repository/eos9ym3/20231220072458_A6C67F/service_class.txt
+07:25:03 | DEBUG    | Setting virtual environment at /home/leila/eos/dest/eos9ym3
+07:25:04 | DEBUG    | Service class: conda
+07:25:04 | DEBUG    | Getting APIs from list file
+07:25:04 | DEBUG    | Getting APIs from Bento
+07:25:04 | DEBUG    | Getting info from BentoML and storing in /tmp/ersilia-q3xlypvz/info.json
+07:25:09 | DEBUG    | Info {'name': 'eos9ym3', 'version': '20231220072458_A6C67F', 'created_at': '2023-12-20T06:25:00.119511Z', 'env': {'conda_env': 'name: bentoml-default-conda-env\nchannels:\n- defaults\ndependencies: []\n', 'python_version': '3.7.16', 'docker_base_image': 'bentoml/model-server:0.11.0-py37', 'pip_packages': ['bentoml==0.11.0']}, 'artifacts': [{'name': 'model', 'artifact_type': 'Artifact', 'metadata': {}}], 'apis': [{'name': 'run', 'input_type': 'JsonInput', 'docs': "BentoService inference API 'run', input: 'JsonInput', output: 'DefaultOutput'", 'output_config': {'cors': '*'}, 'output_type': 'DefaultOutput', 'mb_max_latency': 10000, 'mb_max_batch_size': 2000, 'batch': True}]}
+07:25:09 | DEBUG    | Initializing model for inferring its structure
+07:25:09 | WARNING  | Lake manager 'isaura' is not installed! We strongly recommend installing it to store calculations persistently
+07:25:09 | ERROR    | Isaura is not installed! Calculations will be done without storing and reading from the lake, unfortunately.
+07:25:09 | DEBUG    | No status file exists
+07:25:09 | DEBUG    | Is fetched: False
+07:25:09 | DEBUG    | Schema not yet available
+07:25:09 | DEBUG    | Setting AutoService for eos9ym3
+07:25:09 | DEBUG    | No service class provided, deciding automatically
+07:25:09 | DEBUG    | Service class file exists in folder /home/leila/eos/repository/eos9ym3/20231220072458_A6C67F/service_class.txt
+07:25:09 | DEBUG    | Service class: conda
+07:25:09 | INFO     | Done with initialization!
+07:25:09 | DEBUG    | Model successfully initialized in sniffer
+07:25:09 | DEBUG    | No built-in example available. Generating a test one.
+07:25:10 | DEBUG    | Reading card from eos9ym3
+07:25:10 | DEBUG    | Reading shape from eos9ym3
+07:25:10 | DEBUG    | Input Shape: Single
+07:25:10 | DEBUG    | Input type is: compound
+07:25:10 | DEBUG    | Input shape is: Single
+07:25:10 | DEBUG    | Importing module: .types.compound
+07:25:10 | DEBUG    | Checking RDKIT and other requirements necessary for compound inputs
+07:25:10 | DEBUG    | InputShapeSingle shape: Single
+07:25:10 | DEBUG    | Inputs sampled: 2
+07:25:10 | DEBUG    | Sniffing model
+07:25:10 | DEBUG    | Getting model size
+07:25:10 | DEBUG    | Mode size is 50.06555366516113 MB
+07:25:10 | DEBUG    | Serving model
+07:25:10 | DEBUG    | Cleaning processes before serving
+07:25:10 | DEBUG    | /home/leila/eos/tmp/eos9ym3.pid
+07:25:10 | DEBUG    | Cleaning [166472] processes
+07:25:10 | DEBUG    | Cleaning temp dir
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-fm6b3tax
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-3xke5qwn
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-nv2ccifv
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-b_qfa0y8
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-9_u97kc0
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-g0zfp5of
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-i8dyukl7
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-hqaf563u
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-0rhn0k98
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-q3xlypvz
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-pw9njjqa
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-w7zjyd3_
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-3oap3hx3
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-9u1jptsu
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-4qx96co7
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-y8g9wxr3
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-ed2tsmue
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-m5vo7wzm
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-15xpcyrd
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-3kh8zv2i
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-7rykhaiu
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-lal169mm
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-v_4n7m92
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-9py8hlyv
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-lx57civj
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-wy_fp6sk
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-tglg6jhz
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-srcdg798
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-s1kvtnbl
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-821pvly9
+07:25:10 | DEBUG    | Flushing temporary directory /tmp/ersilia-a5yij_o1
+07:25:10 | DEBUG    | Cleaning temp dir
+07:25:10 | DEBUG    | Silencing docker containers if necessary
+sudo: unknown user udockerusername
+sudo: error initializing audit plugin sudoers_audit
+07:25:11 | DEBUG    | Trying to serve model with BentoML locally
+07:25:11 | WARNING  | Port None was already in use. Using 41083 instead
+07:25:11 | DEBUG    | Free port: 41083
+07:25:11 | DEBUG    | Writing on /tmp/ersilia-86xju5nm/serve.sh
+07:25:11 | DEBUG    | #!/bin/bash
+07:25:11 | DEBUG    | bentoml serve eos9ym3:20231220072458_A6C67F --port 41083 &> /tmp/ersilia-86xju5nm/serve.log &
+07:25:11 | DEBUG    | _pid=$!
+07:25:11 | DEBUG    | echo "$_pid" > /tmp/ersilia-86xju5nm/serve.pid
+07:25:11 | DEBUG    | Run command function available
+07:25:12 | DEBUG    | Running on conda environment eos9ym3
+07:25:12 | DEBUG    | Run commandlines on eos9ym3
+07:25:12 | DEBUG    | bash /tmp/ersilia-86xju5nm/serve.sh
+07:25:13 | DEBUG    | Activating base environment
+07:25:13 | DEBUG    | Current working directory: /home/leila/leila/eos9ym3
+07:25:13 | DEBUG    | Running bash /tmp/ersilia-007uwxib/script.sh 2>&1 | tee -a /tmp/ersilia-z25ib9as/command_outputs.log
+# conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+07:25:14 | DEBUG    | # conda environments:
+#
+base                     /home/leila/miniconda3
+AMP-BERT                 /home/leila/miniconda3/envs/AMP-BERT
+BERT                     /home/leila/miniconda3/envs/BERT
+DocTOR_env               /home/leila/miniconda3/envs/DocTOR_env
+DocTor                   /home/leila/miniconda3/envs/DocTor
+DrugApp                  /home/leila/miniconda3/envs/DrugApp
+IDL-PPBopt               /home/leila/miniconda3/envs/IDL-PPBopt
+MDeePred                 /home/leila/miniconda3/envs/MDeePred
+MRLogP                   /home/leila/miniconda3/envs/MRLogP
+NeoDTI                   /home/leila/miniconda3/envs/NeoDTI
+RLBind                   /home/leila/miniconda3/envs/RLBind
+RLBind_env               /home/leila/miniconda3/envs/RLBind_env
+ReSimNet                 /home/leila/miniconda3/envs/ReSimNet
+STOUT                    /home/leila/miniconda3/envs/STOUT
+bpbi                     /home/leila/miniconda3/envs/bpbi
+chemprop                 /home/leila/miniconda3/envs/chemprop
+clamp_env                /home/leila/miniconda3/envs/clamp_env
+eos1n4b                  /home/leila/miniconda3/envs/eos1n4b
+eos2re5                  /home/leila/miniconda3/envs/eos2re5
+eos2re5-py27             /home/leila/miniconda3/envs/eos2re5-py27
+eos30f3                  /home/leila/miniconda3/envs/eos30f3
+eos3804                  /home/leila/miniconda3/envs/eos3804
+eos3b5e                  /home/leila/miniconda3/envs/eos3b5e
+eos3cf4                  /home/leila/miniconda3/envs/eos3cf4
+eos4se9                  /home/leila/miniconda3/envs/eos4se9
+eos5ecc                  /home/leila/miniconda3/envs/eos5ecc
+eos5xng                  /home/leila/miniconda3/envs/eos5xng
+eos9ym3               *  /home/leila/miniconda3/envs/eos9ym3
+eosbase-bentoml-0.11.0-py37     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py37
+eosbase-bentoml-0.11.0-py38     /home/leila/miniconda3/envs/eosbase-bentoml-0.11.0-py38
+ersili                   /home/leila/miniconda3/envs/ersili
+ersilia                  /home/leila/miniconda3/envs/ersilia
+gt4sd                    /home/leila/miniconda3/envs/gt4sd
+hostspace                /home/leila/miniconda3/envs/hostspace
+ppb                      /home/leila/miniconda3/envs/ppb
+smiles_translator        /home/leila/miniconda3/envs/smiles_translator
+
+
+07:25:14 | DEBUG    | Activation done
+07:25:14 | DEBUG    | Process id: 167865
+07:25:14 | DEBUG    | Trying to wake up. Iteration: 0
+07:25:14 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:14 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:14 | DEBUG    | No error strings found in temporary file
+07:25:14 | DEBUG    | Waiting for server
+07:25:15 | DEBUG    | Trying to wake up. Iteration: 1
+07:25:15 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:15 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:15 | DEBUG    | No error strings found in temporary file
+07:25:15 | DEBUG    | Server logging done
+07:25:16 | DEBUG    | Trying to wake up. Iteration: 2
+07:25:16 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:16 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:16 | DEBUG    | No error strings found in temporary file
+07:25:16 | DEBUG    | Server logging done
+07:25:17 | DEBUG    | Trying to wake up. Iteration: 3
+07:25:17 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:17 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:17 | DEBUG    | No error strings found in temporary file
+07:25:17 | DEBUG    | Server logging done
+07:25:18 | DEBUG    | Trying to wake up. Iteration: 4
+07:25:18 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:18 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:18 | DEBUG    | No error strings found in temporary file
+07:25:18 | DEBUG    | Server logging done
+07:25:19 | DEBUG    | Trying to wake up. Iteration: 5
+07:25:19 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:19 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:19 | DEBUG    | No error strings found in temporary file
+07:25:19 | DEBUG    | Server logging done
+07:25:20 | DEBUG    | Trying to wake up. Iteration: 6
+07:25:20 | DEBUG    | Timeout: 1000 Sleep time: 1
+07:25:20 | DEBUG    | Temporary file available: /tmp/ersilia-86xju5nm/serve.log
+07:25:20 | DEBUG    | No error strings found in temporary file
+07:25:20 | DEBUG    | Server is ready. Trying to get URL
+07:25:20 | DEBUG    | URL found: http://127.0.0.1:41083
+07:25:20 | DEBUG    | Iterating over APIs
+07:25:20 | DEBUG    | Running API: run
+07:25:20 | DEBUG    | ['CC1C2C(CC3(C=CC(=O)C(=C3C2OC1=O)C)C)O', 'C1=CN=CC=C1C(=O)NN']
+07:25:20 | DEBUG    | API: run
+07:25:20 | DEBUG    | MODEL ID: eos9ym3
+07:25:20 | DEBUG    | SERVICE URL: http://127.0.0.1:41083
+07:25:21 | DEBUG    | Reading card from eos9ym3
+07:25:21 | DEBUG    | Reading shape from eos9ym3
+07:25:21 | DEBUG    | Input Shape: Single
+07:25:21 | DEBUG    | Input type is: compound
+07:25:21 | DEBUG    | Input shape is: Single
+07:25:21 | DEBUG    | Importing module: .types.compound
+07:25:21 | DEBUG    | Checking RDKIT and other requirements necessary for compound inputs
+07:25:21 | DEBUG    | InputShapeSingle shape: Single
+07:25:21 | DEBUG    | API eos9ym3:run initialized at URL http://127.0.0.1:41083
+07:25:21 | DEBUG    | Schema not yet available
+07:25:21 | INFO     | No empty output available
+07:25:21 | DEBUG    | Meta: None
+07:25:21 | DEBUG    | Posting to run
+07:25:21 | DEBUG    | Batch size 100
+07:25:21 | DEBUG    | Schema not yet available
+07:25:29 | DEBUG    | Status code: 500
+07:25:29 | ERROR    | Status Code: 500
+07:25:29 | WARNING  | Batch prediction didn't seem to work. Doing predictions one by one...
+07:25:36 | DEBUG    | Status code: 500
+07:25:36 | ERROR    | Status Code: 500
+07:25:43 | DEBUG    | Status code: 500
+07:25:43 | ERROR    | Status Code: 500
+07:25:43 | DEBUG    | Schema not yet available
+07:25:43 | DEBUG    | Done with unique posting
+07:25:43 | DEBUG    | Metadata needs to be calculated
+07:25:43 | ERROR    | Meta not available, run some adapations first and it will be inferred atomatically
+07:25:43 | DEBUG    | These are the results for API run
+07:25:43 | DEBUG    | [{'input': {'key': 'LUHMMHZLDLBAKX-UHFFFAOYSA-N', 'input': 'CC1C2C(CC3(C=CC(=O)C(=C3C2OC1=O)C)C)O', 'text': 'CC1C2C(CC3(C=CC(=O)C(=C3C2OC1=O)C)C)O'}, 'output': None}, {'input': {'key': 'QRXWMOHMRWLFEY-UHFFFAOYSA-N', 'input': 'C1=CN=CC=C1C(=O)NN', 'text': 'C1=CN=CC=C1C(=O)NN'}, 'output': None}]
+07:25:55 | ERROR    | Ersilia exception class:
+EmptyOutputError
+
+Detailed error:
+Model API eos9ym3:run did not produce an output2023-12-20 07:25:47.892466: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-20 07:25:48.145812: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-12-20 07:25:48.151439: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2023-12-20 07:25:48.151506: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-12-20 07:25:49.159053: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2023-12-20 07:25:49.159197: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2023-12-20 07:25:49.159208: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+<class 'rdkonf6.RDKonf'>
+LEN =  60
+xxxxxxxxxxxxxxx 60
+[ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.78086967e+00  2.06942997e+00  9.01355028e-01  1.76312172e+00
+  2.08491431e+00  8.97514424e-01  6.67852373e+00  2.45100925e+00
+ -7.38532324e-01  6.11296356e+00  2.32205255e+00  4.61214829e-01
+  2.04672043e+00  9.19560980e-01 -8.31502191e-01  2.05353510e+00
+  9.11315547e-01 -8.32792717e-01  7.22489516e+00  1.56259214e+00
+ -5.72993027e-01  5.98881385e+00  1.75459037e+00 -7.83047878e-01
+  2.23488881e+00  1.02284374e+00 -7.42317649e-01  2.23895398e+00
+  1.01421411e+00 -7.39427565e-01  8.01557970e+00  1.39658279e+00
+ -3.45462546e-01  5.90144350e+00  1.21786476e+00  1.26956148e-01
+  4.92209899e+00  1.00760523e+00  6.83270145e-01  4.92189743e+00
+  1.00840848e+00  6.79425928e-01  5.05866900e+00  4.38957563e+00
+  6.76109695e-01  7.91171886e+00  3.85989472e+00 -8.61729165e-01
+  3.93363432e+00  3.96996423e-01  0.00000000e+00  3.93188132e+00
+  3.99577940e-01  0.00000000e+00  6.04346191e+00  3.69545417e+00
+  7.50301818e-06  7.61662702e+00  1.92603314e+00  8.80962076e-06]
+LEN =  60
+xxxxxxxxxxxxxxx 60
+[ 0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  2.48546078e+00  2.28912984e+00  6.71550659e-01  2.45079487e+00
+  2.32803890e+00  6.58875279e-01  7.02750656e+00  2.72634811e+00
+ -4.80596436e-01  6.53663098e+00  2.87000641e+00  4.44110967e-01
+  2.46665820e+00  1.36312799e+00  9.19955860e-01  2.46458962e+00
+  1.37320743e+00  9.26011795e-01  7.82951616e+00  2.30706753e+00
+  7.27584311e-01  5.87069169e+00  1.42119414e+00  7.75462984e-01
+  3.10332282e+00  1.73346968e+00  7.85817842e-01  3.09844471e+00
+  1.73670494e+00  7.87669549e-01  7.87363055e+00  2.80672022e+00
+  5.63464100e-01  5.11283377e+00  2.99862540e+00 -5.73312588e-01
+  5.43057577e+00  8.58009490e-01 -5.80062521e-01  5.42950885e+00
+  8.62666291e-01 -5.89286641e-01  6.86473420e+00  4.27847267e+00
+ -4.93427462e-01  7.43126597e+00  4.82590952e+00 -7.76825008e-01
+  5.14476896e+00  1.14385972e+00  1.05877571e-05  5.12377094e+00
+  1.16039907e+00 -8.28373190e-06  1.13656401e+01  9.27364132e-01
+  0.00000000e+00  2.02498490e+00  2.02498490e+00  0.00000000e+00]/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/openbabel/__init__.py:14: UserWarning: "import openbabel" is deprecated, instead use "from openbabel import openbabel"
+  warnings.warn('"import openbabel" is deprecated, instead use "from openbabel import openbabel"')
+
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/keras/initializers/initializers_v1.py:297: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/tensorflow/python/ops/init_ops.py:93: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/tensorflow/python/ops/init_ops.py:93: calling GlorotUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/keras/initializers/initializers_v1.py:177: calling RandomNormal.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2023-12-20 07:25:53.901110: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-12-20 07:25:53.901207: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-12-20 07:25:53.901232: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (Leila): /proc/driver/nvidia/version does not exist
+2023-12-20 07:25:53.901750: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-20 07:25:53.910368: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:357] MLIR V1 optimization pass is not enabled
+2023-12-20 07:25:53.938694: W tensorflow/c/c_api.cc:291] Operation '{name:'dense_3/bias/Assign' id:154 op device:{requested: '', assigned: ''} def:{{{node dense_3/bias/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense_3/bias, dense_3/bias/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2023-12-20 07:25:54.391768: W tensorflow/c/c_api.cc:291] Operation '{name:'dense/bias/v/Assign' id:368 op device:{requested: '', assigned: ''} def:{{{node dense/bias/v/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense/bias/v, dense/bias/v/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2023-12-20 07:25:54.638616: W tensorflow/c/c_api.cc:291] Operation '{name:'dense_3/BiasAdd' id:159 op device:{requested: '', assigned: ''} def:{{{node dense_3/BiasAdd}} = BiasAdd[T=DT_FLOAT, _has_manual_control_dependencies=true, data_format="NHWC"](dense_3/MatMul, dense_3/BiasAdd/ReadVariableOp)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/keras/engine/training_v1.py:2357: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates=self.state_updates,
+<class 'mrlogp.mrlogp.MRlogP'>
+[['Mol_0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1.7808696734543292', '2.0694299668195235', '0.9013550283032016', '1.7631217176981697', '2.084914311814575', '0.8975144238103181', '6.678523731815584', '2.451009245595988', '-0.7385323239843421', '6.112963558739052', '2.3220525506315495', '0.4612148291879506', '2.046720434626604', '0.9195609804877009', '-0.8315021905569591', '2.0535350955046705', '0.9113155472750618', '-0.8327927173105958', '7.2248951603176055', '1.5625921430901069', '-0.5729930271785298', '5.988813845290628', '1.754590367392571', '-0.7830478778015958', '2.2348888133679843', '1.022843738959423', '-0.7423176492303267', '2.2389539800680853', '1.0142141065109174', '-0.739427564653085', '8.015579700926406', '1.396582789783862', '-0.3454625463929877', '5.901443496549122', '1.2178647604943011', '0.1269561478796956', '4.9220989924472995', '1.0076052315607429', '0.6832701449665733', '4.921897434442802', '1.0084084847941548', '0.6794259278637514', '5.058668997880257', '4.389575630145914', '0.6761096945047782', '7.911718860621693', '3.8598947172412252', '-0.8617291650728177', '3.933634316268331', '0.39699642308905503', '0.0', '3.931881320843779', '0.3995779395557433', '0.0', '6.043461906056173', '3.6954541706739277', '7.503018180332101e-06', '7.616627018819701', '1.9260331412272484', '8.809620757505149e-06'], ['Mol_1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2.4854607782207445', '2.2891298392468493', '0.6715506590210579', '2.450794867041011', '2.3280388996684884', '0.6588752787029275', '7.027506564165597', '2.7263481067214856', '-0.4805964361032564', '6.536630984756546', '2.870006414045881', '0.44411096707728503', '2.4666581968335946', '1.3631279917465433', '0.919955860131915', '2.4645896212551013', '1.3732074300319455', '0.9260117952542569', '7.829516160369054', '2.3070675308161563', '0.7275843112498186', '5.8706916928595465', '1.4211941433847444', '0.775462984472049', '3.103322816614173', '1.7334696837219663', '0.785817842146058', '3.0984447083241986', '1.7367049406100028', '0.7876695492820153', '7.873630548352667', '2.8067202230259483', '0.5634641003984316', '5.112833771396057', '2.9986253950392463', '-0.5733125876664891', '5.430575770221444', '0.8580094904740142', '-0.580062521402867', '5.429508850743385', '0.8626662907069884', '-0.5892866413035873', '6.864734200369279', '4.278472667775961', '-0.49342746209137195', '7.431265973597844', '4.825909521055899', '-0.7768250081661462', '5.1447689620876496', '1.1438597236068575', '1.0587757095422633e-05', '5.123770936797652', '1.1603990666246766', '-8.283731902538474e-06', '11.365640122257902', '0.9273641322154944', '0.0', '2.024984897023322', '2.024984897023322', '0.0']]
+[1.4588517, 3.4008038]
+/home/leila/eos/repository/eos9ym3/20231220072458_A6C67F/eos9ym3/artifacts/framework/example_output.csv
+
+
+Hints:
+- Visit the fetch troubleshooting site
+
+[]
+🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+
+Error message:
+
+Ersilia exception class:
+EmptyOutputError
+
+Detailed error:
+Model API eos9ym3:run did not produce an output2023-12-20 07:25:47.892466: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-20 07:25:48.145812: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-12-20 07:25:48.151439: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2023-12-20 07:25:48.151506: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-12-20 07:25:49.159053: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2023-12-20 07:25:49.159197: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2023-12-20 07:25:49.159208: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+<class 'rdkonf6.RDKonf'>
+LEN =  60
+xxxxxxxxxxxxxxx 60
+[ 0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.78086967e+00  2.06942997e+00  9.01355028e-01  1.76312172e+00
+  2.08491431e+00  8.97514424e-01  6.67852373e+00  2.45100925e+00
+ -7.38532324e-01  6.11296356e+00  2.32205255e+00  4.61214829e-01
+  2.04672043e+00  9.19560980e-01 -8.31502191e-01  2.05353510e+00
+  9.11315547e-01 -8.32792717e-01  7.22489516e+00  1.56259214e+00
+ -5.72993027e-01  5.98881385e+00  1.75459037e+00 -7.83047878e-01
+  2.23488881e+00  1.02284374e+00 -7.42317649e-01  2.23895398e+00
+  1.01421411e+00 -7.39427565e-01  8.01557970e+00  1.39658279e+00
+ -3.45462546e-01  5.90144350e+00  1.21786476e+00  1.26956148e-01
+  4.92209899e+00  1.00760523e+00  6.83270145e-01  4.92189743e+00
+  1.00840848e+00  6.79425928e-01  5.05866900e+00  4.38957563e+00
+  6.76109695e-01  7.91171886e+00  3.85989472e+00 -8.61729165e-01
+  3.93363432e+00  3.96996423e-01  0.00000000e+00  3.93188132e+00
+  3.99577940e-01  0.00000000e+00  6.04346191e+00  3.69545417e+00
+  7.50301818e-06  7.61662702e+00  1.92603314e+00  8.80962076e-06]
+LEN =  60
+xxxxxxxxxxxxxxx 60
+[ 0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  1.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  1.00000000e+00  0.00000000e+00  0.00000000e+00  1.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  1.00000000e+00  1.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  1.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  2.48546078e+00  2.28912984e+00  6.71550659e-01  2.45079487e+00
+  2.32803890e+00  6.58875279e-01  7.02750656e+00  2.72634811e+00
+ -4.80596436e-01  6.53663098e+00  2.87000641e+00  4.44110967e-01
+  2.46665820e+00  1.36312799e+00  9.19955860e-01  2.46458962e+00
+  1.37320743e+00  9.26011795e-01  7.82951616e+00  2.30706753e+00
+  7.27584311e-01  5.87069169e+00  1.42119414e+00  7.75462984e-01
+  3.10332282e+00  1.73346968e+00  7.85817842e-01  3.09844471e+00
+  1.73670494e+00  7.87669549e-01  7.87363055e+00  2.80672022e+00
+  5.63464100e-01  5.11283377e+00  2.99862540e+00 -5.73312588e-01
+  5.43057577e+00  8.58009490e-01 -5.80062521e-01  5.42950885e+00
+  8.62666291e-01 -5.89286641e-01  6.86473420e+00  4.27847267e+00
+ -4.93427462e-01  7.43126597e+00  4.82590952e+00 -7.76825008e-01
+  5.14476896e+00  1.14385972e+00  1.05877571e-05  5.12377094e+00
+  1.16039907e+00 -8.28373190e-06  1.13656401e+01  9.27364132e-01
+  0.00000000e+00  2.02498490e+00  2.02498490e+00  0.00000000e+00]/home/leila/miniconda3/envs/ersilia/lib/python3.7/site-packages/openbabel/__init__.py:14: UserWarning: "import openbabel" is deprecated, instead use "from openbabel import openbabel"
+  warnings.warn('"import openbabel" is deprecated, instead use "from openbabel import openbabel"')
+
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/keras/initializers/initializers_v1.py:297: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/tensorflow/python/ops/init_ops.py:93: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/tensorflow/python/ops/init_ops.py:93: calling GlorotUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/keras/initializers/initializers_v1.py:177: calling RandomNormal.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2023-12-20 07:25:53.901110: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2023-12-20 07:25:53.901207: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2023-12-20 07:25:53.901232: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (Leila): /proc/driver/nvidia/version does not exist
+2023-12-20 07:25:53.901750: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-20 07:25:53.910368: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:357] MLIR V1 optimization pass is not enabled
+2023-12-20 07:25:53.938694: W tensorflow/c/c_api.cc:291] Operation '{name:'dense_3/bias/Assign' id:154 op device:{requested: '', assigned: ''} def:{{{node dense_3/bias/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense_3/bias, dense_3/bias/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2023-12-20 07:25:54.391768: W tensorflow/c/c_api.cc:291] Operation '{name:'dense/bias/v/Assign' id:368 op device:{requested: '', assigned: ''} def:{{{node dense/bias/v/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense/bias/v, dense/bias/v/Initializer/zeros)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2023-12-20 07:25:54.638616: W tensorflow/c/c_api.cc:291] Operation '{name:'dense_3/BiasAdd' id:159 op device:{requested: '', assigned: ''} def:{{{node dense_3/BiasAdd}} = BiasAdd[T=DT_FLOAT, _has_manual_control_dependencies=true, data_format="NHWC"](dense_3/MatMul, dense_3/BiasAdd/ReadVariableOp)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+/home/leila/miniconda3/envs/eos9ym3/lib/python3.7/site-packages/keras/engine/training_v1.py:2357: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates=self.state_updates,
+<class 'mrlogp.mrlogp.MRlogP'>
+[['Mol_0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '1', '1', '1', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '1', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '1', '0', '0', '1', '1', '0', '0', '0', '1', '1', '1', '1', '0', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1.7808696734543292', '2.0694299668195235', '0.9013550283032016', '1.7631217176981697', '2.084914311814575', '0.8975144238103181', '6.678523731815584', '2.451009245595988', '-0.7385323239843421', '6.112963558739052', '2.3220525506315495', '0.4612148291879506', '2.046720434626604', '0.9195609804877009', '-0.8315021905569591', '2.0535350955046705', '0.9113155472750618', '-0.8327927173105958', '7.2248951603176055', '1.5625921430901069', '-0.5729930271785298', '5.988813845290628', '1.754590367392571', '-0.7830478778015958', '2.2348888133679843', '1.022843738959423', '-0.7423176492303267', '2.2389539800680853', '1.0142141065109174', '-0.739427564653085', '8.015579700926406', '1.396582789783862', '-0.3454625463929877', '5.901443496549122', '1.2178647604943011', '0.1269561478796956', '4.9220989924472995', '1.0076052315607429', '0.6832701449665733', '4.921897434442802', '1.0084084847941548', '0.6794259278637514', '5.058668997880257', '4.389575630145914', '0.6761096945047782', '7.911718860621693', '3.8598947172412252', '-0.8617291650728177', '3.933634316268331', '0.39699642308905503', '0.0', '3.931881320843779', '0.3995779395557433', '0.0', '6.043461906056173', '3.6954541706739277', '7.503018180332101e-06', '7.616627018819701', '1.9260331412272484', '8.809620757505149e-06'], ['Mol_1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '1', '0', '1', '1', '0', '1', '0', '1', '0', '1', '0', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '1', '0', '1', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '1', '1', '0', '0', '1', '0', '0', '1', '0', '0', '1', '0', '0', '0', '0', '0', '1', '0', '1', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '1', '0', '1', '0', '0', '0', '0', '1', '1', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2.4854607782207445', '2.2891298392468493', '0.6715506590210579', '2.450794867041011', '2.3280388996684884', '0.6588752787029275', '7.027506564165597', '2.7263481067214856', '-0.4805964361032564', '6.536630984756546', '2.870006414045881', '0.44411096707728503', '2.4666581968335946', '1.3631279917465433', '0.919955860131915', '2.4645896212551013', '1.3732074300319455', '0.9260117952542569', '7.829516160369054', '2.3070675308161563', '0.7275843112498186', '5.8706916928595465', '1.4211941433847444', '0.775462984472049', '3.103322816614173', '1.7334696837219663', '0.785817842146058', '3.0984447083241986', '1.7367049406100028', '0.7876695492820153', '7.873630548352667', '2.8067202230259483', '0.5634641003984316', '5.112833771396057', '2.9986253950392463', '-0.5733125876664891', '5.430575770221444', '0.8580094904740142', '-0.580062521402867', '5.429508850743385', '0.8626662907069884', '-0.5892866413035873', '6.864734200369279', '4.278472667775961', '-0.49342746209137195', '7.431265973597844', '4.825909521055899', '-0.7768250081661462', '5.1447689620876496', '1.1438597236068575', '1.0587757095422633e-05', '5.123770936797652', '1.1603990666246766', '-8.283731902538474e-06', '11.365640122257902', '0.9273641322154944', '0.0', '2.024984897023322', '2.024984897023322', '0.0']]
+[1.4588517, 3.4008038]
+/home/leila/eos/repository/eos9ym3/20231220072458_A6C67F/eos9ym3/artifacts/framework/example_output.csv
+
+
+Hints:
+- Visit the fetch troubleshooting site
+
+If this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /home/leila/eos/current.log
